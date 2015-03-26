@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>CMSC-16200 Winter 2015 | VjiaoBlack / NthPrime </title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="wikipage_files/pmwiki.css" type="text/css">
+  <!--HTMLHeader--><style type="text/css"><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python .de1, .python .de2 {font-family: monospace; font-weight: normal;}
+.python  {font-family:monospace;}
+.python .imp {font-weight: bold; color: red;}
+.python li, .python .li1 {font-family: monospace; color: black; font-weight: normal;}
+.python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python .li2 {font-weight: bold;}
+.python .kw1 {color: #ff7700;font-weight:bold;}
+.python .kw2 {color: #008000;}
+.python .kw3 {color: #dc143c;}
+.python .kw4 {color: #0000cd;}
+.python .co1 {color: #808080; font-style: italic;}
+.python .coMULTI {color: #808080; font-style: italic;}
+.python .es0 {color: #000099; font-weight: bold;}
+.python .br0 {color: black;}
+.python .sy0 {color: #66cc66;}
+.python .st0 {color: #483d8b;}
+.python .nu0 {color: #ff4500;}
+.python .me1 {color: black;}
+.python .ln-xtra, .python li.ln-xtra, .python div.ln-xtra {background-color: #ffc;}
+.python span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  border: 1px solid #808080;
+  color: #000000;
+  background-color: #f1f0ed;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c .de1, .c .de2 {font-family: monospace; font-weight: normal;}
+.c  {font-family:monospace;}
+.c .imp {font-weight: bold; color: red;}
+.c li, .c .li1 {font-family: monospace; color: black; font-weight: normal;}
+.c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c .li2 {font-weight: bold;}
+.c .kw1 {color: #b1b100;}
+.c .kw2 {color: #000000; font-weight: bold;}
+.c .kw3 {color: #000066;}
+.c .kw4 {color: #993333;}
+.c .co1 {color: #666666; font-style: italic;}
+.c .co2 {color: #339933;}
+.c .coMULTI {color: #808080; font-style: italic;}
+.c .es0 {color: #000099; font-weight: bold;}
+.c .es1 {color: #000099; font-weight: bold;}
+.c .es2 {color: #660099; font-weight: bold;}
+.c .es3 {color: #660099; font-weight: bold;}
+.c .es4 {color: #660099; font-weight: bold;}
+.c .es5 {color: #006699; font-weight: bold;}
+.c .br0 {color: #009900;}
+.c .sy0 {color: #339933;}
+.c .st0 {color: #ff0000;}
+.c .nu0 {color: #0000dd;}
+.c .nu6 {color: #208080;}
+.c .nu8 {color: #208080;}
+.c .nu12 {color: #208080;}
+.c .nu16 {color:#800080;}
+.c .nu17 {color:#800080;}
+.c .nu18 {color:#800080;}
+.c .nu19 {color:#800080;}
+.c .me1 {color: #202020;}
+.c .me2 {color: #202020;}
+.c .ln-xtra, .c li.ln-xtra, .c div.ln-xtra {background-color: #ffc;}
+.c span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for d
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.d .de1, .d .de2 {font-family: monospace; font-weight: normal;}
+.d  {font-family:monospace;}
+.d .imp {font-weight: bold; color: red;}
+.d li, .d .li1 {font-family: monospace; color: black; font-weight: normal;}
+.d .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.d .li2 {font-weight: bold;}
+.d .kw1 {color: #b1b100;}
+.d .kw2 {color: #000000; font-weight: bold;}
+.d .kw3 {color: #aaaadd; font-weight: bold;}
+.d .kw4 {color: #993333;}
+.d .co1 {color: #808080; font-style: italic;}
+.d .co2 {color: #009933; font-style: italic;}
+.d .co3 {color: #009933; font-style: italic;}
+.d .co4 {color: #ff0000;}
+.d .co5 {color: #0040ff;}
+.d .coMULTI {color: #808080; font-style: italic;}
+.d .es0 {color: #000099; font-weight: bold;}
+.d .es1 {color: #000099; font-weight: bold;}
+.d .es2 {color: #660099; font-weight: bold;}
+.d .es3 {color: #660099; font-weight: bold;}
+.d .es4 {color: #660099; font-weight: bold;}
+.d .es5 {color: #006699; font-weight: bold;}
+.d .es6 {color: #666699; font-weight: bold; font-style: italic;}
+.d .br0 {color: #66cc66;}
+.d .sy0 {color: #66cc66;}
+.d .st0 {color: #ff0000;}
+.d .st_h {color: #ff0000;}
+.d .nu0 {color: #0000dd;}
+.d .nu6 {color: #208080;}
+.d .nu8 {color: #208080;}
+.d .nu12 {color: #208080;}
+.d .nu16 {color:#800080;}
+.d .nu17 {color:#800080;}
+.d .nu18 {color:#800080;}
+.d .nu19 {color:#800080;}
+.d .me1 {color: #006600;}
+.d .me2 {color: #006600;}
+.d .ln-xtra, .d li.ln-xtra, .d div.ln-xtra {background-color: #ffc;}
+.d span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash .de1, .bash .de2 {font-family: monospace; font-weight: normal;}
+.bash  {font-family:monospace;}
+.bash .imp {font-weight: bold; color: red;}
+.bash li, .bash .li1 {font-family: monospace; color: black; font-weight: normal;}
+.bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash .li2 {font-weight: bold;}
+.bash .kw1 {color: #000000; font-weight: bold;}
+.bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash .co0 {color: #666666; font-style: italic;}
+.bash .co1 {color: #800000;}
+.bash .co2 {color: #cc0000; font-style: italic;}
+.bash .co3 {color: #000000; font-weight: bold;}
+.bash .co4 {color: #666666;}
+.bash .es1 {color: #000099; font-weight: bold;}
+.bash .es2 {color: #007800;}
+.bash .es3 {color: #007800;}
+.bash .es4 {color: #007800;}
+.bash .es5 {color: #780078;}
+.bash .es_h {color: #000099; font-weight: bold;}
+.bash .br0 {color: #7a0874; font-weight: bold;}
+.bash .sy0 {color: #000000; font-weight: bold;}
+.bash .st0 {color: #ff0000;}
+.bash .st_h {color: #ff0000;}
+.bash .nu0 {color: #000000;}
+.bash .re0 {color: #007800;}
+.bash .re1 {color: #007800;}
+.bash .re2 {color: #007800;}
+.bash .re4 {color: #007800;}
+.bash .re5 {color: #660033;}
+.bash .ln-xtra, .bash li.ln-xtra, .bash div.ln-xtra {background-color: #ffc;}
+.bash span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for haskell
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.haskell .de1, .haskell .de2 {font-family: monospace; font-weight: normal;}
+.haskell  {font-family:monospace;}
+.haskell .imp {font-weight: bold; color: red;}
+.haskell li, .haskell .li1 {font-family: monospace; color: black; font-weight: normal;}
+.haskell .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.haskell .li2 {font-weight: bold;}
+.haskell .kw1 {color: #06c; font-weight: bold;}
+.haskell .kw2 {color: #06c; font-weight: bold;}
+.haskell .kw3 {font-weight: bold;}
+.haskell .kw4 {color: #cccc00; font-weight: bold;}
+.haskell .kw5 {color: maroon;}
+.haskell .co1 {color: #5d478b; font-style: italic;}
+.haskell .co2 {color: #339933; font-weight: bold;}
+.haskell .co3 {color: #5d478b; font-style: italic;}
+.haskell .coMULTI {color: #5d478b; font-style: italic;}
+.haskell .es0 {background-color: #3cb371; font-weight: bold;}
+.haskell .br0 {color: green;}
+.haskell .sy0 {color: #339933; font-weight: bold;}
+.haskell .st0 {background-color: #3cb371;}
+.haskell .nu0 {color: red;}
+.haskell .me1 {color: #060;}
+.haskell .ln-xtra, .haskell li.ln-xtra, .haskell div.ln-xtra {background-color: #ffc;}
+.haskell span.xtra { display:block; }
+
+--></style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="robots" content="index,follow">
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id="wikilogo"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php"><img src="wikipage_files/uc-wordmark.png" alt="CMSC-16200 Winter 2015" border="0"></a></div>
+  <div id="wikihead">
+  <form action="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php">
+    <span class="headnav"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/RecentChanges" accesskey="c">Recent Changes</a> -</span>
+    <input name="n" value="VjiaoBlack.NthPrime" type="hidden">
+    <input name="action" value="search" type="hidden">
+    <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a>:
+    <input name="q" class="inputbox searchbox" type="text">
+    <input class="inputbutton searchbutton" value="Go" type="submit"></form></div>
+<!--/PageHeaderFmt-->
+  <table id="wikimid" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<!--PageLeftFmt-->
+      <td id="wikileft" valign="top">
+        <p class="sidehead"> Main
+</p><ul><li><a class="urllink" href="http://cmsc-16200.cs.uchicago.edu/2015/" rel="nofollow">Course Home (exit)</a>
+</li><li><a class="urllink" href="https://piazza.com/uchicago/winter2015/cmsc16200/home" rel="nofollow">Piazza (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Main/HomePage">Course WikiHome</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges">Recent Changes</a> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges?action=rss">(rss)</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Student">Student</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Problems">Problems</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Resources">Resources</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Questions">Questions</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">Profiles</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">My Profile</a>
+</li></ul><p class="vspace sidehead"> Instructor
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/StuartKurtz">Stuart Kurtz</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/ArielFeldman">Ariel Feldman</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Instructor/SampleProblem">Sample Problem</a>
+</li></ul><p class="vspace sidehead"> Lab
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/MarkStoehr">Mark Stoehr</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/Labs">Labs</a>
+</li><li><a class="urllink" href="http://people.cs.uchicago.edu/%7Estoehr/cs162" rel="nofollow">Labs Page (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/FAQ">FAQ</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/PmWiki">PmWiki</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/Cookbook/SourceBlock" rel="nofollow">SourceBlock (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/DocumentationIndex">Documentation Index</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/FAQ">PmWiki FAQ</a>
+</li></ul><p class="vspace" style="text-align: right;"> <span style="font-size:83%"><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/SideBar?action=edit">edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id="wikibody" valign="top">
+<!--PageActionFmt-->
+        <div id="wikicmds"><ul><li class="browse">      <a accesskey="" rel="nofollow" class="selflink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime">View</a>
+</li><li class="edit">      <a accesskey="e" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=edit">Edit</a>
+</li><li class="diff">   <a accesskey="h" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=diff">History</a>
+</li><li class="print">     <a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=print">Print</a>
+</li><li class="logout"><em>  <span style="font-size:83%"><a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=logout">Logout</a></span></em>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id="wikititle">
+          <div class="pagegroup"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack">VjiaoBlack</a> /</div>
+          <h1 class="pagetitle">NthPrime</h1></div>
+<!--PageText-->
+<div id="wikitext">
+<p>Create a FAST algorithm that finds the Nth Prime.
+Present a table of primes, Ns, and times.
+</p>
+<div class="vspace"></div><hr> 
+<p>Contribution by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Abao">Aaron Bao</a>.
+ This is code I used for Project Euler a while back. It's python so it's
+ definitely slower than if you used C. It uses numpy, a python library 
+for multi-dimensional arrays, (not sure if that makes it faster or 
+slower) because I was learning it at the time. 
+</p>
+<p class="vspace">It took ~3.5 seconds to generate the 10,000th prime
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock1">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">import</span> numpy <span class="kw1">as</span> np<br>
+<span class="kw1">import</span> <span class="kw3">itertools</span> <span class="kw1">as</span> it<br>
+<span class="kw1">import</span> <span class="kw3">math</span><br>
+<span class="kw1">import</span> <span class="kw3">time</span><br>
+<br>
+<span class="st0">'''<br>
+Sieve of Erathosthenes using numpy. Works by generating a giant array of
+ all numbers up to n and masking all values that are composite numbers.<br>
+'''</span><br>
+<span class="kw1">def</span> actualsieve<span class="br0">(</span>n<span class="br0">)</span>:<br>
+&nbsp; &nbsp; nums <span class="sy0">=</span> np.<span class="me1">ma</span>.<span class="kw3">array</span><span class="br0">(</span>np.<span class="me1">arange</span><span class="br0">(</span>n<span class="br0">)</span><span class="sy0">,</span> mask <span class="sy0">=</span> <span class="kw2">False</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1">#Begin by masking odd numbers</span><br>
+&nbsp; &nbsp; nums.<span class="me1">mask</span><span class="br0">[</span>::<span class="nu0">2</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">True</span><span class="sy0">;</span> nums.<span class="me1">mask</span><span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">False</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> maskarray<span class="br0">(</span>a<span class="sy0">,</span> val<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; a.<span class="me1">mask</span><span class="br0">[</span>val<span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">True</span><br>
+<br>
+<br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">3</span><span class="sy0">,</span> <span class="kw2">int</span><span class="br0">(</span><span class="kw3">math</span>.<span class="me1">floor</span><span class="br0">(</span><span class="kw3">math</span>.<span class="me1">sqrt</span><span class="br0">(</span>n<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> + <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">)</span>: <span class="co1">#</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">#Create generator of new values to be masked</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; multgen <span class="sy0">=</span> <span class="br0">(</span>a*x <span class="kw1">for</span> a <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span>x<span class="sy0">,</span> <span class="kw2">int</span><span class="br0">(</span><span class="kw3">math</span>.<span class="me1">floor</span><span class="br0">(</span>n/x<span class="br0">)</span><span class="br0">)</span>+<span class="nu0">1</span><span class="br0">)</span> <span class="kw1">if</span> a % <span class="nu0">2</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">#filter out multiples of three</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="sy0">&gt;</span> <span class="nu0">3</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; multgen <span class="sy0">=</span> it.<span class="me1">ifilter</span><span class="br0">(</span><span class="kw1">lambda</span> x: x % <span class="nu0">3</span><span class="sy0">,</span> multgen<span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">[</span>maskarray<span class="br0">(</span>nums<span class="sy0">,</span> mult<span class="br0">)</span> <span class="kw1">for</span> mult <span class="kw1">in</span> multgen<span class="br0">]</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">return</span> nums.<span class="me1">compressed</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<span class="co1">#return 10000th prime. Probably could be faster if I'm smarter about how big to make the array at the beginning</span><br>
+<span class="kw1">def</span> PE7<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; start <span class="sy0">=</span> <span class="kw3">time</span>.<span class="kw3">time</span><br>
+&nbsp; &nbsp; primegen <span class="sy0">=</span> actualsieve<span class="br0">(</span><span class="kw2">int</span><span class="br0">(</span><span class="nu0">4e6</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="kw2">list</span><span class="br0">(</span>it.<span class="me1">islice</span><span class="br0">(</span>primegen<span class="sy0">,</span> <span class="nu0">10001</span><span class="sy0">,</span> <span class="nu0">10002</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; elapsed <span class="sy0">=</span> <span class="kw3">time</span>.<span class="kw3">time</span><span class="br0">(</span><span class="br0">)</span> - start<br>
+&nbsp; &nbsp; <span class="kw1">print</span> elapsed<br>
+<br>
+<span class="st0">'''<br>
+&gt; PE7<br>
+[104743]<br>
+3.51264 seconds<br>
+<br>
+'''</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=sourceblock&amp;num=1" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<div class="vspace"></div><hr>
+<p class="vspace">The 10,000th prime is 104,729, you have provided the 10001th prime number!
+(just a note :) your algorithm seems to work fine)
+- <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/VjiaoBlack">Victor Jiao</a>
+</p>
+<div class="vspace"></div><hr>
+<p class="vspace">Finished! I think it can be quite a bit faster though (with less space complexity) - I'll update the table as I go on.
+</p>
+<p class="vspace"><a class="urllink" href="http://github.com/VjiaoBlack/NthPrime" rel="nofollow">code (on github)</a>
+</p>
+<div class="vspace"></div><h3>Results</h3>
+<table style="border-collapse:collapse" width="66%" border="1" cellpadding="5"><tbody><tr><th align="center">N</th><th align="right">Nth Prime</th><th align="center">milliseconds</th></tr>
+<tr><td align="center">10,000</td><td align="center">104729</td><td align="center">1</td></tr>
+<tr><td align="center">100,000</td><td align="center">1299709</td><td align="center">31</td></tr>
+<tr><td align="center">300,000</td><td align="center">4256233</td><td align="center">120</td></tr>
+<tr><td align="center">500,000</td><td align="center">7368787</td><td align="center">214</td></tr>
+<tr><td align="center">1,000,000</td><td align="center">15485863</td><td align="center">447</td></tr>
+</tbody></table>
+<p class="vspace">- <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/VjiaoBlack">Victor Jiao</a>
+</p>
+<div class="vspace"></div><hr>
+<p class="vspace">I wrote a slightly bulkier version that uses up O(N logN) memory, but that also runs in O(N logN):
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock2">
+  <div class="sourceblocktext"><div class="c"><span class="co2">#include &lt;string.h&gt;</span><br>
+<span class="co2">#include &lt;stdlib.h&gt;</span><br>
+<span class="co2">#include &lt;stdio.h&gt;</span><br>
+<span class="co2">#include &lt;math.h&gt;</span><br>
+<br>
+<span class="kw4">unsigned</span> <span class="kw4">char</span> <span class="sy0">*</span>prev <span class="sy0">=</span> NULL<span class="sy0">,</span> <span class="sy0">*</span>next <span class="sy0">=</span> NULL<span class="sy0">;</span><br>
+<br>
+<span class="kw4">int</span> sieveStart<span class="br0">(</span><span class="kw4">int</span> x<span class="sy0">,</span> <span class="kw4">int</span> lim<span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; lim <span class="sy0">=</span> <span class="br0">(</span> <span class="br0">(</span>lim <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">/</span> <span class="br0">(</span><span class="nu0">2</span> <span class="sy0">*</span> x <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">1</span> <span class="br0">)</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>lim <span class="sy0">&lt;</span> x<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span>next<span class="br0">[</span>x<span class="br0">]</span> <span class="sy0">&amp;&amp;</span> x <span class="sy0">+</span> next<span class="br0">[</span>x<span class="br0">]</span> <span class="sy0">&lt;=</span> lim<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x <span class="sy0">+=</span> next<span class="br0">[</span>x<span class="br0">]</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> x<span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">void</span> popList<span class="br0">(</span><span class="kw4">int</span> x<span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; prev<span class="br0">[</span> x <span class="sy0">+</span> next<span class="br0">[</span>x<span class="br0">]</span> <span class="br0">]</span> <span class="sy0">=</span> next<span class="br0">[</span> x <span class="sy0">-</span> prev<span class="br0">[</span>x<span class="br0">]</span> <span class="br0">]</span> <span class="sy0">=</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>prev<span class="br0">[</span>x<span class="br0">]</span> <span class="sy0">|</span> next<span class="br0">[</span>x<span class="br0">]</span><span class="br0">)</span> <span class="sy0">?</span> prev<span class="br0">[</span>x<span class="br0">]</span> <span class="sy0">+</span> next<span class="br0">[</span>x<span class="br0">]</span> <span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">void</span> buildSieve<span class="br0">(</span><span class="kw4">int</span> N<span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">int</span> size <span class="sy0">=</span> <span class="br0">(</span>N <span class="sy0">/</span> <span class="nu0">2</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">*</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">unsigned</span> <span class="kw4">char</span><span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; prev <span class="sy0">=</span> <span class="kw3">malloc</span><span class="br0">(</span>size<span class="br0">)</span><span class="sy0">;</span> <span class="kw3">memset</span><span class="br0">(</span>prev<span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> size<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; next <span class="sy0">=</span> <span class="kw3">malloc</span><span class="br0">(</span>size<span class="br0">)</span><span class="sy0">;</span> <span class="kw3">memset</span><span class="br0">(</span>next<span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> size<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; prev<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="sy0">=</span> next<span class="br0">[</span>N <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">]</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">1</span> <span class="sy0">;</span> next<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">&amp;&amp;</span> <span class="nu0">4</span> <span class="sy0">*</span> i <span class="sy0">*</span> i <span class="sy0">&lt;</span> N <span class="sy0">;</span> i <span class="sy0">+=</span> next<span class="br0">[</span>i<span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> j <span class="sy0">=</span> sieveStart<span class="br0">(</span>i<span class="sy0">,</span> N<span class="br0">)</span> <span class="sy0">;</span> j <span class="sy0">&gt;=</span> i <span class="sy0">;</span> j <span class="sy0">-=</span> prev<span class="br0">[</span>j<span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; popList<span class="br0">(</span><span class="nu0">2</span> <span class="sy0">*</span> i <span class="sy0">*</span> j <span class="sy0">+</span> i <span class="sy0">+</span> j<span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">int</span> nextPrime<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> n <span class="sy0">+</span> <span class="nu0">2</span> <span class="sy0">*</span> next<span class="br0">[</span>n <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">]</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">void</span> freeSieve<span class="br0">(</span><span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">free</span><span class="br0">(</span>prev<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">free</span><span class="br0">(</span>next<span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">int</span> upperBound<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="nu0">1</span> <span class="sy0">+</span> n <span class="sy0">*</span> <span class="br0">(</span> <span class="kw3">log</span><span class="br0">(</span>n<span class="br0">)</span> <span class="sy0">+</span> <span class="kw3">log</span><span class="br0">(</span><span class="kw3">log</span><span class="br0">(</span>n<span class="br0">)</span><span class="br0">)</span> <span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">int</span> nth_prime<span class="br0">(</span><span class="kw4">int</span> nr<span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; buildSieve<span class="br0">(</span> upperBound<span class="br0">(</span>nr<span class="br0">)</span> <span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">int</span> n <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; nr <span class="sy0">-=</span> <span class="nu0">2</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span>nr<span class="sy0">--</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n <span class="sy0">=</span> nextPrime<span class="br0">(</span>n<span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; freeSieve<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> n<span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">**</span> argv<span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"%d<span class="es1">\n</span>"</span><span class="sy0">,</span> nth_prime<span class="br0">(</span> <span class="kw3">atoi</span><span class="br0">(</span>argv<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span> <span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<span class="br0">}</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=sourceblock&amp;num=2" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">For N = 10 000 000, it ran in 2.8 secs and used up 178MB of memory. The 10 000 000th prime number is 179 424 673. 
+</p>
+<p class="vspace">~ <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Mihai">Mihai Andreescu</a>
+</p>
+<div class="vspace"></div><hr>
+<p class="vspace">Question for Aaron Bao: Did you update the original 
+code from your first post? Since you said it took 3.5 seconds to 
+generate the 10,000th prime in your python code but only 1 millisecond 
+in the table.
+</p>
+<p class="vspace">I wrote a simple algorithm in C that calculates the 
+10,000th prime in 26 milliseconds. My version is essentially brute-force
+ checking.
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock3">
+  <div class="sourceblocktext"><div class="c"><span class="co2">#include &lt;stdio.h&gt;</span><br>
+<span class="co2">#include &lt;stdbool.h&gt;</span><br>
+<span class="co2">#include &lt;math.h&gt;</span><br>
+<br>
+<span class="kw4">int</span> isprime<span class="br0">(</span><span class="kw4">int</span> x<span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; <span class="kw4">int</span> even <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span><br>
+&nbsp; <span class="kw4">int</span> odd <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span><br>
+&nbsp; <span class="kw1">if</span> <span class="br0">(</span>x <span class="sy0">%</span> even <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span><br>
+&nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+&nbsp; <span class="br0">}</span><br>
+&nbsp; <span class="kw4">double</span> val <span class="sy0">=</span> <span class="kw3">sqrt</span> <span class="br0">(</span> <span class="br0">(</span><span class="kw4">double</span><span class="br0">)</span>x <span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span>odd<span class="sy0">&lt;=</span>val<span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>x <span class="sy0">%</span> odd <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; odd <span class="sy0">+=</span> <span class="nu0">2</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; <span class="kw1">return</span> <span class="nu0">1</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span> <span class="kw4">const</span> <span class="sy0">*</span>argv<span class="br0">[</span><span class="br0">]</span><span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; <span class="kw4">int</span> test <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">,</span> count <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span><br>
+&nbsp; <span class="kw4">double</span> prime <span class="sy0">=</span> <span class="nu0">100000</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span>count <span class="sy0">&lt;</span> prime<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>isprime<span class="br0">(</span>test<span class="br0">)</span><span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; count<span class="sy0">++;</span><br>
+&nbsp; &nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>count <span class="sy0">==</span> prime<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"The %dth prime is: %d<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span>prime <span class="sy0">,</span> test<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; test <span class="sy0">+=</span> <span class="nu0">2</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="coMULTI">/* Output with time<br>
+<br>
+$ time ./nthprime<br>
+The 10000th prime is: 104729<br>
+<br>
+real &nbsp;0m0.026s<br>
+user &nbsp;0m0.023s<br>
+sys 0m0.003s<br>
+*/</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=sourceblock&amp;num=3" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Solution by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/SeanPierre">Sean Pierre</a>
+</p>
+<div class="vspace"></div><hr>
+<p>Solution by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teo Collin</a>
+</p>
+<p class="vspace">For reasons that are not relevant at this time, I decided to start learning the <a class="urllink" href="http://dlang.org/" rel="nofollow">D programming language</a>. I think it looks nice and it has some interesting things, maybe... Here are some links: <a class="urllink" href="http://ddili.org/ders/d.en/index.html" rel="nofollow">1</a>, <a class="urllink" href="http://dlang.org/function.html" rel="nofollow">2</a>
+</p>
+<p class="vspace">Anyway, nth prime is always a good starting exercise 
+so I decided to just quickly implement the brute force version, which is
+ basically just the solution above only in D, which doesn't look that 
+different from C... I may or may not decide to go on and implement Sieve
+ of Erathosthenes in D too. 
+</p>
+<p class="vspace">Here is the code, followed by a sample run:
+(Remarkably, sourceblock knows about D... but not R... which replaced S, which I will test...)
+</p>
+<div class="sourceblock " id="sourceblock4">
+  <div class="sourceblocktext"><div class="d"><span class="kw2">import</span> std.<span class="me1">stdio</span><span class="sy0">;</span><br>
+<span class="kw2">import</span> std.<span class="me1">math</span><span class="sy0">;</span><br>
+<span class="kw2">import</span> std.<span class="me1">conv</span><span class="sy0">;</span><br>
+<br>
+<span class="kw4">bool</span> primetest<span class="br0">(</span><span class="kw4">float</span> val<span class="br0">)</span><br>
+<span class="br0">{</span><br>
+<br>
+&nbsp; <span class="kw1">if</span> <span class="br0">(</span>val <span class="sy0">%</span> <span class="nu0">2</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span><span class="br0">{</span> <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span> <span class="br0">}</span><br>
+&nbsp; <span class="kw1">else</span><br>
+&nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">float</span> cur &nbsp;<span class="sy0">=</span> <span class="nu16">3.0</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span><span class="br0">(</span>cur <span class="sy0">&lt;=</span> <span class="br0">(</span>sqrt<span class="br0">(</span>val<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>val <span class="sy0">%</span> cur <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur<span class="sy0">+=</span><span class="nu0">2</span><span class="sy0">;</span><br>
+<br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">true</span><span class="sy0">;</span><br>
+&nbsp; <span class="br0">}</span><br>
+<br>
+<br>
+<br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">void</span> main<span class="br0">(</span><span class="kw4">string</span><span class="br0">[</span><span class="br0">]</span> args<span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">auto</span> input <span class="sy0">=</span> to<span class="sy0">!</span><span class="kw4">float</span><span class="br0">(</span>args<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">float</span> cur <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">float</span> curt <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span>cur <span class="sy0">&lt;</span> input<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; curt <span class="sy0">+=</span><span class="nu0">2</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>primetest<span class="br0">(</span>curt<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cur<span class="sy0">++;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">}</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; writeln<span class="br0">(</span><span class="st0">"The "</span><span class="sy0">,</span> input<span class="sy0">,</span><span class="st0">"th prime is "</span><span class="sy0">,</span> curt<span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+<span class="br0">}</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=sourceblock&amp;num=4" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Sample run:
+</p>
+<div class="sourceblock " id="sourceblock5">
+  <div class="sourceblocktext"><div class="bash"><span class="re1">$time</span> .<span class="sy0">/</span><span class="kw3">test</span> <span class="nu0">10000</span><br>
+The 10000th prime is <span class="nu0">104729</span><br>
+<br>
+real&nbsp; &nbsp; 0m0.026s<br>
+user&nbsp; &nbsp; 0m0.019s<br>
+sys &nbsp; &nbsp; 0m0.002s<br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=sourceblock&amp;num=5" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">This is basically identical to the C solution in terms of time too...
+</p><hr>
+<p class="vspace">Solution by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/RudyardRichter">Rudyard Richter</a>:
+</p>
+<p class="vspace">I made a test using an implementation of Miller-Rabin 
+in C. (This is the same general idea as I used for primality testing in 
+my RSA project.) It finds the 10000th prime in 15 ms and the 100000th in
+ about 150 ms; it only works, however, up to about 105000—above that and
+ more witnesses would need to be added. The code is <a class="urllink" href="http://git.io/pvfx" rel="nofollow">here</a>.
+</p><hr>
+<p>Solution by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/JackCalder">Jack Calder</a>:
+</p>
+<p class="vspace">I implemented this <a class="urllink" href="http://www.paul-scott.com/nth-prime.php" rel="nofollow">algorithm</a> in Haskell, as a small exercise. It's not particularly fast, but it's in haskell. Eh.
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock6">
+  <div class="sourceblocktext"><div class="haskell"><span class="kw1">import</span> Data<span class="sy0">.</span>List<br>
+<br>
+nthprime <span class="sy0">::</span> <span class="kw4">Int</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span><br>
+nthprime <span class="sy0">=</span> buildEval <span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><br>
+<br>
+buildEval <span class="sy0">::</span> <span class="br0">[</span><span class="kw4">Int</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span><br>
+buildEval list <span class="nu0">1</span> <span class="sy0">=</span> <span class="kw3">last</span> list<br>
+buildEval list level <span class="sy0">=</span> buildEval <span class="br0">(</span>list <span class="sy0">++</span> <span class="br0">[</span><span class="br0">(</span>nextPrime list <span class="br0">(</span><span class="br0">(</span><span class="kw3">last</span> list<span class="br0">)</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span><span class="br0">]</span><span class="br0">)</span> <span class="br0">(</span>level <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+<br>
+nextPrime <span class="sy0">::</span> <span class="br0">[</span><span class="kw4">Int</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span><br>
+nextPrime <span class="sy0">_</span> <span class="nu0">2</span> <span class="sy0">=</span> <span class="nu0">2</span><br>
+nextPrime list x <span class="sy0">=</span> <span class="kw1">case</span> <span class="br0">(</span>checkPrime <span class="br0">(</span><span class="kw3">tail</span> list<span class="br0">)</span> x<span class="br0">)</span> <span class="kw1">of</span><br>
+&nbsp; True <span class="sy0">-&gt;</span> x<br>
+&nbsp; False <span class="sy0">-&gt;</span> <span class="kw1">case</span> <span class="kw3">odd</span> x <span class="kw1">of</span><br>
+&nbsp; &nbsp; True <span class="sy0">-&gt;</span> nextPrime list <span class="br0">(</span>x <span class="sy0">+</span> <span class="nu0">2</span><span class="br0">)</span><br>
+&nbsp; &nbsp; False <span class="sy0">-&gt;</span> nextPrime list <span class="br0">(</span>x <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span><br>
+checkPrime <span class="sy0">::</span> <span class="br0">[</span><span class="kw4">Int</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span> <span class="sy0">-&gt;</span> <span class="kw4">Bool</span><br>
+checkPrime <span class="br0">(</span>x:xs<span class="br0">)</span> i <span class="sy0">=</span> <span class="kw1">case</span> <span class="br0">(</span> x <span class="sy0">&gt;</span> <span class="br0">(</span><span class="kw3">floor</span> <span class="br0">(</span><span class="kw3">sqrt</span> <span class="br0">(</span><span class="kw3">fromIntegral</span> i<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">of</span><br>
+&nbsp; False <span class="sy0">-&gt;</span> <span class="kw1">case</span> <span class="br0">(</span><span class="br0">(</span>i `<span class="kw3">mod</span>` x<span class="br0">)</span><span class="br0">)</span> <span class="kw1">of</span><br>
+&nbsp; &nbsp; <span class="nu0">0</span> <span class="sy0">-&gt;</span> False<br>
+&nbsp; &nbsp; <span class="sy0">_</span> <span class="sy0">-&gt;</span> checkPrime xs i<br>
+&nbsp; True <span class="sy0">-&gt;</span> True<br>
+checkPrime <span class="br0">[</span><span class="br0">]</span> i <span class="sy0">=</span> True</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=sourceblock&amp;num=6" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+</div>
+
+      </td>
+    </tr></tbody></table>
+<!--PageFooterFmt-->
+  <div id="wikifoot">
+    <div class="footnav">
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=edit">Edit</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=diff">History</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/NthPrime?action=print" target="_blank">Print</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/VjiaoBlack/RecentChanges">Recent Changes</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a></div>
+    <div class="lastmod">Page last modified on March 15, 2015, at 05:56 PM</div></div>
+<!--HTMLFooter-->
+
+
+</body></html>

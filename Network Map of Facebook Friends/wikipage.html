@@ -1,0 +1,1494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>CMSC-16200 Winter 2015 | Teocollin / NetworkMapOfFacebookFriends </title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="wikipage_files/pmwiki.css" type="text/css">
+  <!--HTMLHeader--><style type="text/css"><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  border: 1px solid #808080;
+  color: #000000;
+  background-color: #f1f0ed;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python .de1, .python .de2 {font-family: monospace; font-weight: normal;}
+.python  {font-family:monospace;}
+.python .imp {font-weight: bold; color: red;}
+.python li, .python .li1 {font-family: monospace; color: black; font-weight: normal;}
+.python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python .li2 {font-weight: bold;}
+.python .kw1 {color: #ff7700;font-weight:bold;}
+.python .kw2 {color: #008000;}
+.python .kw3 {color: #dc143c;}
+.python .kw4 {color: #0000cd;}
+.python .co1 {color: #808080; font-style: italic;}
+.python .coMULTI {color: #808080; font-style: italic;}
+.python .es0 {color: #000099; font-weight: bold;}
+.python .br0 {color: black;}
+.python .sy0 {color: #66cc66;}
+.python .st0 {color: #483d8b;}
+.python .nu0 {color: #ff4500;}
+.python .me1 {color: black;}
+.python .ln-xtra, .python li.ln-xtra, .python div.ln-xtra {background-color: #ffc;}
+.python span.xtra { display:block; }
+
+--></style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="robots" content="index,follow">
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id="wikilogo"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php"><img src="wikipage_files/uc-wordmark.png" alt="CMSC-16200 Winter 2015" border="0"></a></div>
+  <div id="wikihead">
+  <form action="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php">
+    <span class="headnav"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/RecentChanges" accesskey="c">Recent Changes</a> -</span>
+    <input name="n" value="Teocollin.NetworkMapOfFacebookFriends" type="hidden">
+    <input name="action" value="search" type="hidden">
+    <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a>:
+    <input name="q" class="inputbox searchbox" type="text">
+    <input class="inputbutton searchbutton" value="Go" type="submit"></form></div>
+<!--/PageHeaderFmt-->
+  <table id="wikimid" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<!--PageLeftFmt-->
+      <td id="wikileft" valign="top">
+        <p class="sidehead"> Main
+</p><ul><li><a class="urllink" href="http://cmsc-16200.cs.uchicago.edu/2015/" rel="nofollow">Course Home (exit)</a>
+</li><li><a class="urllink" href="https://piazza.com/uchicago/winter2015/cmsc16200/home" rel="nofollow">Piazza (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Main/HomePage">Course WikiHome</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges">Recent Changes</a> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges?action=rss">(rss)</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Student">Student</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Problems">Problems</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Resources">Resources</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Questions">Questions</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">Profiles</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">My Profile</a>
+</li></ul><p class="vspace sidehead"> Instructor
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/StuartKurtz">Stuart Kurtz</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/ArielFeldman">Ariel Feldman</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Instructor/SampleProblem">Sample Problem</a>
+</li></ul><p class="vspace sidehead"> Lab
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/MarkStoehr">Mark Stoehr</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/Labs">Labs</a>
+</li><li><a class="urllink" href="http://people.cs.uchicago.edu/%7Estoehr/cs162" rel="nofollow">Labs Page (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/FAQ">FAQ</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/PmWiki">PmWiki</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/Cookbook/SourceBlock" rel="nofollow">SourceBlock (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/DocumentationIndex">Documentation Index</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/FAQ">PmWiki FAQ</a>
+</li></ul><p class="vspace" style="text-align: right;"> <span style="font-size:83%"><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/SideBar?action=edit">edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id="wikibody" valign="top">
+<!--PageActionFmt-->
+        <div id="wikicmds"><ul><li class="browse">      <a accesskey="" rel="nofollow" class="selflink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends">View</a>
+</li><li class="edit">      <a accesskey="e" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=edit">Edit</a>
+</li><li class="diff">   <a accesskey="h" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=diff">History</a>
+</li><li class="print">     <a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=print">Print</a>
+</li><li class="logout"><em>  <span style="font-size:83%"><a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=logout">Logout</a></span></em>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id="wikititle">
+          <div class="pagegroup"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin">Teocollin</a> /</div>
+          <h1 class="pagetitle">NetworkMapOfFacebookFriends</h1></div>
+<!--PageText-->
+<div id="wikitext">
+<p>Network Map of Facebook friends
+</p>
+<p class="vspace">Proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teodoro Fields Collin</a>
+</p><h2>Statement</h2>
+<p>The objective of this project is to build a program, which given your
+ Facebook username/password and an integer n will produce a network map 
+of friendships up to n friendships away from you. The graph itself 
+should be composed of nodes, which represent people, and edges, which 
+represent friendships.
+</p><h2>Notes</h2>
+<p>This project will involve multiple parts and I would like to quickly comment on them:
+</p><ul><li>You will need to login into Facebook. There various 
+libraries for almost all languages that I have used that allow you to 
+interact with the web or simulate a browser. For example, python has <a class="urllink" href="https://docs.python.org/2/library/urllib.html" rel="nofollow">urlib</a> (which is a horrifiying abomination), <a class="urllink" href="http://docs.python-requests.org/en/latest/" rel="nofollow">requests</a>, and <a class="urllink" href="http://wwwsearch.sourceforge.net/mechanize/" rel="nofollow">mechanize</a>.
+<ul><li>Facebook is not a fan of this so you will need to deal with their restrictions.
+</li><li>You will also need to convince Facebook that you are an 
+approved browser i.e. a browser that you have used before or find away 
+of adding it whilst doing this.
+</li></ul></li><li>You will then need to do some sort of recursion on 
+your list of friends, and friends of friends, and so on so that you can 
+gather a list of people and friendships. 
+<ul><li>You will of course need to get this data from Facebook's HTML. 
+So, you are going to need some basic knowledge of HTML and something to 
+work with HTML.  
+</li></ul></li><li>You will then need to find a way of organizing this 
+into a graph object. There are many libraries to do this in many 
+languages. You could use one for your language, or you could format the 
+data for use in some other language or technology such as <a class="urllink" href="http://www.r-project.org/" rel="nofollow">R</a> (if using python you could use the <a class="urllink" href="http://rpy.sourceforge.net/" rel="nofollow">R to python bridge</a>) or <a class="urllink" href="http://www.gpartraphviz.org/Documentation/dotguide.pdf" rel="nofollow">Graphviz's dot language</a>
+</li><li>From whatever method you choose, you need to output the graph as an image and write it to the disk. 
+</li></ul><p class="vspace">I will note that accuracy of this graph is 
+going to be naturally restricted by Facebook's privacy settings and 
+suggest that we just accept that. 
+</p>
+<p class="vspace">Lastly, I will note that this could be modified to add
+ additional attributes to a graph. For example, the color of a node 
+could represent group membership (e.g. Maroon for anyone who is part a 
+group with UChicago in the name).
+</p>
+<p class="vspace">The terminal commands should look something like this:
+</p>
+<div class="sourceblock " id="sourceblock1">
+  <div class="sourceblocktext"><div>facebookgrapher username pass 5<br>[A
+ lot of output of what it is doing, which you will probably want in the 
+initial stages to detect errors anyway or we could write this to a log 
+file]<br>The graph for username has been created and named "graph.png"<br></div></div>
+  <div class="sourceblocklink"></div>
+</div>
+
+<div class="vspace"></div><hr>
+<div class="vspace"></div><h2>Part 1: Getting to the facebook newsfeed.</h2>
+<div class="vspace"></div><pre> (By <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teodoro Fields Collin</a>)
+</pre><p class="vspace">I have successfully wrote a python script that 
+will get to, login into facebook, and get to the news feed. I have most 
+of the rest of this program figured out and hope to be finished soon, 
+but I thought I would document this stage while it was fresh in my head.
+</p>
+<p class="vspace">Of the tools for emulating a web browser in python, I 
+opted to use mechanize. Urlib is horrible and requests lacks a crucial 
+feature. Mainly, requests doesn't exactly simulate a web browser... And,
+ we need something close to an actual browser for a two reasons. First, 
+because facebook won't let an unidentified browser use their site, so we
+ use br.addheaders = ... to assign some browser id. Second, we need to 
+be able to handle cookies. To do this, we also need something called <a class="urllink" href="https://docs.python.org/2/library/cookielib.html" rel="nofollow">cookielib</a> and to tell mechanize that we need handle cookies.
+</p>
+<p class="vspace">This almost allows us to login. Despite being pretty 
+good, mechanize has some flaws, most notably it doesn't support 
+javascript, which is important because facebook requires javascript. 
+However, that is just the desktop version of facebook. Since various 
+mobile devices don't have javascript and facebook wants mobile users, 
+the mobile version doesn't require it, so we go to the mobile version 
+using the following: 
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock2">
+  <div class="sourceblocktext"><div class="python">br.<span class="kw2">open</span><span class="br0">(</span><span class="st0">'https://m.facebook.com/'</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=2" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Now, to login, we identify the forms that we need to submit to facebook, fill them, and submit them, which is done like this:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock3">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> login<span class="br0">(</span><span class="kw3">email</span><span class="sy0">,</span> password<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span><span class="br0">[</span><span class="st0">'email'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw3">email</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span><span class="br0">[</span><span class="st0">'pass'</span><span class="br0">]</span> <span class="sy0">=</span> password<br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+login<span class="br0">(</span>your_email<span class="sy0">,</span> your_password<span class="br0">)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=3" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">However, we will not reach our news feed or profile 
+page, instead, facebook might freakout because we are logging in from a 
+new device or browser. So, we need to use mechanize to hit all the right
+ buttons to get past all of this crap.
+</p>
+<p class="vspace">This requires a lot of messing around with mecahinze's ways of using browser controls. I use <a class="urllink" href="http://www.pythonforbeginners.com/cheatsheet/python-mechanize-cheat-sheet" rel="nofollow">this tutorial</a>
+ and I cite some of their techniques in the code. Specifically, using 
+the methods, I write a function that prints out the available controls 
+and a function that prints the raw html response:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock4">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> control_explore<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> form <span class="kw1">in</span> br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> form<br>
+&nbsp; &nbsp; <span class="kw1">for</span> control <span class="kw1">in</span> br.<span class="me1">form</span>.<span class="me1">controls</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span>control<span class="sy0">,</span> control.<span class="kw2">type</span><span class="sy0">,</span> control.<span class="me1">name</span><span class="sy0">,</span> br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> print_response<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">print</span> br.<span class="me1">response</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=4" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">I load what I have so far into an python session via 
+my command line. I use these tools to navigate getting by all of 
+facebook's login checkpoints (that I know of) by hand. I write down the 
+things that I have to do and turn them into functions, resulting in 
+functions like "say_this_is_okay()". I note the conditions in which I 
+have to do these things. In order to recognize these conditions, I do 
+not look at the raw html, instead, I use a library built for dealing 
+with HTML, called <a class="urllink" href="http://www.crummy.com/software/BeautifulSoup/" rel="nofollow">BeautifulSoup</a>.
+ I also use the number of controls available, working under the 
+assumption that the facebook page has dramatically more options than a 
+login checkpoint. I then combine all of this into a function to get me 
+from logging in to the news feed. The function is called 
+"control_control()"
+</p>
+<p class="vspace">The result of all of this is a function which gets us 
+from facebook's concerns about my security to the news feed. And, it 
+seems to work and I can verify the output by looking at a print out of 
+the html. This works with my account, due to varying security settings, 
+it might require further modifications.
+</p>
+<p class="vspace">Here is the code as it currently stands minus my username, password, doctstrings, and some pep:
+</p>
+<div class="sourceblock " id="sourceblock5">
+  <div class="sourceblocktext"><div class="python"><br>
+__author__ <span class="sy0">=</span> <span class="st0">'teo'</span><br>
+<span class="kw1">import</span> mechanize<br>
+<span class="kw1">import</span> <span class="kw3">cookielib</span><br>
+<span class="kw1">from</span> bs4 <span class="kw1">import</span> &nbsp;BeautifulSoup<br>
+<br>
+br <span class="sy0">=</span> mechanize.<span class="me1">Browser</span><span class="br0">(</span><span class="br0">)</span> <span class="co1"># set up browser</span><br>
+<br>
+<span class="co1"># sets up cookie handling</span><br>
+br.<span class="me1">set_handle_robots</span><span class="br0">(</span><span class="kw2">False</span><span class="br0">)</span><br>
+cj <span class="sy0">=</span> <span class="kw3">cookielib</span>.<span class="me1">LWPCookieJar</span><span class="br0">(</span><span class="br0">)</span><br>
+br.<span class="me1">set_cookiejar</span><span class="br0">(</span>cj<span class="br0">)</span><br>
+<br>
+<br>
+br.<span class="me1">set_handle_equiv</span><span class="br0">(</span><span class="kw2">True</span><span class="br0">)</span><br>
+br.<span class="me1">set_handle_redirect</span><span class="br0">(</span><span class="kw2">True</span><span class="br0">)</span><br>
+br.<span class="me1">set_handle_referer</span><span class="br0">(</span><span class="kw2">True</span><span class="br0">)</span> <span class="co1"># The three are to do deal with login redirects</span><br>
+<br>
+<br>
+br.<span class="me1">addheaders</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">(</span><span class="st0">'User-agent'</span><span class="sy0">,</span> <span class="st0">'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'</span><span class="br0">)</span><span class="br0">]</span> <span class="co1"># set browser id</span><br>
+br.<span class="kw2">open</span><span class="br0">(</span><span class="st0">'https://m.facebook.com/'</span><span class="br0">)</span> <span class="co1"># gets us to the login page</span><br>
+br.<span class="me1">select_form</span><span class="br0">(</span>nr<span class="sy0">=</span><span class="nu0">0</span><span class="br0">)</span><br>
+<br>
+your_username <span class="sy0">=</span> <span class="st0">""</span> &nbsp;<span class="co1"># set it</span><br>
+your_password <span class="sy0">=</span> <span class="st0">""</span> &nbsp;<span class="co1"># set it</span><br>
+<br>
+<span class="kw1">def</span> print_response<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">print</span> br.<span class="me1">response</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> login<span class="br0">(</span><span class="kw3">email</span><span class="sy0">,</span> password<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span><span class="br0">[</span><span class="st0">'email'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw3">email</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span><span class="br0">[</span><span class="st0">'pass'</span><span class="br0">]</span> <span class="sy0">=</span> password<br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> say_yes_basic<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; control <span class="sy0">=</span> br.<span class="me1">form</span>.<span class="me1">find_control</span><span class="br0">(</span><span class="st0">"submit[Continue]"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> say_this_is_okay<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; control <span class="sy0">=</span> br.<span class="me1">form</span>.<span class="me1">find_control</span><span class="br0">(</span><span class="st0">"submit[This is Okay]"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> control_something<span class="br0">(</span>br<span class="sy0">,</span>something<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; control <span class="sy0">=</span> br.<span class="me1">form</span>.<span class="me1">find_control</span><span class="br0">(</span>something<span class="br0">)</span><br>
+&nbsp; &nbsp; br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><br>
+<br>
+<br>
+<span class="co1"># cite http://www.pythonforbeginners.com/cheatsheet/python-mechanize-cheat-sheet</span><br>
+<br>
+<br>
+<span class="kw1">def</span> control_explore<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> form <span class="kw1">in</span> br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> form<br>
+&nbsp; &nbsp; <span class="kw1">for</span> control <span class="kw1">in</span> br.<span class="me1">form</span>.<span class="me1">controls</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span>control<span class="sy0">,</span> control.<span class="kw2">type</span><span class="sy0">,</span> control.<span class="me1">name</span><span class="sy0">,</span> br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span>BeautifulSoup<span class="br0">(</span>br.<span class="me1">response</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> ncontrols<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">[</span>control.<span class="me1">name</span> <span class="kw1">for</span> control <span class="kw1">in</span> br.<span class="me1">form</span>.<span class="me1">controls</span><span class="br0">]</span><br>
+<br>
+<br>
+<span class="kw1">def</span> go_to_profile<span class="br0">(</span>br<span class="sy0">,</span> name<span class="br0">)</span>:<br>
+&nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span><span class="st0">'https://m.facebook.com/'</span> + name<span class="br0">)</span><br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> control_control<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; soup_response <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; n <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>ncontrols<span class="br0">(</span>br<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> n<br>
+&nbsp; &nbsp; <span class="kw1">print</span> soup_response.<span class="me1">title</span>.<span class="me1">text</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n <span class="sy0">&gt;</span> <span class="nu0">10</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Bypassed Facebook security"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> soup_response.<span class="me1">title</span>.<span class="me1">text</span> <span class="sy0">==</span> <span class="st0">"Remember Browser"</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"not remembering"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; say_yes_basic<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> soup_response.<span class="me1">title</span>.<span class="me1">text</span> <span class="sy0">==</span> <span class="st0">"Review Recent Login"</span>: <span class="co1">#Two almost identicial options...</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"reviewing"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; say_yes_basic<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> mechanize.<span class="me1">ControlNotFoundError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; say_this_is_okay<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+<br>
+<br>
+<br>
+<br>
+login<span class="br0">(</span>your_username<span class="sy0">,</span> your_password<span class="br0">)</span><br>
+control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+print_response<span class="br0">(</span>br<span class="br0">)</span><br>
+<span class="kw1">print</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span>.<span class="me1">prettify</span><span class="br0">(</span><span class="br0">)</span> <span class="co1"># output verify</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=5" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<hr>
+<h2>Parts 2 &amp; 3:</h2>
+<h3>Part 2: Scrapping friends, friends of friends, and what not. </h3>
+<h3>Part 3: Storing the Data as a graph and outputting it.</h3>
+<h4>Warning: This section is still requires some copy editing/ looking over for trivial mistakes in the writting.</h4>
+<p>By <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teodoro Fields Collin</a>
+</p>
+<p class="vspace">(Note: If you just want to see the code, it is at the very bottom of my archive of my thought process)
+</p>
+<p class="vspace">So, as it turns out, due to the way the mobile version
+ of Facebook works, scrapping my direct friends and everyone else's 
+(friends of friends of ...) are two distinct challenges.
+</p>
+<p class="vspace">My friends are at the url: <a class="urllink" href="https://m.facebook.com/friends/center/friends/?ref=bookmark" rel="nofollow">https://m.facebook.com/friends/center/friends/?ref=bookmark</a>
+ and since I have about 9 of them, this is all I need to do. This is 
+going to be a consistent theme in this code; I’ve only tested it on my 
+self. I will probably create a test profile and friend everyone here to 
+test it with more than just 9.
+</p>
+<p class="vspace">Anyway, from the friends page, getting the list of 
+friends is trivial because Facebook labels all of them with the same 
+class on my profile. So, we convert the page to a bs4 object and get a 
+bs4 object for each friend listing:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock6">
+  <div class="sourceblocktext"><div class="python"><br>
+<span class="kw1">def</span> get_my_friends<span class="br0">(</span>br<span class="br0">)</span>:<br>
+  &nbsp; &nbsp;soup <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span>  &nbsp; &nbsp;<br>
+&nbsp; &nbsp; <span class="kw1">return</span> soup.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'div'</span><span class="sy0">,</span> class_<span class="sy0">=</span><span class="st0">'x e y'</span><span class="br0">)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=6" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Now, for reasons completely former to me, it doesn’t 
+link directly to the profile page. So, I opt to simply extract the uid, 
+(which is just a string of digits that can allow us to access someone’s 
+profile page by going to m.facebook.com/uid . You can find your uid on <a class="urllink" href="http://findmyfacebookid.com/" rel="nofollow">this site</a>) and the user name. This is accomplished using regular expressions of the url and bs4 tag system:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock7">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> my_friend_to_uid<span class="br0">(</span>soup<span class="br0">)</span>:   &nbsp; &nbsp;<br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw3">re</span>.<span class="me1">search</span><span class="br0">(</span><span class="st0">'(?&lt;=uid=)[0-9]*'</span><span class="sy0">,</span> soup.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span><span class="br0">)</span>.<span class="me1">group</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span>   <br>
+<br>
+<span class="kw1">def</span> my_frend_to_name<span class="br0">(</span>soup<span class="br0">)</span>:  &nbsp; &nbsp;<br>
+&nbsp; &nbsp; <span class="kw1">return</span> soup.<span class="me1">span</span>.<span class="me1">text</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=7" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">With these tools, we can get all of my friends’ names and uids:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock8">
+  <div class="sourceblocktext"><div class="python">go_to_my_friends<span class="br0">(</span>br<span class="br0">)</span> <br>
+a <span class="sy0">=</span> get_my_friends<span class="br0">(</span>br<span class="br0">)</span> <br>
+my_friends_uid <span class="sy0">=</span> <span class="br0">[</span>my_friend_to_uid<span class="br0">(</span>a2<span class="br0">)</span> <span class="kw1">for</span> a2 <span class="kw1">in</span> a<span class="br0">]</span> my_friends_names <span class="sy0">=</span> <span class="br0">[</span>a1.<span class="me1">span</span>.<span class="me1">text</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> a<span class="br0">]</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=8" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Now, we effectively have the first set of edges, one 
+for each friend, constituting the friendship between myself and all my 
+friends. I could keep track of this with a list of edges, but I think 
+there might be a better way.
+</p>
+<p class="vspace">There is a library for the creation, storing, analysis, and display of graphs. <a class="urllink" href="https://networkx.github.io/" rel="nofollow">It is called networkx and it scales fairly well.</a> 
+</p>
+<p class="vspace">A graph can be generated like this: 
+</p>
+<div class="sourceblock " id="sourceblock9">
+  <div class="sourceblocktext"><div class="python">graph <span class="sy0">=</span> nx.<span class="me1">Graph</span><span class="br0">(</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=9" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">and I can add my new edges like this:
+</p>
+<div class="sourceblock " id="sourceblock10">
+  <div class="sourceblocktext"><div class="python">graph.<span class="me1">add_edges_from</span><span class="br0">(</span><span class="br0">[</span><span class="br0">(</span>profile_name<span class="sy0">,</span> a1.<span class="me1">span</span>.<span class="me1">text</span><span class="br0">)</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> a<span class="br0">]</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=10" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">So, at each turn, I just add the edges to the graph 
+and continue on. Having done all of this, we have effectively covered 
+the first degree of separation. Now, we need to grab all my friends of 
+friends and friends of friends of friends, and so on.
+</p>
+<p class="vspace">When we go to some other page, we will already have 
+gotten their uid or profile name from whoever we scrapped from. To do 
+this, we need to go to their page, and then append 
+?v=friends&amp;startindex=00 and go to the new url, which will be the 
+location of the list of this person’s friends. This is accomplished with
+ this:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock11">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> friends_friends_page<span class="br0">(</span>br<span class="sy0">,</span> uid<span class="br0">)</span>:<br>
+&nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; go_to_profile<span class="br0">(</span>br<span class="sy0">,</span> uid<span class="br0">)</span><br>
+&nbsp; &nbsp; actual_profile_url <span class="sy0">=</span> br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">replace</span><span class="br0">(</span><span class="st0">'?_rdr'</span><span class="sy0">,</span><span class="st0">''</span><span class="br0">)</span> <span class="co1"># removes redirect info</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> actual_profile_url + <span class="st0">'?v=friends&amp;startindex=00'</span><br>
+&nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">10</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>actual_profile_url + <span class="st0">'?v=friends&amp;startindex=00'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span> &nbsp;<span class="co1"># prints some feedback so we can traceback errors</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=11" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Unlike before, we have no assurances that all the 
+friend listings will have a particular class tag. So, after much 
+comparison, I came up with a set of criteria that will detect if a tag 
+is a friend listing and made a function that tests them:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock12">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> is_a_friend<span class="br0">(</span>tag<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument a bs4 object which may or may not have the link to someone's facebook friend<br>
+&nbsp; &nbsp; :return Boolean<br>
+&nbsp; &nbsp; Returns true if there is a friend and returns false if there isnt<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; a <span class="sy0">=</span> tag.<span class="me1">has_attr</span><span class="br0">(</span><span class="st0">'class'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; b <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>tag.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">2</span> <span class="kw1">or</span> <span class="kw2">len</span><span class="br0">(</span>tag.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">1</span><br>
+&nbsp; &nbsp; c <span class="sy0">=</span> tag.<span class="me1">img</span> <span class="sy0">==</span> <span class="kw2">None</span><br>
+&nbsp; &nbsp; d <span class="sy0">=</span> tag.<span class="me1">table</span> <span class="sy0">==</span> <span class="kw2">None</span><br>
+&nbsp; &nbsp; e <span class="sy0">=</span> <span class="kw1">not</span> tag.<span class="me1">has_attr</span><span class="br0">(</span><span class="st0">'id'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> a <span class="kw1">and</span> b <span class="kw1">and</span> c <span class="kw1">and</span> d <span class="kw1">and</span> e<br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=12" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">We can use this to filter out all the bs4 objects that contain friends from a set of possible candidates: 
+</p>
+<div class="sourceblock " id="sourceblock13">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> get_friends_of_friends<span class="br0">(</span>br<span class="br0">)</span>:<br>
+  &nbsp; &nbsp;soups <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span> <br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">filter</span><span class="br0">(</span>is_a_friend<span class="sy0">,</span> <span class="br0">(</span>soups.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'div'</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=13" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Due to the nature of the mobile site, running the 
+above right after we get to the friends page of someone will not yield 
+all their friends, but only the first ten or twenty. On the actual 
+mobile site, you would need to scroll down. However, scrolling is not 
+exactly something within our current capacities. Thankfully, scrolling 
+is really just trigger the loading of a webpage which is nicely labeled 
+with id=m_more_friends. So, I can get that location, and from extract 
+the new starting index for looking at friends using the regular 
+expression:  '(?&lt;=startindex=)[0-9]*' I can then change the starting 
+index part of the url to reflect where we are and carry on the scraping.
+</p>
+<p class="vspace">Replacing scrolling with loading a url means that I do
+ have to grab friends and then load the url, and do it all again until 
+there is no more new friends, signified by the lack of a tag with 
+id=m_more_friends. This ends up being coded as three functions. We use 
+friends_friends_page to get us to the the starting friend page. Then, we
+ use the initial writing of get_friends_of_friends to get the first list
+ of friends, then we pass the result and the current browser state to 
+get_rest_friends_of_friends which will continue to add the friend’s 
+friends to our total until it can’t anymore. This all looks like this:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock14">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> get_rest_friends_of_friends<span class="br0">(</span>br<span class="sy0">,</span> initial_friends<span class="br0">)</span>:<br>
+&nbsp; &nbsp; soup <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; index_locations <span class="sy0">=</span> soup.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'div'</span><span class="sy0">,</span> <span class="kw2">id</span><span class="sy0">=</span><span class="st0">"m_more_friends"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1"># print index_locations</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">len</span><span class="br0">(</span>index_locations<span class="br0">)</span> <span class="sy0">!=</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; strip <span class="sy0">=</span> <span class="kw3">re</span>.<span class="kw2">compile</span><span class="br0">(</span><span class="st0">'=[0-9]*'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; current_url <span class="sy0">=</span> <span class="br0">(</span>br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1"># print current_url</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; index_location <span class="sy0">=</span> index_locations<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; newindex <span class="sy0">=</span> <span class="kw3">re</span>.<span class="me1">search</span><span class="br0">(</span><span class="st0">'(?&lt;=startindex=)[0-9]*'</span><span class="sy0">,</span> index_location<span class="br0">)</span>.<span class="me1">group</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; tempurl <span class="sy0">=</span> <span class="kw3">re</span>.<span class="me1">sub</span><span class="br0">(</span>strip<span class="sy0">,</span> <span class="st0">'='</span><span class="sy0">,</span> current_url<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; newurl <span class="sy0">=</span> tempurl + newindex<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> newurl<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>newurl<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> URLError:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Network problems"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">150</span><span class="sy0">,</span><span class="nu0">300</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>newurl<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> URLError:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">800</span><span class="sy0">,</span><span class="nu0">1600</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>newurl<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; initial_friends +<span class="sy0">=</span> get_friends_of_friends<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">#print initial_friends</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; get_rest_friends_of_friends<span class="br0">(</span>br<span class="sy0">,</span> initial_friends<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> initial_friends<br>
+<br>
+<span class="kw1">def</span> get_all_friends<span class="br0">(</span>br<span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument a mechanize browser and an user id of some type<br>
+&nbsp; &nbsp; :return all of a user's friends (that we can see..)<br>
+&nbsp; &nbsp; This combines getting the initail friends with scrolling down adding more friends<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; friends_friends_page<span class="br0">(</span>br<span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span><br>
+&nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> get_rest_friends_of_friends<span class="br0">(</span>br<span class="sy0">,</span> get_friends_of_friends<span class="br0">(</span>br<span class="br0">)</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=14" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">The reason that I use exceptions and long waiting 
+periods is that sending lots of requests as required by this method can 
+result in either the network I’m operating on getting disconnected or 
+Facebook temporarily sending a 500 error. So, I simply have it wait. 
+This is a rather simple way of dealing with the problem. As I add to 
+this, I will probably create a wrapper like function for opening urls 
+that has those sort of precautions builtin.
+</p>
+<p class="vspace">Moving on, now that we have a way of getting someone 
+else’s list of friends, I can combine it with our method of adding 
+friends to the graph and the recursion needed to reach a certain depth 
+level as specified by the user. This results in a function which given 
+the browser state, the current depth, the person who we are scrapping, 
+and the person who we found them through (i.e. their friend). And, it 
+gets all of the new person’s friends, adds the edge between the friend 
+that got them their and all of their friends, and, then, recurses by 
+mapping itself on to a list of its friends names and ids, decrementing 
+the depth level and passing the browser state each time. The function 
+looks like this:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock15">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> friends_graph<span class="br0">(</span>br<span class="sy0">,</span> n<span class="sy0">,</span> <span class="kw2">id</span><span class="sy0">,</span> name<span class="sy0">,</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument a mechanize browser<br>
+&nbsp; &nbsp; :argument the currrent depth<br>
+&nbsp; &nbsp; :argument the id of the user whose friends we are scrapping and adding to the graph<br>
+&nbsp; &nbsp; :argument the name of the user who they are friends with<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span><span class="st0">'id is'</span><span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span><span class="st0">'name is'</span><span class="sy0">,</span> name<span class="br0">)</span><br>
+&nbsp; &nbsp; friends_friends <span class="sy0">=</span> get_all_friends<span class="br0">(</span>br<span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> friends_friends <span class="kw1">is</span> <span class="kw2">None</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Reached End"</span><br>
+&nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; friends_friends_names <span class="sy0">=</span> <span class="br0">[</span>a1.<span class="me1">span</span>.<span class="me1">text</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> friends_friends<span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; friends_friends_ids <span class="sy0">=</span> <span class="br0">[</span>a1.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span>.<span class="me1">replace</span><span class="br0">(</span><span class="st0">'?fref=fr_tab'</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">)</span>.<span class="me1">lstrip</span><span class="br0">(</span><span class="st0">'/'</span><span class="br0">)</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> friends_friends<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">except</span> <span class="kw2">NameError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Security settings"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">except</span> <span class="kw2">AttributeError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"security settings"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1"># print friends_friends_ids</span><br>
+&nbsp; &nbsp; graph.<span class="me1">add_edges_from</span><span class="br0">(</span><span class="br0">[</span><span class="br0">(</span>name<span class="sy0">,</span> a1<span class="br0">)</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> friends_friends_names<span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1">#nx.draw(graph)</span><br>
+&nbsp; &nbsp; <span class="co1">#plt.savefig('crap.png')</span><br>
+&nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span>graph<span class="sy0">,</span> <span class="st0">'mtemp.dot'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n - <span class="nu0">1</span> <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Reached End"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw2">map</span><span class="br0">(</span><span class="kw1">lambda</span> ids<span class="sy0">,</span> names: friends_graph<span class="br0">(</span>br<span class="sy0">,</span> <span class="br0">(</span>n - <span class="nu0">1</span><span class="br0">)</span><span class="sy0">,</span> ids<span class="sy0">,</span> names<span class="br0">)</span><span class="sy0">,</span> friends_friends_ids<span class="sy0">,</span> friends_friends_names<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"we have completed"</span> + <span class="kw2">str</span><span class="br0">(</span>name<span class="br0">)</span><br>
+&nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span>graph<span class="sy0">,</span> <span class="st0">'temp.dot'</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=15" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Note, nx.write-dot takes the current state of the 
+graph, with all of its edges, and writes a dot file. A dot file is a 
+file that can be used by various programs to produce a graphical 
+representation of a network graph. You can find more information <a class="urllink" href="http://www.graphviz.org/" rel="nofollow">here</a>. 
+</p>
+<p class="vspace">So, I then combine the setup for getting the initial 
+persons friends, this function, and nx.write dot to write the main 
+function, which simply takes a level of depth and then ends with the 
+creation of a dot file with all the information that we scrapped and put
+ into the graph. Here it is:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock16">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> main<span class="br0">(</span>n<span class="sy0">,</span> your_email1<span class="sy0">,</span> your_password1<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument The degrees to cover<br>
+&nbsp; &nbsp; :return None<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; profile_name <span class="sy0">=</span> <span class="st0">"Teodoro Fields Collin"</span><br>
+&nbsp; &nbsp; login<span class="br0">(</span>your_email1<span class="sy0">,</span> your_password1<span class="sy0">,</span> br<span class="br0">)</span><br>
+&nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; go_to_my_friends<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; a <span class="sy0">=</span> get_my_friends<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; my_friends_uid <span class="sy0">=</span> <span class="br0">[</span>my_friend_to_uid<span class="br0">(</span>a2<span class="br0">)</span> <span class="kw1">for</span> a2 <span class="kw1">in</span> a<span class="br0">]</span><br>
+&nbsp; &nbsp; my_friends_names <span class="sy0">=</span> <span class="br0">[</span>a1.<span class="me1">span</span>.<span class="me1">text</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> a<span class="br0">]</span><br>
+&nbsp; &nbsp; graph.<span class="me1">add_edges_from</span><span class="br0">(</span><span class="br0">[</span><span class="br0">(</span>profile_name<span class="sy0">,</span> a1.<span class="me1">span</span>.<span class="me1">text</span><span class="br0">)</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> a<span class="br0">]</span><span class="br0">)</span> <span class="co1"># Adds all my friends to the graph</span><br>
+<br>
+&nbsp; &nbsp; <span class="co1"># Completes the first degree of sep</span><br>
+&nbsp; &nbsp; <span class="kw2">map</span><span class="br0">(</span><span class="kw1">lambda</span> uids<span class="sy0">,</span> names: friends_graph<span class="br0">(</span>br<span class="sy0">,</span> <span class="br0">(</span>n - <span class="nu0">1</span><span class="br0">)</span><span class="sy0">,</span> uids<span class="sy0">,</span> names<span class="br0">)</span><span class="sy0">,</span> my_friends_uid<span class="sy0">,</span> my_friends_names<span class="br0">)</span> <span class="co1"># runs the functions for getting everyone else's friends on all my friends</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Just needs to be drawn"</span><br>
+&nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span>graph<span class="sy0">,</span> <span class="st0">'results.dot'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"done"</span><br>
+<br>
+<br>
+main<span class="br0">(</span><span class="nu0">3</span><span class="sy0">,</span> your_email<span class="sy0">,</span> your_password<span class="br0">)</span> <span class="co1"># runs it for three degrees</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=16" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">So, now we have a dot file with our info and we can do things with it, which I will address shortly after I make quick note.
+</p>
+<p class="vspace">I have run the program on myself and it finishes in 
+around 16 hours. It used to be faster, but then I added the random 
+delays to avoid getting blocked from Facebook (and pissing off my entire
+ house) and also avoiding their 500 errors. I plan on making another 
+account and friending more people so that I can figure out some of the 
+problems that may emerge if has to run for a longer period of time. But 
+that will come later and be documented in a later stage. 
+</p>
+<div class="vspace"></div><hr>
+<h3>Part 4: Graphing</h3>
+<p>Graphiz has quite a few methods of graphing large files and I have 
+tried a few. They all end in either the process being killed or a series
+ of bizarre errors concluded with segmentation fault. I suspect that the
+ file has simply too much data for gaphiz. I ran wc -l on it and it 
+reported that it had 370k edges (one edge per line). I will have to look
+ into other options, but if none are available, all hope is not lost.
+</p>
+<p class="vspace">Networkx posses the ability to reimport the dot file. 
+It also posses the ability to measure or estimate a bunch of properties.
+ I will write with another program that imports the file and measures 
+the density, attempts to find the central node, tests other things like 
+if on average a person’s friends have more friends than they do or 
+anything else that I can come up with. 
+</p>
+<p class="vspace">Lastly, networks can create subgraphs and I may just graph many portions of the graph. 
+</p>
+<p class="vspace">Current Conclusions:
+</p><ul><li>We have a semi-functional scrapper that needs to be tested on other accounts and for longer periods of time.
+</li><li>We may have to settle for alternatives to visual outputs. 
+</li><li>There is still more work to be done and I will hopefully report back again.
+</li></ul><hr>
+<h3>Part 5: Reimporting and Analysis</h3>
+<p>Networkx posses the native ability to reimport dot files as graph 
+objects, or, so I thought it did. When I tried to reimport it threw a 
+unicode related exception. Upon further examination, I found that it 
+relies on something called pygraphviz to reimport the data file, and 
+this library was written in a unicode unfriendly manner, from what I can
+ see. 
+</p>
+<p class="vspace">The main problem is that people have names with 
+non-english characters. People can have umlauts in their name or their 
+names can be in Chinese, Japanese, etc... 
+</p>
+<p class="vspace">I attempted to see if the library had some option that
+ I could change to solve the problem. It didn't. So, I had to quickly 
+write a function to convert unicode to ascii while maintaining the 
+structure of the graph. To do this, I used the library <a class="urllink" href="https://pypi.python.org/pypi/Unidecode" rel="nofollow">Unidecode</a>
+ which will convert unicode characters in other languages to equivalent 
+english, by some rules that seem to for the most keep things one to one.
+ I also used <a class="urllink" href="https://docs.python.org/2/library/unicodedata.html" rel="nofollow">Unicode Data</a> to write all of it to a file. 
+</p>
+<p class="vspace">All of this results in a function which converts are unicode dot file to ascii while maintaining the structure of the graph:
+</p>
+<div class="sourceblock " id="sourceblock17">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> correct<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw2">file</span> <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">(</span><span class="st0">'results.dot'</span><span class="sy0">,</span><span class="st0">'r'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw2">all</span> <span class="sy0">=</span> <span class="kw2">file</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw2">file</span>.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; allb <span class="sy0">=</span> <span class="kw2">unicode</span><span class="br0">(</span><span class="kw2">all</span><span class="sy0">,</span> <span class="st0">'utf-8'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; allc <span class="sy0">=</span> unidecode<span class="br0">(</span>allb<span class="br0">)</span><br>
+&nbsp; &nbsp; alla <span class="sy0">=</span> <span class="kw2">unicode</span><span class="br0">(</span>allc<span class="sy0">,</span> <span class="st0">'utf-8'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; b <span class="sy0">=</span> <span class="kw3">unicodedata</span>.<span class="me1">normalize</span><span class="br0">(</span><span class="st0">'NFKD'</span><span class="sy0">,</span> alla<span class="br0">)</span>.<span class="me1">encode</span><span class="br0">(</span><span class="st0">'ascii'</span><span class="sy0">,</span> <span class="st0">'ignore'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; f <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">(</span><span class="st0">'try.dot'</span><span class="sy0">,</span><span class="st0">'w'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; f.<span class="me1">write</span><span class="br0">(</span>b<span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=17" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">With this solved, I was able to start writing some 
+functions to mess around with the analysis capabilities of networkx. 
+Here is a basic start:
+</p>
+<div class="sourceblock " id="sourceblock18">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> graph_analysis<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; A <span class="sy0">=</span> pygraphviz.<span class="me1">AGraph</span><span class="br0">(</span><span class="kw2">file</span><span class="sy0">=</span><span class="st0">'try.dot'</span><span class="sy0">,</span> encoding<span class="sy0">=</span><span class="st0">'ascii'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; a <span class="sy0">=</span> nx.<span class="me1">from_agraph</span><span class="br0">(</span>A<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="br0">(</span><span class="kw2">max</span><span class="br0">(</span>nx.<span class="me1">degree_centrality</span><span class="br0">(</span>a<span class="br0">)</span>.<span class="me1">values</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=18" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">As it turns out, I can't actually think of much 
+analysis to do on this data. If anyone has any ideas, I will be happy to
+ implement them, but for now, I will just settle for the friendship 
+paradox. Here is the code for that. For the record, within 3 degrees of 
+me on facebook, not accounting for privacy settings and peripheral 
+nodes, on average someone's friends have 495 more friends than they do.
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock19">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> friendship_paradox<span class="br0">(</span>graph<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph digraph<br>
+&nbsp; &nbsp; :return returns the average dif between the number of friends that a node has and the average number of friends<br>
+&nbsp; &nbsp; the node's friends have<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nf'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span> <span class="co1"># computes number of friends</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nff'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">sum</span><span class="br0">(</span><span class="br0">[</span>graph.<span class="me1">node</span><span class="br0">[</span>z<span class="br0">]</span><span class="br0">[</span><span class="st0">'nf'</span><span class="br0">]</span> <span class="kw1">for</span> z <span class="kw1">in</span> graph.<span class="me1">successors</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">]</span><span class="br0">)</span> / <span class="br0">(</span><span class="nu0">1</span> + <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1"># computers the average number of friends that one's friends have</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">sum</span><span class="br0">(</span><span class="br0">[</span>graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nff'</span><span class="br0">]</span> - graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nf'</span><span class="br0">]</span> <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span><span class="br0">]</span><span class="br0">)</span>/<span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1"># returns average dif between the two numbers over all nodes.</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=19" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<hr>
+<h3>Part 6: A final attempt at graphing.</h3>
+<p>As I have found that the tools at my disposal are unable to graph 
+really large network graphs and I have no desire to reinvent the wheel, I
+ decided to reduce the problem to graphing all the sub-graphs around all
+ the sub-nodes. This result in a function to create a bunch of 
+sub-graphs (by listing all the involved nodes and passing it to a filter
+ function made for creating subgraphs) and a function to graph them (by 
+writing them to .dot files):
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock20">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> all_sucs_not<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> exclude<span class="sy0">,</span> n<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :start The person you are centering on<br>
+&nbsp; &nbsp; :exclude The person you are excluding, probably where the graph started<br>
+&nbsp; &nbsp; :n depth from start<br>
+&nbsp; &nbsp; :return a list of nodes to be made into a sub graph<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; stuff <span class="sy0">=</span> <span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span> <span class="kw1">if</span> x <span class="kw1">is</span> <span class="kw1">not</span> exclude<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff<br>
+&nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff + <span class="kw2">list</span><span class="br0">(</span>chain.<span class="me1">from_iterable</span><span class="br0">(</span><span class="br0">[</span>all_sucs_not<span class="br0">(</span>graph<span class="sy0">,</span> x<span class="sy0">,</span> exclude<span class="sy0">,</span> <span class="br0">(</span>n-<span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">for</span> x <span class="kw1">in</span> stuff<span class="br0">]</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> all_sub_graphs<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> depth<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :param start the center of the graph or the node you want to have all these graphs link back to<br>
+&nbsp; &nbsp; :depth depth of each from the neighboring nod<br>
+&nbsp; &nbsp; :return a list of all subgraphs<br>
+<br>
+&nbsp; &nbsp; This function takes a digraph and a start and a depth. It takes the start and finds all the nodes around it. For<br>
+&nbsp; &nbsp; each of those nodes it creates a subgraph going out to the depth specified. It writes a dot file for each of these<br>
+&nbsp; &nbsp; dot files.<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; results <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">new</span> <span class="sy0">=</span> graph.<span class="me1">subgraph</span><span class="br0">(</span>all_sucs_not<span class="br0">(</span>graph<span class="sy0">,</span> graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span><span class="sy0">,</span> me<span class="sy0">,</span> depth<span class="br0">)</span><span class="br0">)</span> <span class="co1">#creates a subgraph</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; results.<span class="me1">append</span><span class="br0">(</span><span class="kw3">new</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span><span class="kw3">new</span><span class="sy0">,</span> graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span> + <span class="st0">'.dot'</span><span class="br0">)</span> <span class="co1"># write it</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw3">new</span><br>
+<br>
+<span class="co1">#run like this:</span><br>
+<span class="co1">#graph = setup()</span><br>
+<span class="co1">#me = "Teodoro Fields Collin"</span><br>
+<span class="co1">#all_sub_graphs(graph, me, 2)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=20" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Running this at a depth of 1 would be kind of 
+pointless because it wouldn't really give us an interesting graph. If 
+anyone wants to, they are free to, and they will probably be able to 
+produce a sub-graphs of all a node's direct neighbors. 
+</p>
+<p class="vspace">So, I ran it at a depth of 2, as the graph was 
+generated at a depth of 3, this means that this will for each node 
+neighboring the node I started with (myself), we will get all the nodes 
+that you can get to within two steps of them that don't involve going 
+through me. This method still produced really large networks that are 
+ungraphable with my current means because all my friends who have lots 
+of friends also seem to be friends with each other. To deal with this, I
+ provided another version of the functions that also prevented it from 
+going through not only myself but all my neighbors:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock21">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">def</span> all_sucs_not_xlist<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> exclude<span class="sy0">,</span> n<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :start The person you are centering on<br>
+&nbsp; &nbsp; :exclude The list of persons you are excluding, probably where the graph started<br>
+&nbsp; &nbsp; :n depth from start<br>
+&nbsp; &nbsp; :return a list of nodes to be made into a sub graph<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; stuff <span class="sy0">=</span> <span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span> <span class="kw1">if</span> x <span class="kw1">not</span> <span class="kw1">in</span> exclude <span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff + <span class="br0">[</span>start<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff + <span class="kw2">list</span><span class="br0">(</span>chain.<span class="me1">from_iterable</span><span class="br0">(</span><span class="br0">[</span>all_sucs_not_xlist<span class="br0">(</span>graph<span class="sy0">,</span> x<span class="sy0">,</span> exclude<span class="sy0">,</span> <span class="br0">(</span>n-<span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">for</span> x <span class="kw1">in</span> stuff<span class="br0">]</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> all_sub_graphs_xlist<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> depth<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; Same as above but using lists to exlude<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :param start the center of the graph or the node you want to have all these graphs link back to<br>
+&nbsp; &nbsp; :depth depth of each from the neighboring nod<br>
+&nbsp; &nbsp; :return a list of all subgraphs<br>
+<br>
+&nbsp; &nbsp; This function takes a digraph and a start and a depth. It takes the start and finds all the nodes around it. For<br>
+&nbsp; &nbsp; each of those nodes it creates a subgraph going out to the depth specified. It writes a dot file for each of these<br>
+&nbsp; &nbsp; dot files.<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; results <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">new</span> <span class="sy0">=</span> graph.<span class="me1">subgraph</span><span class="br0">(</span>all_sucs_not_xlist<span class="br0">(</span>graph<span class="sy0">,</span> graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span><span class="sy0">,</span> <span class="br0">[</span>me<span class="br0">]</span> + graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span> - graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span><span class="sy0">,</span> depth<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">#creates a subgraph</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; results.<span class="me1">append</span><span class="br0">(</span><span class="kw3">new</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span><span class="kw3">new</span><span class="sy0">,</span>graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span> + <span class="st0">'.dot'</span><span class="br0">)</span> <span class="co1"># write it</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw3">new</span><br>
+<br>
+<span class="co1">#run like this:</span><br>
+<span class="co1">#graph = setup()</span><br>
+<span class="co1">#me = "Teodoro Fields Collin"</span><br>
+<span class="co1">#all_sub_graphs_xlist(graph, me, 2)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=21" type="text/plain">[$[Get Code]]</a></div>
+</div>
+ 
+<p class="vspace">I was actually able to get dot and neato to graph 
+these, but they were... useless. Once again, using a depth of 1 would 
+probably have produced something graphable and comprehensible. And, we 
+could generate a bunch of these... but that isn't really useful or 
+interesting. So, I'm just going to move on.
+</p>
+<div class="vspace"></div><hr>
+<h3>Part 7: The above is a lie</h3>
+<p>I'm keeping it for historical records, anyway.
+</p>
+<p class="vspace">After doing some research and communicating with other
+ human beings, it was suggested to me that I use the graphml format and 
+the related tools, which are apparently much better suited to large 
+scale graphs. Well, I did some googling and I found useful information:
+</p>
+<div class="vspace"></div><ul><li><a class="urllink" href="http://networkx.lanl.gov/reference/readwrite.graphml.html" rel="nofollow">Networkx can write in the graphml format</a>
+</li><li>There is a way to convert from <a class="urllink" href="http://dl9obn.darc.de/programming/python/dottoxml/#basic" rel="nofollow">dot to graphml</a> (So, I don't really need to add that capacity to my code yet...)
+</li></ul><p class="vspace">I used the linked script to convert and used <a class="urllink" href="https://gephi.github.io/" rel="nofollow">gephi</a>,
+ a powerful tool for rendering, exploring, and analyzing graphs. As I 
+was using it, I noticed that it could read in dot files too, completely 
+eliminating any need that I have for graphml. Of course, if one wanted 
+to, they could easily have my code write to it or use the linked script.
+ If there is a better utility that only uses graphml, tell me and I will
+ modify my code or write some more code using the linked script.
+</p>
+<p class="vspace">Anyway, I was able to load the full graph in. It looked like a giant useless blob. However, there are various <a class="urllink" href="https://gephi.github.io/users/tutorial-layouts/" rel="nofollow">graph layout algorithms</a>
+ that one can apply. There are all really quite useful. Also, the 
+algorithms and the basis for their design is quite interesting...
+</p>
+<p class="vspace">Anyway, I applied the Force Atlas 2 algorithm. The 
+first run it ran out of memory and crashed. I restarted the application 
+with 10 gigabytes and that worked fine. Watching the graph transform 
+reminded me of the 2nd part of the <a class="urllink" href="https://en.wikipedia.org/wiki/The_End_of_Evangelion" rel="nofollow">The End of Evangelion</a>:
+</p>
+<div class="vspace"></div><div><img src="wikipage_files/CP6VjGS.jpg" alt="" title=""><br><strong>start +1</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/XSMG01b.jpg" alt="" title=""><br><strong>Start + 5 or 10ish</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/Nb5ByjT.jpg" alt="" title=""><br><strong>Start + 25ish</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/RWVaubt.jpg" alt="" title=""><br><strong>I stopped counting</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/70wSs5X.jpg" alt="" title=""><br><strong>Still rather useless... but amusing</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/HL0Kz2t.jpg" alt="" title=""><br><strong>The eventual result</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/ZZscfJI.jpg" alt="" title=""><br><strong>Zoom in</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/qH6s04U.jpg" alt="" title=""><br><strong>More</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/p9pjQfV.jpg" alt="" title=""><br><strong>MORE</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/lyyQ7LK.jpg" alt="" title=""><br><em><big></big></em></div>
+<div class="vspace"></div><div><img src="wikipage_files/m8NAXgh.jpg" alt="" title=""><br><strong>Zooming in and adding names</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/DZEGEO5.jpg" alt="" title=""><br><strong>Zooming out with names...which leads to:</strong></div>
+<div class="vspace"></div><div><img src="wikipage_files/UUycx7a.jpg" alt="" title=""><br><strong>ops</strong></div>
+<p class="vspace">Anyway, these mean that I can actually call this 
+finished.... The graph isn't necessarily useful in image format and it 
+is best viewed through an application like gephi. Graphing the smaller 
+graphs will probably result in useful images and I will get to this soon
+ enough. 
+</p>
+<div class="vspace"></div><hr>
+<h3>Part 9: Fin</h3>
+<p>I was able to build the web scraper. It is able to gather data and 
+return it in a format that can be analyzed. It was also able to do this 
+without getting me banned from facebook, so that is nice. I was able to 
+get a graphical representation of the data that can be explored and used
+ and what not. So, I'm going to call this basically finished and mark it
+ as complete.
+</p>
+<p class="vspace">Here is all of my code:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock22">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">from</span> <span class="kw3">urllib2</span> <span class="kw1">import</span> URLError<br>
+<span class="kw1">import</span> mechanize<br>
+<span class="kw1">import</span> <span class="kw3">cookielib</span><br>
+<span class="kw1">from</span> bs4 <span class="kw1">import</span> BeautifulSoup<br>
+<span class="kw1">import</span> <span class="kw3">re</span><br>
+<span class="kw1">import</span> networkx <span class="kw1">as</span> nx<br>
+<span class="kw1">import</span> pygraphviz<br>
+<span class="kw1">from</span> <span class="kw3">random</span> <span class="kw1">import</span> randint<br>
+<span class="kw1">from</span> <span class="kw3">time</span> <span class="kw1">import</span> sleep<br>
+<span class="kw1">import</span> <span class="kw3">unicodedata</span><br>
+<span class="kw1">from</span> unidecode <span class="kw1">import</span> unidecode<br>
+<span class="kw1">from</span> <span class="kw3">itertools</span> <span class="kw1">import</span> chain<br>
+<br>
+graph <span class="sy0">=</span> nx.<span class="me1">Graph</span><span class="br0">(</span><span class="br0">)</span><br>
+br <span class="sy0">=</span> mechanize.<span class="me1">Browser</span><span class="br0">(</span><span class="br0">)</span> <span class="co1"># set up browser</span><br>
+<br>
+<span class="co1"># sets up cookie handling</span><br>
+br.<span class="me1">set_handle_robots</span><span class="br0">(</span><span class="kw2">False</span><span class="br0">)</span><br>
+cj <span class="sy0">=</span> <span class="kw3">cookielib</span>.<span class="me1">LWPCookieJar</span><span class="br0">(</span><span class="br0">)</span><br>
+br.<span class="me1">set_cookiejar</span><span class="br0">(</span>cj<span class="br0">)</span><br>
+<br>
+<br>
+br.<span class="me1">set_handle_equiv</span><span class="br0">(</span><span class="kw2">True</span><span class="br0">)</span><br>
+br.<span class="me1">set_handle_redirect</span><span class="br0">(</span><span class="kw2">True</span><span class="br0">)</span><br>
+br.<span class="me1">set_handle_referer</span><span class="br0">(</span><span class="kw2">True</span><span class="br0">)</span> <span class="co1"># The three are to do deal with login redirects</span><br>
+<br>
+<br>
+br.<span class="me1">addheaders</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">(</span><span class="st0">'User-agent'</span><span class="sy0">,</span> <span class="st0">'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'</span><span class="br0">)</span><span class="br0">]</span> <span class="co1"># set browser id</span><br>
+br.<span class="kw2">open</span><span class="br0">(</span><span class="st0">'https://m.facebook.com/'</span><span class="br0">)</span> <span class="co1"># gets us to the login page</span><br>
+br.<span class="me1">select_form</span><span class="br0">(</span>nr<span class="sy0">=</span><span class="nu0">0</span><span class="br0">)</span><br>
+<br>
+your_username <span class="sy0">=</span> <span class="st0">''</span> <span class="co1"># set it</span><br>
+your_password <span class="sy0">=</span> <span class="st0">''</span> &nbsp;<span class="co1"># set it</span><br>
+<br>
+<span class="kw1">def</span> print_response<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument mechanize browser<br>
+&nbsp; &nbsp; :return None<br>
+<br>
+&nbsp; &nbsp; Prints the text of a mechanize page in raw html<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> br.<span class="me1">response</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> login<span class="br0">(</span><span class="kw3">email</span><span class="sy0">,</span> password<span class="sy0">,</span> br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument: string for email, string for password, and mechanize browser<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; Logins into Facebook<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span><span class="br0">[</span><span class="st0">'email'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw3">email</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span><span class="br0">[</span><span class="st0">'pass'</span><span class="br0">]</span> <span class="sy0">=</span> password<br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> say_yes_basic<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument mechanize browser<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; Hits a simple continue button<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; control <span class="sy0">=</span> br.<span class="me1">form</span>.<span class="me1">find_control</span><span class="br0">(</span><span class="st0">"submit[Continue]"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> say_this_is_okay<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument Mechanize browser<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; Hits a simple submit This is Okay button<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; control <span class="sy0">=</span> br.<span class="me1">form</span>.<span class="me1">find_control</span><span class="br0">(</span><span class="st0">"submit[This is Okay]"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><br>
+&nbsp; &nbsp; br.<span class="me1">submit</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> control_something<span class="br0">(</span>br<span class="sy0">,</span> something<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument Mechanize browser, string with name of a control<br>
+&nbsp; &nbsp; Hits the stated control<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; control <span class="sy0">=</span> br.<span class="me1">form</span>.<span class="me1">find_control</span><span class="br0">(</span>something<span class="br0">)</span><br>
+&nbsp; &nbsp; br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><br>
+<br>
+<br>
+<span class="co1"># cite http://www.pythonforbeginners.com/cheatsheet/python-mechanize-cheat-sheet</span><br>
+<br>
+<br>
+<span class="kw1">def</span> control_explore<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument Mechanize browser<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; Prints the list of controls<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> form <span class="kw1">in</span> br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> form<br>
+&nbsp; &nbsp; <span class="kw1">for</span> control <span class="kw1">in</span> br.<span class="me1">form</span>.<span class="me1">controls</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span>control<span class="sy0">,</span> control.<span class="kw2">type</span><span class="sy0">,</span> control.<span class="me1">name</span><span class="sy0">,</span> br<span class="br0">[</span>control.<span class="me1">name</span><span class="br0">]</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument A mechanize browser<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; Takes the current mechanize browser and turns its raw html in to a bs4 object<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span>BeautifulSoup<span class="br0">(</span>br.<span class="me1">response</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">except</span> <span class="kw2">AttributeError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Nonetype for response"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span>br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span>br.<span class="me1">get_data</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Trying again"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span>BeautifulSoup<span class="br0">(</span>br.<span class="me1">response</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> ncontrols<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument Mechanize Browser<br>
+&nbsp; &nbsp; :return A list of controls<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">[</span>control.<span class="me1">name</span> <span class="kw1">for</span> control <span class="kw1">in</span> br.<span class="me1">form</span>.<span class="me1">controls</span><span class="br0">]</span><br>
+<br>
+<br>
+<span class="kw1">def</span> go_to_profile<span class="br0">(</span>br<span class="sy0">,</span> name<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument A mechanize browser, a text arguemt such as a user uid or profile name<br>
+&nbsp; &nbsp; :returns None<br>
+&nbsp; &nbsp; Takes the browser to a specific profile<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> name<br>
+&nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">20</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"going"</span><br>
+&nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span><span class="st0">'https://m.facebook.com/'</span> + name<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">except</span> URLError:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Wifi lost, trying again"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">200</span><span class="sy0">,</span><span class="nu0">400</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span><span class="st0">'https://m.facebook.com/'</span> + name<span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> control_control<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument A mechanise browser<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; Loggs into facebook<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; soup_response <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; br.<span class="me1">form</span> <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span>br.<span class="me1">forms</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; n <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>ncontrols<span class="br0">(</span>br<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> n<br>
+&nbsp; &nbsp; <span class="kw1">print</span> soup_response.<span class="me1">title</span>.<span class="me1">text</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n <span class="sy0">&gt;</span> <span class="nu0">10</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Bypassed Facebook security"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> soup_response.<span class="me1">title</span>.<span class="me1">text</span> <span class="sy0">==</span> <span class="st0">"Remember Browser"</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"not remembering"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; say_yes_basic<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> soup_response.<span class="me1">title</span>.<span class="me1">text</span> <span class="sy0">==</span> <span class="st0">"Review Recent Login"</span>: <span class="co1">#Two almost identicial options...</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"reviewing"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; say_yes_basic<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> mechanize.<span class="me1">ControlNotFoundError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; say_this_is_okay<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> mechanize.<span class="me1">ControlNotFoundError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; say_yes_basic<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> mechanize.<span class="me1">ControlNotFoundError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Abnormal security settings"</span><br>
+<br>
+<br>
+<span class="kw1">def</span> go_to_my_friends<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument Mechanise browser<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; Goes to the location where facebook stores your firends i.e the contents of degree one<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span><span class="st0">'https://m.facebook.com/friends/center/friends/?ref=bookmark'</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> get_my_friends<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument Mechanise Browser<br>
+&nbsp; &nbsp; :return A list of bs4 objects each corresponding to an entry for a friend<br>
+&nbsp; &nbsp; This may not work based on somethings that I'm not sure of, mainly the class_ = ""<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; soup <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> soup.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'div'</span><span class="sy0">,</span> class_<span class="sy0">=</span><span class="st0">'x e y'</span><span class="br0">)</span> &nbsp;<span class="co1"># I have really know idea why facebook decided to use these letters... and it might need to be changed...</span><br>
+<br>
+<span class="kw1">def</span> my_friend_to_uid<span class="br0">(</span>soup<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument A bs4 object containing a link to your friend... not a friend of a friend<br>
+&nbsp; &nbsp; :return a uid corresponding to the facebook profile that the bs4 object came from<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw3">re</span>.<span class="me1">search</span><span class="br0">(</span><span class="st0">'(?&lt;=uid=)[0-9]*'</span><span class="sy0">,</span> soup.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span><span class="br0">)</span>.<span class="me1">group</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1"># gets the UID because the link we are given is a redirect which is annoying to archive</span><br>
+<br>
+<span class="kw1">def</span> my_frend_to_name<span class="br0">(</span>soup<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument a bs4 object containing a link to your friend, not a friend of a friend<br>
+&nbsp; &nbsp; :return The friend's name<br>
+<br>
+&nbsp; &nbsp; This is probably unneccesary<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> soup.<span class="me1">span</span>.<span class="me1">text</span><br>
+<br>
+<span class="kw1">def</span> friends_friends_page<span class="br0">(</span>br<span class="sy0">,</span> uid<span class="br0">)</span>:<br>
+&nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; go_to_profile<span class="br0">(</span>br<span class="sy0">,</span> uid<span class="br0">)</span><br>
+&nbsp; &nbsp; actual_profile_url <span class="sy0">=</span> br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">replace</span><span class="br0">(</span><span class="st0">'?_rdr'</span><span class="sy0">,</span><span class="st0">''</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> actual_profile_url + <span class="st0">'?v=friends&amp;startindex=00'</span><br>
+&nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">10</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>actual_profile_url + <span class="st0">'?v=friends&amp;startindex=00'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> more_friends<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; strip <span class="sy0">=</span> <span class="kw3">re</span>.<span class="kw2">compile</span><span class="br0">(</span><span class="st0">'=[0-9]*'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; current_url <span class="sy0">=</span> br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; index_location <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span>.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'div'</span><span class="sy0">,</span> <span class="kw2">id</span><span class="sy0">=</span><span class="st0">"m_more_friends"</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; newindex <span class="sy0">=</span> <span class="kw3">re</span>.<span class="me1">search</span><span class="br0">(</span><span class="st0">'(?&lt;=startindex=)[0-9]*'</span><span class="sy0">,</span> index_location<span class="br0">)</span>.<span class="me1">group</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><br>
+&nbsp; &nbsp; tempurl <span class="sy0">=</span> <span class="kw3">re</span>.<span class="me1">sub</span><span class="br0">(</span>strip<span class="sy0">,</span> <span class="st0">'='</span><span class="sy0">,</span> current_url<span class="br0">)</span><br>
+&nbsp; &nbsp; newurl <span class="sy0">=</span> tempurl + newindex<br>
+&nbsp; &nbsp; <span class="kw1">print</span> newurl<br>
+&nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>newurl<span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> print_line<span class="br0">(</span>ss<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span><span class="kw2">len</span><span class="br0">(</span>ss<span class="br0">)</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">'====================================================================,'</span> + <span class="kw2">str</span><span class="br0">(</span>x<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> ss<span class="br0">[</span>x<span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">'====================================================================, x'</span><br>
+<br>
+<br>
+<span class="kw1">def</span> is_a_friend<span class="br0">(</span>tag<span class="br0">)</span>:<br>
+&nbsp; &nbsp; a <span class="sy0">=</span> tag.<span class="me1">has_attr</span><span class="br0">(</span><span class="st0">'class'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; b <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>tag.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">2</span> <span class="kw1">or</span> <span class="kw2">len</span><span class="br0">(</span>tag.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span><span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">1</span><br>
+&nbsp; &nbsp; c <span class="sy0">=</span> tag.<span class="me1">img</span> <span class="sy0">==</span> <span class="kw2">None</span><br>
+&nbsp; &nbsp; d <span class="sy0">=</span> tag.<span class="me1">table</span> <span class="sy0">==</span> <span class="kw2">None</span><br>
+&nbsp; &nbsp; e <span class="sy0">=</span> <span class="kw1">not</span> tag.<span class="me1">has_attr</span><span class="br0">(</span><span class="st0">'id'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> a <span class="kw1">and</span> b <span class="kw1">and</span> c <span class="kw1">and</span> d <span class="kw1">and</span> e<br>
+<br>
+<br>
+<span class="kw1">def</span> get_friends_of_friends<span class="br0">(</span>br<span class="br0">)</span>:<br>
+&nbsp; &nbsp; soups <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">filter</span><span class="br0">(</span>is_a_friend<span class="sy0">,</span> <span class="br0">(</span>soups.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'div'</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">class</span> user_id_keeping:<br>
+<br>
+&nbsp; &nbsp; <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">keeper</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> adds<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> records<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">keeper</span> +<span class="sy0">=</span> records<br>
+&nbsp; &nbsp; <span class="kw1">def</span> soup_uid_check<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span>soup<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span>soup.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span>.<span class="me1">replace</span><span class="br0">(</span><span class="st0">'?fref=fr_tab'</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">)</span>.<span class="me1">lstrip</span><span class="br0">(</span><span class="st0">'/'</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">keeper</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> uid_check<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> uid<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> uid <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">keeper</span><br>
+<br>
+all_uids <span class="sy0">=</span> user_id_keeping<span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> get_rest_friends_of_friends<span class="br0">(</span>br<span class="sy0">,</span> initial_friends<span class="br0">)</span>:<br>
+&nbsp; &nbsp; soup <span class="sy0">=</span> request_to_soup<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; index_locations <span class="sy0">=</span> soup.<span class="me1">find_all</span><span class="br0">(</span><span class="st0">'div'</span><span class="sy0">,</span> <span class="kw2">id</span><span class="sy0">=</span><span class="st0">"m_more_friends"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1"># print index_locations</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">len</span><span class="br0">(</span>index_locations<span class="br0">)</span> <span class="sy0">!=</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; strip <span class="sy0">=</span> <span class="kw3">re</span>.<span class="kw2">compile</span><span class="br0">(</span><span class="st0">'=[0-9]*'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; current_url <span class="sy0">=</span> <span class="br0">(</span>br.<span class="me1">geturl</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1"># print current_url</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; index_location <span class="sy0">=</span> index_locations<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; newindex <span class="sy0">=</span> <span class="kw3">re</span>.<span class="me1">search</span><span class="br0">(</span><span class="st0">'(?&lt;=startindex=)[0-9]*'</span><span class="sy0">,</span> index_location<span class="br0">)</span>.<span class="me1">group</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; tempurl <span class="sy0">=</span> <span class="kw3">re</span>.<span class="me1">sub</span><span class="br0">(</span>strip<span class="sy0">,</span> <span class="st0">'='</span><span class="sy0">,</span> current_url<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; newurl <span class="sy0">=</span> tempurl + newindex<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> newurl<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>newurl<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> URLError:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Network problems"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">150</span><span class="sy0">,</span><span class="nu0">300</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>newurl<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> URLError:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">800</span><span class="sy0">,</span><span class="nu0">1600</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br.<span class="kw2">open</span><span class="br0">(</span>newurl<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; initial_friends +<span class="sy0">=</span> get_friends_of_friends<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">#print initial_friends</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; get_rest_friends_of_friends<span class="br0">(</span>br<span class="sy0">,</span> initial_friends<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> initial_friends<br>
+<br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> get_all_friends<span class="br0">(</span>br<span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; friends_friends_page<span class="br0">(</span>br<span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span><br>
+&nbsp; &nbsp; sleep<span class="br0">(</span>randint<span class="br0">(</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> get_rest_friends_of_friends<span class="br0">(</span>br<span class="sy0">,</span> get_friends_of_friends<span class="br0">(</span>br<span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> friends_graph<span class="br0">(</span>br<span class="sy0">,</span> n<span class="sy0">,</span> <span class="kw2">id</span><span class="sy0">,</span> name<span class="sy0">,</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span><span class="st0">'id is'</span><span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="br0">(</span><span class="st0">'name is'</span><span class="sy0">,</span> name<span class="br0">)</span><br>
+&nbsp; &nbsp; friends_friends <span class="sy0">=</span> get_all_friends<span class="br0">(</span>br<span class="sy0">,</span> <span class="kw2">id</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> friends_friends <span class="kw1">is</span> <span class="kw2">None</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Reached End"</span><br>
+&nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; friends_friends_names <span class="sy0">=</span> <span class="br0">[</span>a1.<span class="me1">span</span>.<span class="me1">text</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> friends_friends <span class="kw1">if</span> <span class="kw1">not</span> all_uids.<span class="me1">soup_uid_check</span><span class="br0">(</span>a1<span class="br0">)</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; friends_friends_ids <span class="sy0">=</span> <span class="br0">[</span>a1.<span class="me1">a</span>.<span class="me1">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span>.<span class="me1">replace</span><span class="br0">(</span><span class="st0">'?fref=fr_tab'</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">)</span>.<span class="me1">lstrip</span><span class="br0">(</span><span class="st0">'/'</span><span class="br0">)</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> friends_friends <span class="kw1">if</span> <span class="kw1">not</span> all_uids.<span class="me1">soup_uid_check</span><span class="br0">(</span>a1<span class="br0">)</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">except</span> <span class="kw2">NameError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Security settings"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">except</span> <span class="kw2">AttributeError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"security settings"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1"># print friends_friends_ids</span><br>
+&nbsp; &nbsp; all_uids.<span class="me1">adds</span><span class="br0">(</span>friends_friends_ids<span class="br0">)</span><br>
+&nbsp; &nbsp; graph.<span class="me1">add_edges_from</span><span class="br0">(</span><span class="br0">[</span><span class="br0">(</span>name<span class="sy0">,</span> a1<span class="br0">)</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> friends_friends_names<span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1">#nx.draw(graph)</span><br>
+&nbsp; &nbsp; <span class="co1">#plt.savefig('crap.png')</span><br>
+&nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span>graph<span class="sy0">,</span> <span class="st0">'resultst.dot'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n - <span class="nu0">1</span> <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Reached End"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw2">map</span><span class="br0">(</span><span class="kw1">lambda</span> ids<span class="sy0">,</span> names: friends_graph<span class="br0">(</span>br<span class="sy0">,</span> <span class="br0">(</span>n - <span class="nu0">1</span><span class="br0">)</span><span class="sy0">,</span> ids<span class="sy0">,</span> names<span class="br0">)</span><span class="sy0">,</span> friends_friends_ids<span class="sy0">,</span> friends_friends_names<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"we have completed"</span> + <span class="kw2">str</span><span class="br0">(</span>name<span class="br0">)</span><br>
+&nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span>graph<span class="sy0">,</span> <span class="st0">'temp.dot'</span><span class="br0">)</span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> main<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; profile_name <span class="sy0">=</span> <span class="st0">"set it"</span><br>
+&nbsp; &nbsp; login<span class="br0">(</span><span class="st0">'set it'</span><span class="sy0">,</span> <span class="st0">'set it'</span><span class="sy0">,</span> br<span class="br0">)</span><br>
+&nbsp; &nbsp; control_control<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; go_to_my_friends<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; a <span class="sy0">=</span> get_my_friends<span class="br0">(</span>br<span class="br0">)</span><br>
+&nbsp; &nbsp; graph.<span class="me1">add_edges_from</span><span class="br0">(</span><span class="br0">[</span><span class="br0">(</span>profile_name<span class="sy0">,</span> a1.<span class="me1">span</span>.<span class="me1">text</span><span class="br0">)</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> a<span class="br0">]</span><span class="br0">)</span> <span class="co1"># investiage if this is getting blank profile page people</span><br>
+&nbsp; &nbsp; my_friends_uid <span class="sy0">=</span> <span class="br0">[</span>my_friend_to_uid<span class="br0">(</span>a2<span class="br0">)</span> <span class="kw1">for</span> a2 <span class="kw1">in</span> a<span class="br0">]</span><br>
+&nbsp; &nbsp; all_uids.<span class="me1">adds</span><span class="br0">(</span>my_friends_uid<span class="br0">)</span><br>
+&nbsp; &nbsp; my_friends_names <span class="sy0">=</span> <span class="br0">[</span>a1.<span class="me1">span</span>.<span class="me1">text</span> <span class="kw1">for</span> a1 <span class="kw1">in</span> a<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="co1"># print type(my_friends_uid[0])</span><br>
+&nbsp; &nbsp; <span class="co1"># friends_graph(br, 2, my_friends_uid[0], a[0].span.text)</span><br>
+&nbsp; &nbsp; <span class="kw2">map</span><span class="br0">(</span><span class="kw1">lambda</span> uids<span class="sy0">,</span> names: friends_graph<span class="br0">(</span>br<span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> uids<span class="sy0">,</span> names<span class="br0">)</span><span class="sy0">,</span> my_friends_uid<span class="sy0">,</span> my_friends_names<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"Just needs to be drawn"</span><br>
+&nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span>graph<span class="sy0">,</span> <span class="st0">'results.dot'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1">#nx.draw(graph)</span><br>
+&nbsp; &nbsp; <span class="co1">#plt.savefig('crap.png')</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"done"</span><br>
+<br>
+<br>
+<span class="co1">#run this once to convert the dotfile</span><br>
+<span class="kw1">def</span> correct<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw2">file</span> <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">(</span><span class="st0">'results.dot'</span><span class="sy0">,</span><span class="st0">'r'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw2">all</span> <span class="sy0">=</span> <span class="kw2">file</span>.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw2">file</span>.<span class="me1">close</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; allb <span class="sy0">=</span> <span class="kw2">unicode</span><span class="br0">(</span><span class="kw2">all</span><span class="sy0">,</span> <span class="st0">'utf-8'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; allc <span class="sy0">=</span> unidecode<span class="br0">(</span>allb<span class="br0">)</span><br>
+&nbsp; &nbsp; alla <span class="sy0">=</span> <span class="kw2">unicode</span><span class="br0">(</span>allc<span class="sy0">,</span> <span class="st0">'utf-8'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; b <span class="sy0">=</span> <span class="kw3">unicodedata</span>.<span class="me1">normalize</span><span class="br0">(</span><span class="st0">'NFKD'</span><span class="sy0">,</span> alla<span class="br0">)</span>.<span class="me1">encode</span><span class="br0">(</span><span class="st0">'ascii'</span><span class="sy0">,</span> <span class="st0">'ignore'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; f <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">(</span><span class="st0">'try.dot'</span><span class="sy0">,</span><span class="st0">'w'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; f.<span class="me1">write</span><span class="br0">(</span>b<span class="br0">)</span><br>
+<br>
+<span class="co1"># use this to recover the graph from the converted dot file</span><br>
+<span class="kw1">def</span> setup<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; A <span class="sy0">=</span> pygraphviz.<span class="me1">AGraph</span><span class="br0">(</span><span class="kw2">file</span><span class="sy0">=</span><span class="st0">'try.dot'</span><span class="sy0">,</span> encoding<span class="sy0">=</span><span class="st0">'ascii'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; a <span class="sy0">=</span> nx.<span class="me1">DiGraph</span><span class="br0">(</span>nx.<span class="me1">from_agraph</span><span class="br0">(</span>A<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> a<br>
+<br>
+<span class="co1">#finds the max centrality of any node</span><br>
+<span class="kw1">def</span> centrality_max<span class="br0">(</span>a<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="br0">(</span><span class="kw2">max</span><span class="br0">(</span>nx.<span class="me1">degree_centrality</span><span class="br0">(</span>a<span class="br0">)</span>.<span class="me1">values</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> friendship_paradox<span class="br0">(</span>graph<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph digraph<br>
+&nbsp; &nbsp; :return returns the average dif between the number of friends that a node has and the average number of friends<br>
+&nbsp; &nbsp; the node's friends have<br>
+<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nf'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span> <span class="co1"># computes number of friends</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nff'</span><span class="br0">]</span> <span class="sy0">=</span> <span class="kw2">sum</span><span class="br0">(</span><span class="br0">[</span>graph.<span class="me1">node</span><span class="br0">[</span>z<span class="br0">]</span><span class="br0">[</span><span class="st0">'nf'</span><span class="br0">]</span> <span class="kw1">for</span> z <span class="kw1">in</span> graph.<span class="me1">successors</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">]</span><span class="br0">)</span> / <span class="br0">(</span><span class="nu0">1</span> + <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>x<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1"># computers the average number of friends that one's friends have</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">sum</span><span class="br0">(</span><span class="br0">[</span>graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nff'</span><span class="br0">]</span> - graph.<span class="me1">node</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">[</span><span class="st0">'nf'</span><span class="br0">]</span> <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span><span class="br0">]</span><span class="br0">)</span>/<span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">nodes</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="co1"># returns average dif between the two numbers over all nodes.</span><br>
+<br>
+<br>
+<span class="kw1">def</span> all_sucs_not<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> exclude<span class="sy0">,</span> n<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :start The person you are centering on<br>
+&nbsp; &nbsp; :exclude The person you are excluding, probably where the graph started<br>
+&nbsp; &nbsp; :n depth from start<br>
+&nbsp; &nbsp; :return a list of nodes to be made into a sub graph<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; stuff <span class="sy0">=</span> <span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span> <span class="kw1">if</span> x <span class="kw1">is</span> <span class="kw1">not</span> exclude<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff<br>
+&nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff + <span class="kw2">list</span><span class="br0">(</span>chain.<span class="me1">from_iterable</span><span class="br0">(</span><span class="br0">[</span>all_sucs_not<span class="br0">(</span>graph<span class="sy0">,</span> x<span class="sy0">,</span> exclude<span class="sy0">,</span> <span class="br0">(</span>n-<span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">for</span> x <span class="kw1">in</span> stuff<span class="br0">]</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<br>
+<span class="kw1">def</span> all_sucs_not_xlist<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> exclude<span class="sy0">,</span> n<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :start The person you are centering on<br>
+&nbsp; &nbsp; :exclude The list of persons you are excluding, probably where the graph started<br>
+&nbsp; &nbsp; :n depth from start<br>
+&nbsp; &nbsp; :return a list of nodes to be made into a sub graph<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; stuff <span class="sy0">=</span> <span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span> <span class="kw1">if</span> x <span class="kw1">not</span> <span class="kw1">in</span> exclude <span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> n <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff + <span class="br0">[</span>start<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> stuff + <span class="kw2">list</span><span class="br0">(</span>chain.<span class="me1">from_iterable</span><span class="br0">(</span><span class="br0">[</span>all_sucs_not_xlist<span class="br0">(</span>graph<span class="sy0">,</span> x<span class="sy0">,</span> exclude<span class="sy0">,</span> <span class="br0">(</span>n-<span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">for</span> x <span class="kw1">in</span> stuff<span class="br0">]</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> all_sub_graphs<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> depth<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :param start the center of the graph or the node you want to have all these graphs link back to<br>
+&nbsp; &nbsp; :depth depth of each from the neighboring nod<br>
+&nbsp; &nbsp; :return a list of all subgraphs<br>
+<br>
+&nbsp; &nbsp; This function takes a digraph and a start and a depth. It takes the start and finds all the nodes around it. For<br>
+&nbsp; &nbsp; each of those nodes it creates a subgraph going out to the depth specified. It writes a dot file for each of these<br>
+&nbsp; &nbsp; dot files.<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; results <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">new</span> <span class="sy0">=</span> graph.<span class="me1">subgraph</span><span class="br0">(</span>all_sucs_not<span class="br0">(</span>graph<span class="sy0">,</span> graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span><span class="sy0">,</span> me<span class="sy0">,</span> depth<span class="br0">)</span><span class="br0">)</span> <span class="co1">#creates a subgraph</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; results.<span class="me1">append</span><span class="br0">(</span><span class="kw3">new</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span><span class="kw3">new</span><span class="sy0">,</span> graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span> + <span class="st0">'.dot'</span><span class="br0">)</span> <span class="co1"># write it</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw3">new</span><br>
+<br>
+<span class="kw1">def</span> all_sub_graphs_xlist<span class="br0">(</span>graph<span class="sy0">,</span> start<span class="sy0">,</span> depth<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; Same as above but using lists to exlude<br>
+&nbsp; &nbsp; :param graph a digraph<br>
+&nbsp; &nbsp; :param start the center of the graph or the node you want to have all these graphs link back to<br>
+&nbsp; &nbsp; :depth depth of each from the neighboring nod<br>
+&nbsp; &nbsp; :return a list of all subgraphs<br>
+<br>
+&nbsp; &nbsp; This function takes a digraph and a start and a depth. It takes the start and finds all the nodes around it. For<br>
+&nbsp; &nbsp; each of those nodes it creates a subgraph going out to the depth specified. It writes a dot file for each of these<br>
+&nbsp; &nbsp; dot files.<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>graph.<span class="me1">successors</span><span class="br0">(</span>start<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; results <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">new</span> <span class="sy0">=</span> graph.<span class="me1">subgraph</span><span class="br0">(</span>all_sucs_not_xlist<span class="br0">(</span>graph<span class="sy0">,</span> graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span><span class="sy0">,</span> <span class="br0">[</span>me<span class="br0">]</span> + graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span> - graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span><span class="sy0">,</span> depth<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">#creates a subgraph</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; results.<span class="me1">append</span><span class="br0">(</span><span class="kw3">new</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; nx.<span class="me1">write_dot</span><span class="br0">(</span><span class="kw3">new</span><span class="sy0">,</span>graph.<span class="me1">successors</span><span class="br0">(</span>me<span class="br0">)</span><span class="br0">[</span>x<span class="br0">]</span> + <span class="st0">'.dot'</span><span class="br0">)</span> <span class="co1"># write it</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw3">new</span><br>
+<br>
+<span class="co1">#run like this:</span><br>
+<span class="co1">#main()</span><br>
+<span class="co1">#correct()</span><br>
+<span class="co1">#graph = setup()</span><br>
+<span class="co1">#me = "Teodoro Fields Collin"</span><br>
+<span class="co1">#all_sub_graphs_xlist(graph, me, 2)</span><br>
+<span class="co1">#all_sub_graphs(graph, me, 2)</span><br>
+<span class="co1">#print friendship_paradox(graph)</span><br>
+<span class="co1">#result of this is 495</span><br>
+<br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=sourceblock&amp;num=22" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+</div>
+
+      </td>
+    </tr></tbody></table>
+<!--PageFooterFmt-->
+  <div id="wikifoot">
+    <div class="footnav">
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=edit">Edit</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=diff">History</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/NetworkMapOfFacebookFriends?action=print" target="_blank">Print</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/RecentChanges">Recent Changes</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a></div>
+    <div class="lastmod">Page last modified on March 01, 2015, at 06:35 PM</div></div>
+<!--HTMLFooter-->
+
+
+</body></html>

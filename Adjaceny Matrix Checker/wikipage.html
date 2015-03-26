@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>CMSC-16200 Winter 2015 | Joeyzou / AdjacencyMatrixChecker </title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="wikipage_files/pmwiki.css" type="text/css">
+  <!--HTMLHeader--><style type="text/css"><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c .de1, .c .de2 {font-family: monospace; font-weight: normal;}
+.c  {font-family:monospace;}
+.c .imp {font-weight: bold; color: red;}
+.c li, .c .li1 {font-family: monospace; color: black; font-weight: normal;}
+.c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c .li2 {font-weight: bold;}
+.c .kw1 {color: #b1b100;}
+.c .kw2 {color: #000000; font-weight: bold;}
+.c .kw3 {color: #000066;}
+.c .kw4 {color: #993333;}
+.c .co1 {color: #666666; font-style: italic;}
+.c .co2 {color: #339933;}
+.c .coMULTI {color: #808080; font-style: italic;}
+.c .es0 {color: #000099; font-weight: bold;}
+.c .es1 {color: #000099; font-weight: bold;}
+.c .es2 {color: #660099; font-weight: bold;}
+.c .es3 {color: #660099; font-weight: bold;}
+.c .es4 {color: #660099; font-weight: bold;}
+.c .es5 {color: #006699; font-weight: bold;}
+.c .br0 {color: #009900;}
+.c .sy0 {color: #339933;}
+.c .st0 {color: #ff0000;}
+.c .nu0 {color: #0000dd;}
+.c .nu6 {color: #208080;}
+.c .nu8 {color: #208080;}
+.c .nu12 {color: #208080;}
+.c .nu16 {color:#800080;}
+.c .nu17 {color:#800080;}
+.c .nu18 {color:#800080;}
+.c .nu19 {color:#800080;}
+.c .me1 {color: #202020;}
+.c .me2 {color: #202020;}
+.c .ln-xtra, .c li.ln-xtra, .c div.ln-xtra {background-color: #ffc;}
+.c span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  border: 1px solid #808080;
+  color: #000000;
+  background-color: #f1f0ed;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python .de1, .python .de2 {font-family: monospace; font-weight: normal;}
+.python  {font-family:monospace;}
+.python .imp {font-weight: bold; color: red;}
+.python li, .python .li1 {font-family: monospace; color: black; font-weight: normal;}
+.python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python .li2 {font-weight: bold;}
+.python .kw1 {color: #ff7700;font-weight:bold;}
+.python .kw2 {color: #008000;}
+.python .kw3 {color: #dc143c;}
+.python .kw4 {color: #0000cd;}
+.python .co1 {color: #808080; font-style: italic;}
+.python .coMULTI {color: #808080; font-style: italic;}
+.python .es0 {color: #000099; font-weight: bold;}
+.python .br0 {color: black;}
+.python .sy0 {color: #66cc66;}
+.python .st0 {color: #483d8b;}
+.python .nu0 {color: #ff4500;}
+.python .me1 {color: black;}
+.python .ln-xtra, .python li.ln-xtra, .python div.ln-xtra {background-color: #ffc;}
+.python span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash .de1, .bash .de2 {font-family: monospace; font-weight: normal;}
+.bash  {font-family:monospace;}
+.bash .imp {font-weight: bold; color: red;}
+.bash li, .bash .li1 {font-family: monospace; color: black; font-weight: normal;}
+.bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash .li2 {font-weight: bold;}
+.bash .kw1 {color: #000000; font-weight: bold;}
+.bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash .co0 {color: #666666; font-style: italic;}
+.bash .co1 {color: #800000;}
+.bash .co2 {color: #cc0000; font-style: italic;}
+.bash .co3 {color: #000000; font-weight: bold;}
+.bash .co4 {color: #666666;}
+.bash .es1 {color: #000099; font-weight: bold;}
+.bash .es2 {color: #007800;}
+.bash .es3 {color: #007800;}
+.bash .es4 {color: #007800;}
+.bash .es5 {color: #780078;}
+.bash .es_h {color: #000099; font-weight: bold;}
+.bash .br0 {color: #7a0874; font-weight: bold;}
+.bash .sy0 {color: #000000; font-weight: bold;}
+.bash .st0 {color: #ff0000;}
+.bash .st_h {color: #ff0000;}
+.bash .nu0 {color: #000000;}
+.bash .re0 {color: #007800;}
+.bash .re1 {color: #007800;}
+.bash .re2 {color: #007800;}
+.bash .re4 {color: #007800;}
+.bash .re5 {color: #660033;}
+.bash .ln-xtra, .bash li.ln-xtra, .bash div.ln-xtra {background-color: #ffc;}
+.bash span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for scheme
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.scheme .de1, .scheme .de2 {font-family: monospace; font-weight: normal;}
+.scheme  {font-family:monospace;}
+.scheme .imp {font-weight: bold; color: red;}
+.scheme li, .scheme .li1 {font-family: monospace; color: black; font-weight: normal;}
+.scheme .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.scheme .li2 {font-weight: bold;}
+.scheme .kw1 {color: #b1b100;}
+.scheme .co1 {color: #808080; font-style: italic;}
+.scheme .coMULTI {color: #808080; font-style: italic;}
+.scheme .es0 {color: #000099; font-weight: bold;}
+.scheme .br0 {color: #66cc66;}
+.scheme .sy0 {color: #66cc66;}
+.scheme .st0 {color: #ff0000;}
+.scheme .nu0 {color: #cc66cc;}
+.scheme .me0 {color: #202020;}
+.scheme .ln-xtra, .scheme li.ln-xtra, .scheme div.ln-xtra {background-color: #ffc;}
+.scheme span.xtra { display:block; }
+
+--></style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="robots" content="index,follow">
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id="wikilogo"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php"><img src="wikipage_files/uc-wordmark.png" alt="CMSC-16200 Winter 2015" border="0"></a></div>
+  <div id="wikihead">
+  <form action="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php">
+    <span class="headnav"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/RecentChanges" accesskey="c">Recent Changes</a> -</span>
+    <input name="n" value="Joeyzou.AdjacencyMatrixChecker" type="hidden">
+    <input name="action" value="search" type="hidden">
+    <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a>:
+    <input name="q" class="inputbox searchbox" type="text">
+    <input class="inputbutton searchbutton" value="Go" type="submit"></form></div>
+<!--/PageHeaderFmt-->
+  <table id="wikimid" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<!--PageLeftFmt-->
+      <td id="wikileft" valign="top">
+        <p class="sidehead"> Main
+</p><ul><li><a class="urllink" href="http://cmsc-16200.cs.uchicago.edu/2015/" rel="nofollow">Course Home (exit)</a>
+</li><li><a class="urllink" href="https://piazza.com/uchicago/winter2015/cmsc16200/home" rel="nofollow">Piazza (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Main/HomePage">Course WikiHome</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges">Recent Changes</a> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges?action=rss">(rss)</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Student">Student</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Problems">Problems</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Resources">Resources</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Questions">Questions</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">Profiles</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">My Profile</a>
+</li></ul><p class="vspace sidehead"> Instructor
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/StuartKurtz">Stuart Kurtz</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/ArielFeldman">Ariel Feldman</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Instructor/SampleProblem">Sample Problem</a>
+</li></ul><p class="vspace sidehead"> Lab
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/MarkStoehr">Mark Stoehr</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/Labs">Labs</a>
+</li><li><a class="urllink" href="http://people.cs.uchicago.edu/%7Estoehr/cs162" rel="nofollow">Labs Page (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/FAQ">FAQ</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/PmWiki">PmWiki</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/Cookbook/SourceBlock" rel="nofollow">SourceBlock (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/DocumentationIndex">Documentation Index</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/FAQ">PmWiki FAQ</a>
+</li></ul><p class="vspace" style="text-align: right;"> <span style="font-size:83%"><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/SideBar?action=edit">edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id="wikibody" valign="top">
+<!--PageActionFmt-->
+        <div id="wikicmds"><ul><li class="browse">      <a accesskey="" rel="nofollow" class="selflink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker">View</a>
+</li><li class="edit">      <a accesskey="e" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=edit">Edit</a>
+</li><li class="diff">   <a accesskey="h" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=diff">History</a>
+</li><li class="print">     <a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=print">Print</a>
+</li><li class="logout"><em>  <span style="font-size:83%"><a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=logout">Logout</a></span></em>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id="wikititle">
+          <div class="pagegroup"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou">Joeyzou</a> /</div>
+          <h1 class="pagetitle">AdjacencyMatrixChecker</h1></div>
+<!--PageText-->
+<div id="wikitext">
+<p>Proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Joeyzou">Joey Zou</a> on 01/07/15 <br>Last edited on 01/07/15
+</p>
+<p class="vspace">A graph is comprised of a set of vertices and a set of
+ edges, where an edge is a pair of vertices. A simple undirected graph 
+is a graph where there are no loops (i.e. an edge from a vertex to 
+itself), the order of the pair of vertices of an edge is not important 
+(so (a,b) is an edge if and only if (b,a) is an edge, and both pairs are
+ considered one edge), and there is at most one edge for every pair of 
+vertices. The adjacency matrix of a graph is a v by v matrix (where v is
+ the number of vertices) where the entry of the ith row and jth column 
+is 1 if there is an edge between vertices i and j and 0 otherwise. There
+ are four necessary and sufficient conditions for a matrix to be the 
+adjacency matrix of some simple undirected graph:
+</p><ul><li>The matrix must be square
+</li><li>Each entry of the matrix is either 0 or 1
+</li><li>The entries along the diagonal are all 0
+</li><li>The matrix is symmetric, i.e. interchanging the roles of the rows and columns does not change the matrix
+</li></ul><p class="vspace">Problem: Write a program which, given a 
+matrix, determines whether the matrix is the adjacency matrix of some 
+simple undirected graph. Additionally, if possible, print a graphic 
+representation of the graph. You may represent the matrix using whatever
+ data structure you like.
+</p>
+<div class="vspace"></div><hr>
+<p class="vspace">A simple take on the problem in C (by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Nsapoval">Nick Sapoval</a>)
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock1">
+  <div class="sourceblocktext"><div class="c"><span class="coMULTI">/* This is a simple adjacency matrix checker.<br>
+No command line parameters needed. The <br>
+interaction looks like follows:<br>
+<br>
+$ ./matrix<br>
+3<br>
+0 1 1<br>
+1 0 0<br>
+1 0 0<br>
+This is an adjacency matrix.<br>
+<br>
+$ ./matrix<br>
+3<br>
+1 2 3<br>
+This is not an adjacency matrix. <br>
+*/</span><br>
+<br>
+<span class="co2">#include &lt;stdio.h&gt;</span><br>
+<span class="co2">#include &lt;stdlib.h&gt;</span><br>
+<br>
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span> <span class="sy0">**</span>argv<span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; <span class="kw4">int</span> n<span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="kw3">scanf</span><span class="br0">(</span><span class="st0">"%d"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>n<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="kw4">int</span> a<span class="br0">[</span>n<span class="br0">]</span><span class="br0">[</span>n<span class="br0">]</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="kw4">int</span> v<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">,</span>i<span class="sy0">,</span>j<span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span><span class="br0">(</span>i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> i<span class="sy0">&lt;</span>n<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span><span class="br0">(</span>j<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> j<span class="sy0">&lt;</span>n<span class="sy0">;</span> j<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">scanf</span><span class="br0">(</span><span class="st0">"%d"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>v<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span><span class="br0">(</span>v<span class="sy0">==</span><span class="nu0">0</span> <span class="sy0">||</span> v<span class="sy0">==</span><span class="nu0">1</span><span class="br0">)</span> a<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span><span class="sy0">=</span>v<span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">else</span> <span class="br0">{</span>v<span class="sy0">=-</span><span class="nu0">1</span><span class="sy0">;</span> <span class="kw2">break</span><span class="sy0">;</span><span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span><span class="br0">(</span>i<span class="sy0">&gt;</span>j <span class="sy0">&amp;&amp;</span> a<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span><span class="sy0">!=</span>a<span class="br0">[</span>j<span class="br0">]</span><span class="br0">[</span>i<span class="br0">]</span><span class="br0">)</span> <span class="br0">{</span>v<span class="sy0">=-</span><span class="nu0">1</span><span class="sy0">;</span> <span class="kw2">break</span><span class="sy0">;</span><span class="br0">}</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span><span class="br0">(</span>i<span class="sy0">==</span>j <span class="sy0">&amp;&amp;</span> a<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span><span class="sy0">!=</span><span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span>v<span class="sy0">=-</span><span class="nu0">1</span><span class="sy0">;</span> <span class="kw2">break</span><span class="sy0">;</span><span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"This is %s"</span><span class="sy0">,</span> v <span class="sy0">==</span> <span class="sy0">-</span><span class="nu0">1</span> <span class="sy0">?</span> <span class="st0">"not an adjacency matrix."</span> <span class="sy0">:</span> <span class="st0">"an adjacency matrix."</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="kw3">exit</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=sourceblock&amp;num=1" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<div class="vspace"></div><hr>
+<p class="vspace">Another solution in Python (by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Skomissopoulos">Sotiri Komissopoulos</a>)
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock2">
+  <div class="sourceblocktext"><div class="python"><span class="co1">#!/usr/bin/env python3.4</span><br>
+<br>
+<span class="st0">"""<br>
+A simple command-line python script to determine whether a given matrix 
+is the adjacency matrix of some graph. If not, a reason why is given. <br>
+Graphics for the corresponding graph have not been implemented.<br>
+<br>
+Sample runs:<br>
+$ echo -e "1 0 1<span class="es0">\n</span>0 0 0<span class="es0">\n</span>1 0 0" | python3.4 adjacencyMatrixChecker.py<br>
+Adjacency matrices must have only zeroes on their diagonal!<br>
+1 0 1<br>
+0 0 0<br>
+1 0 0<br>
+is NOT an adjacency matrix!<br>
+<br>
+$ echo -e "0 0 1<span class="es0">\n</span>0 0 1<span class="es0">\n</span>1 1 0" | python3.4 adjacencyMatrixChecker.py<br>
+0 0 1<br>
+0 0 1<br>
+1 1 0<br>
+is an adjacency matrix!<br>
+"""</span><br>
+<br>
+<span class="kw1">from</span> <span class="kw3">sys</span> <span class="kw1">import</span> stdin<br>
+<br>
+<span class="kw1">def</span> checkAdj<span class="br0">(</span>mat<span class="br0">)</span>:<br>
+&nbsp; &nbsp; dim <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>mat<span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span>dim<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; row <span class="sy0">=</span> mat<span class="br0">[</span>i<span class="br0">]</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> row<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">!=</span> <span class="st0">"0"</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Adjacency matrices must have only zeroes on their diagonal!"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span><span class="br0">(</span><span class="kw2">False</span><span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">any</span><span class="br0">(</span>val <span class="kw1">not</span> <span class="kw1">in</span> <span class="br0">[</span><span class="st0">"0"</span><span class="sy0">,</span><span class="st0">"1"</span><span class="br0">]</span> <span class="kw1">for</span> val <span class="kw1">in</span> row<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Adjacency matrices must only contain zeroes and ones!"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span><span class="br0">(</span><span class="kw2">False</span><span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">elif</span> <span class="kw2">len</span><span class="br0">(</span>row<span class="br0">)</span> <span class="sy0">!=</span> dim:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">len</span><span class="br0">(</span>row<span class="br0">)</span> <span class="sy0">&gt;</span> dim:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Adjacency matrices must be square! There are fewer rows than columns."</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Adjacency matrices must be square! There are more rows than columns."</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span><span class="br0">(</span><span class="kw2">False</span><span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">elif</span> <span class="kw1">not</span><span class="br0">(</span><span class="kw2">all</span><span class="br0">(</span>mat<span class="br0">[</span>i<span class="br0">]</span><span class="br0">[</span>j<span class="br0">]</span> <span class="sy0">==</span> mat<span class="br0">[</span>j<span class="br0">]</span><span class="br0">[</span>i<span class="br0">]</span> <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span>dim<span class="br0">)</span> <span class="kw1">for</span> j <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span>i<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Adjacency matrices must be symmetric!"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span><span class="br0">(</span><span class="kw2">False</span><span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">return</span><span class="br0">(</span><span class="kw2">True</span><span class="br0">)</span><br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> showMat<span class="br0">(</span>mat<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">return</span><span class="br0">(</span><span class="st0">"<span class="es0">\n</span>"</span>.<span class="me1">join</span><span class="br0">(</span><span class="kw2">list</span><span class="br0">(</span><span class="kw2">map</span><span class="br0">(</span><span class="st0">" "</span>.<span class="me1">join</span><span class="sy0">,</span>mat<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<br>
+<br>
+inpMat <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+<br>
+<span class="kw1">for</span> line <span class="kw1">in</span> stdin:<br>
+&nbsp; &nbsp; inpMat.<span class="me1">append</span><span class="br0">(</span>line.<span class="me1">split</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">if</span> checkAdj<span class="br0">(</span>inpMat<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span>showMat<span class="br0">(</span>inpMat<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"is an adjacency matrix!"</span><span class="br0">)</span><br>
+<span class="kw1">else</span>:<br>
+&nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span>showMat<span class="br0">(</span>inpMat<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"is NOT an adjacency matrix!"</span><span class="br0">)</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=sourceblock&amp;num=2" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<div class="vspace"></div><hr>
+<p>A new take on this problem in R by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teo Collin</a>
+</p>
+<p class="vspace">So, I have decided that the wiki needs some R, so I 
+decided to quickly write this in R. The result in an R function that can
+ take a data frame, generated in R or read in from a csv, and determine 
+if that data frame is a viable adjacency matrix. One will then note that
+ this is intended to be used as part an "R" command line interaction.
+</p>
+<p class="vspace">I will quickly explain the program. 
+</p>
+<p class="vspace">The first test is conducted using an assumption about 
+data frames, mainly that all vectors in a data frame will be the same 
+length. Then, one could just check the number of vectors in a data frame
+ vs. the length of any given vector. However, there is an exception to 
+this assumption. If a data frame is read in from some external source, 
+all vectors will be filled with NA at the end until they are as long as 
+the longest vector. To deal with this, I remove all rows with NA and 
+then test the number of vectors against the length of the first vector.
+</p>
+<p class="vspace">The second test loops through all vectors in the data 
+frame and adds the length of the vector with all values of that vector 
+except for 1s and 0s to a constant that starts as 0. Then, we just check
+ if the value of the constant is not 0 for this test.
+</p>
+<p class="vspace">The third test is conducted in a straightforward manner and can easily be discerned by looking at the code. 
+</p>
+<p class="vspace">The fourth test is conducted by transposing our 
+canmdidate matrix and testing equality between the values at each 
+position of each matrix e.g. (1,1) in the transposed matrix is compared 
+against (1,1) in the original only for all possible positions. (R 
+operators are often vector or data frame wise...). This yields a data 
+frame of boolean vectors, which I loop over using reduce (i.e foldr in 
+haskell), a constant, and a for loop. 
+</p>
+<p class="vspace">I think that there are probably more concise ways of doing this.
+Anyway, here is the function:
+</p>
+<div class="sourceblock " id="sourceblock3">
+  <div class="sourceblocktext"><div class="bash">adjacencymatrix <span class="sy0">&lt;</span>- <span class="kw1">function</span><span class="br0">(</span>sample<span class="br0">)</span><span class="br0">{</span><br>
+sample <span class="sy0">&lt;</span>- na.omit<span class="br0">(</span>sample<span class="br0">)</span><br>
+test1 <span class="sy0">&lt;</span>- length<span class="br0">(</span>sample<span class="br0">)</span> == length<span class="br0">(</span>sample<span class="br0">[</span>,<span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span> <br>
+<span class="co0"># is square</span><br>
+temp <span class="sy0">&lt;</span>- <span class="nu0">0</span><br>
+<span class="kw1">for</span> <span class="br0">(</span>x <span class="kw1">in</span> sample<span class="br0">)</span><span class="br0">{</span><br>
+temp <span class="sy0">&lt;</span>- temp + length<span class="br0">(</span>x<span class="br0">[</span>x <span class="sy0">!</span>= <span class="nu0">1</span> <span class="sy0">&amp;&amp;</span> x <span class="sy0">!</span>=<span class="nu0">0</span><span class="br0">]</span><span class="br0">)</span><br>
+<span class="br0">}</span><br>
+test2 <span class="sy0">&lt;</span>- temp<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> == <span class="nu0">0</span><br>
+<span class="co0">#only 0 and 1s</span><br>
+<br>
+test3 <span class="sy0">&lt;</span>- TRUE<br>
+<span class="kw1">for</span> <span class="br0">(</span>x <span class="kw1">in</span> <span class="kw2">seq</span><span class="br0">(</span><span class="nu0">1</span>,length<span class="br0">(</span>sample<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; test3 <span class="sy0">&lt;</span>- test3 <span class="sy0">&amp;&amp;</span> <span class="br0">(</span>sample<span class="br0">[</span>x,x<span class="br0">]</span> == <span class="nu0">0</span><span class="br0">)</span><br>
+<span class="br0">}</span><br>
+<span class="co0"># diagonal only 0</span><br>
+<br>
+test4 <span class="sy0">&lt;</span>- TRUE<br>
+<span class="kw1">for</span><span class="br0">(</span>x <span class="kw1">in</span> <span class="br0">(</span>t<span class="br0">(</span>sample<span class="br0">)</span> == sample<span class="br0">)</span><span class="br0">)</span><span class="br0">{</span><br>
+test4 <span class="sy0">&lt;</span>- test4 <span class="sy0">&amp;&amp;</span> Reduce<span class="br0">(</span><span class="kw1">function</span><span class="br0">(</span>x,y<span class="br0">)</span> <span class="br0">{</span>x <span class="sy0">&amp;&amp;</span> y<span class="br0">}</span>, x, TRUE<span class="br0">)</span><br>
+<span class="br0">}</span><br>
+<span class="co0">#survives being transposed </span><br>
+<span class="kw3">return</span> <span class="br0">(</span>test1 <span class="sy0">&amp;&amp;</span> test2 <span class="sy0">&amp;&amp;</span> test3 <span class="sy0">&amp;&amp;</span> test4<span class="br0">)</span><br>
+<span class="br0">}</span></div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=sourceblock&amp;num=3" type="text/plain">[$[Get Code]]</a></div>
+</div>
+ 
+<p class="vspace">And, here is a sample interaction in the R environment featuring matrices/data frames read in from csv files:
+</p>
+<div class="sourceblock " id="sourceblock4">
+  <div class="sourceblocktext"><div class="bash"><span class="sy0">&gt;</span> sample<br>
+&nbsp; A B C<br>
+<span class="nu0">1</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><br>
+<span class="nu0">2</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><br>
+<span class="nu0">3</span> <span class="nu0">1</span> <span class="nu0">1</span> <span class="nu0">0</span><br>
+<span class="sy0">&gt;</span> agg<br>
+&nbsp; X1 X1.1 X1.2<br>
+<span class="nu0">1</span> &nbsp;<span class="nu0">1</span> &nbsp; &nbsp;<span class="nu0">1</span> &nbsp; &nbsp;<span class="nu0">1</span><br>
+<span class="nu0">2</span> &nbsp;<span class="nu0">1</span> &nbsp; &nbsp;<span class="nu0">1</span> &nbsp; &nbsp;<span class="nu0">1</span><br>
+<span class="nu0">3</span> &nbsp;<span class="nu0">1</span> &nbsp; NA &nbsp; &nbsp;<span class="nu0">1</span><br>
+<span class="sy0">&gt;</span> aggg<br>
+&nbsp; A B C<br>
+<span class="nu0">1</span> <span class="nu0">1</span> <span class="nu0">0</span> <span class="nu0">2</span><br>
+<span class="nu0">2</span> <span class="nu0">1</span> <span class="nu0">0</span> <span class="nu0">2</span><br>
+<span class="nu0">3</span> <span class="nu0">0</span> <span class="nu0">1</span> <span class="nu0">2</span><br>
+<span class="sy0">&gt;</span> <span class="br0">(</span>adjacencymatrix<span class="br0">(</span>sample<span class="br0">)</span><span class="br0">)</span><br>
+<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> TRUE<br>
+<span class="sy0">&gt;</span> adjacencymatrix<span class="br0">(</span>agg<span class="br0">)</span><br>
+<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> FALSE<br>
+<span class="sy0">&gt;</span> adjacencymatrix<span class="br0">(</span>aggg<span class="br0">)</span><br>
+<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> FALSE</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=sourceblock&amp;num=4" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<hr>
+<p>Another solution in MIT Scheme by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teo Collin</a>
+</p>
+<p class="vspace">In a similar vein, I decided that I wanted to see some
+ scheme on this wiki so I quickly wrote this program in scheme. It is 
+once again just a function. It takes 2d lists as its matrix 
+representation. 
+</p>
+<p class="vspace">I learned scheme from TLS and the GNU/MIT docs. This 
+code is somewhat reflective of this. I also have not written any scheme 
+in a while so it could probably use second pass.
+</p>
+<p class="vspace">I do not think the code requires much explanation beyond looking at it so I will not waste breath on that. 
+Code:
+</p>
+<div class="sourceblock " id="sourceblock5">
+  <div class="sourceblocktext"><div class="scheme"><span class="co1">;;This already exists, but practice</span><br>
+<span class="br0">(</span><span class="kw1">define</span> <span class="kw1">length</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">cond</span> <span class="br0">(</span><span class="br0">(</span><span class="kw1">null?</span> <span class="kw1">list</span><span class="br0">)</span> <span class="nu0">0</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">(</span><span class="kw1">else</span> <span class="br0">(</span><span class="sy0">+</span> <span class="nu0">1</span> <span class="br0">(</span><span class="kw1">length</span> <span class="br0">(</span><span class="kw1">cdr</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="co1">;;Maps length</span><br>
+&nbsp;<span class="br0">(</span><span class="kw1">define</span> mapL <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">map</span> <span class="kw1">length</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;What it says on the tin</span><br>
+&nbsp;<span class="br0">(</span><span class="kw1">define</span> test1? <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span>fold<span class="sy0">-</span>right <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span>x y<span class="br0">)</span> <span class="br0">(</span><span class="kw1">and</span> x y<span class="br0">)</span><span class="br0">)</span> #t <span class="br0">(</span><span class="kw1">map</span> <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span>x<span class="br0">)</span> <span class="br0">(</span><span class="kw1">eq?</span> x <span class="br0">(</span><span class="kw1">length</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">(</span>mapL <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="co1">;;if all elements in a list are 0 or 1.</span><br>
+&nbsp;<span class="br0">(</span><span class="kw1">define</span> zone? <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">cond</span> <span class="br0">(</span><span class="br0">(</span><span class="kw1">null?</span> <span class="kw1">list</span><span class="br0">)</span> #t<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="br0">(</span><span class="kw1">not</span> <span class="br0">(</span><span class="kw1">or</span> <span class="br0">(</span><span class="kw1">eq?</span> <span class="br0">(</span><span class="kw1">car</span> <span class="kw1">list</span><span class="br0">)</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">eq?</span> <span class="br0">(</span><span class="kw1">car</span> <span class="kw1">list</span><span class="br0">)</span> <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> #f<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">else</span> <span class="br0">(</span>zone? <span class="br0">(</span><span class="kw1">cdr</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+&nbsp;<span class="br0">(</span><span class="kw1">define</span> test2? <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">cond</span> <span class="br0">(</span><span class="br0">(</span><span class="kw1">null?</span> <span class="kw1">list</span><span class="br0">)</span> #t<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="br0">(</span><span class="kw1">not</span> <span class="br0">(</span>zone? <span class="br0">(</span><span class="kw1">car</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> #f<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">else</span> <span class="br0">(</span>test2? <span class="br0">(</span><span class="kw1">cdr</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+&nbsp;<span class="br0">(</span><span class="kw1">define</span> test3? <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">cond</span> <span class="br0">(</span><span class="br0">(</span><span class="kw1">null?</span> <span class="kw1">list</span><span class="br0">)</span> #t<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="br0">(</span><span class="kw1">not</span> <span class="br0">(</span><span class="kw1">zero?</span> <span class="br0">(</span><span class="kw1">car</span> <span class="br0">(</span><span class="kw1">car</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> #f<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">else</span> <span class="br0">(</span>test3? <span class="br0">(</span><span class="kw1">map</span> <span class="kw1">cdr</span> <span class="br0">(</span><span class="kw1">cdr</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="br0">(</span><span class="kw1">define</span> <span class="br0">(</span>transpose m<span class="br0">)</span> <span class="br0">(</span>apply <span class="kw1">map</span> <span class="kw1">list</span> m<span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;I knew there was an easy one for mit scheme so I just googled it… http://rosettacode.org/wiki/Matrix_transposition#Scheme </span><br>
+<br>
+&nbsp;<span class="br0">(</span><span class="kw1">define</span> test4? <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">equal?</span> <span class="br0">(</span>transpose &nbsp;<span class="kw1">list</span><span class="br0">)</span> <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+&nbsp;<span class="br0">(</span><span class="kw1">define</span> amatrix? <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span><span class="kw1">list</span><span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">(</span><span class="kw1">and</span> <span class="br0">(</span><span class="kw1">and</span> <span class="br0">(</span>test1? <span class="kw1">list</span><span class="br0">)</span> <span class="br0">(</span>test2? <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">and</span> <span class="br0">(</span>test3? <span class="kw1">list</span><span class="br0">)</span> <span class="br0">(</span>test4? <span class="kw1">list</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;End function</span><br>
+<br>
+<span class="co1">;;Tests:</span><br>
+<span class="br0">(</span>amatrix? <span class="br0">(</span><span class="kw1">list</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">1</span> <span class="nu0">1</span> <span class="nu0">0</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;True</span><br>
+&nbsp;<span class="br0">(</span>amatrix? <span class="br0">(</span><span class="kw1">list</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;False</span><br>
+&nbsp;<span class="br0">(</span>amatrix? <span class="br0">(</span><span class="kw1">list</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">1</span> <span class="nu0">1</span> <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;False</span><br>
+&nbsp;<span class="br0">(</span>amatrix? <span class="br0">(</span><span class="kw1">list</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">1</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">1</span> <span class="nu0">1</span> <span class="nu0">0</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;False </span><br>
+&nbsp;<span class="br0">(</span>amatrix? <span class="br0">(</span><span class="kw1">list</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">1</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">0</span> <span class="nu0">0</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">(</span><span class="kw1">list</span> <span class="nu0">1</span> <span class="nu0">1</span> <span class="nu0">0</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<span class="co1">;;False</span><br>
+<br>
+<br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=sourceblock&amp;num=5" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+</div>
+
+      </td>
+    </tr></tbody></table>
+<!--PageFooterFmt-->
+  <div id="wikifoot">
+    <div class="footnav">
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=edit">Edit</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=diff">History</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/AdjacencyMatrixChecker?action=print" target="_blank">Print</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Joeyzou/RecentChanges">Recent Changes</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a></div>
+    <div class="lastmod">Page last modified on February 10, 2015, at 10:43 PM</div></div>
+<!--HTMLFooter-->
+
+
+</body></html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>CMSC-16200 Winter 2015 | Cms / Hangman AI </title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="wikipage_files/pmwiki.css" type="text/css">
+  <!--HTMLHeader--><style type="text/css"><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for haskell
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.haskell .de1, .haskell .de2 {font-family: monospace; font-weight: normal;}
+.haskell  {font-family:monospace;}
+.haskell .imp {font-weight: bold; color: red;}
+.haskell li, .haskell .li1 {font-family: monospace; color: black; font-weight: normal;}
+.haskell .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.haskell .li2 {font-weight: bold;}
+.haskell .kw1 {color: #06c; font-weight: bold;}
+.haskell .kw2 {color: #06c; font-weight: bold;}
+.haskell .kw3 {font-weight: bold;}
+.haskell .kw4 {color: #cccc00; font-weight: bold;}
+.haskell .kw5 {color: maroon;}
+.haskell .co1 {color: #5d478b; font-style: italic;}
+.haskell .co2 {color: #339933; font-weight: bold;}
+.haskell .co3 {color: #5d478b; font-style: italic;}
+.haskell .coMULTI {color: #5d478b; font-style: italic;}
+.haskell .es0 {background-color: #3cb371; font-weight: bold;}
+.haskell .br0 {color: green;}
+.haskell .sy0 {color: #339933; font-weight: bold;}
+.haskell .st0 {background-color: #3cb371;}
+.haskell .nu0 {color: red;}
+.haskell .me1 {color: #060;}
+.haskell .ln-xtra, .haskell li.ln-xtra, .haskell div.ln-xtra {background-color: #ffc;}
+.haskell span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  border: 1px solid #808080;
+  color: #000000;
+  background-color: #f1f0ed;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash .de1, .bash .de2 {font-family: monospace; font-weight: normal;}
+.bash  {font-family:monospace;}
+.bash .imp {font-weight: bold; color: red;}
+.bash li, .bash .li1 {font-family: monospace; color: black; font-weight: normal;}
+.bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash .li2 {font-weight: bold;}
+.bash .kw1 {color: #000000; font-weight: bold;}
+.bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash .co0 {color: #666666; font-style: italic;}
+.bash .co1 {color: #800000;}
+.bash .co2 {color: #cc0000; font-style: italic;}
+.bash .co3 {color: #000000; font-weight: bold;}
+.bash .co4 {color: #666666;}
+.bash .es1 {color: #000099; font-weight: bold;}
+.bash .es2 {color: #007800;}
+.bash .es3 {color: #007800;}
+.bash .es4 {color: #007800;}
+.bash .es5 {color: #780078;}
+.bash .es_h {color: #000099; font-weight: bold;}
+.bash .br0 {color: #7a0874; font-weight: bold;}
+.bash .sy0 {color: #000000; font-weight: bold;}
+.bash .st0 {color: #ff0000;}
+.bash .st_h {color: #ff0000;}
+.bash .nu0 {color: #000000;}
+.bash .re0 {color: #007800;}
+.bash .re1 {color: #007800;}
+.bash .re2 {color: #007800;}
+.bash .re4 {color: #007800;}
+.bash .re5 {color: #660033;}
+.bash .ln-xtra, .bash li.ln-xtra, .bash div.ln-xtra {background-color: #ffc;}
+.bash span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python .de1, .python .de2 {font-family: monospace; font-weight: normal;}
+.python  {font-family:monospace;}
+.python .imp {font-weight: bold; color: red;}
+.python li, .python .li1 {font-family: monospace; color: black; font-weight: normal;}
+.python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python .li2 {font-weight: bold;}
+.python .kw1 {color: #ff7700;font-weight:bold;}
+.python .kw2 {color: #008000;}
+.python .kw3 {color: #dc143c;}
+.python .kw4 {color: #0000cd;}
+.python .co1 {color: #808080; font-style: italic;}
+.python .coMULTI {color: #808080; font-style: italic;}
+.python .es0 {color: #000099; font-weight: bold;}
+.python .br0 {color: black;}
+.python .sy0 {color: #66cc66;}
+.python .st0 {color: #483d8b;}
+.python .nu0 {color: #ff4500;}
+.python .me1 {color: black;}
+.python .ln-xtra, .python li.ln-xtra, .python div.ln-xtra {background-color: #ffc;}
+.python span.xtra { display:block; }
+
+--></style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="robots" content="index,follow">
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id="wikilogo"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php"><img src="wikipage_files/uc-wordmark.png" alt="CMSC-16200 Winter 2015" border="0"></a></div>
+  <div id="wikihead">
+  <form action="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php">
+    <span class="headnav"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/RecentChanges" accesskey="c">Recent Changes</a> -</span>
+    <input name="n" value="Cms.Hangman" type="hidden">
+    <input name="action" value="search" type="hidden">
+    <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a>:
+    <input name="q" class="inputbox searchbox" type="text">
+    <input class="inputbutton searchbutton" value="Go" type="submit"></form></div>
+<!--/PageHeaderFmt-->
+  <table id="wikimid" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<!--PageLeftFmt-->
+      <td id="wikileft" valign="top">
+        <p class="sidehead"> Main
+</p><ul><li><a class="urllink" href="http://cmsc-16200.cs.uchicago.edu/2015/" rel="nofollow">Course Home (exit)</a>
+</li><li><a class="urllink" href="https://piazza.com/uchicago/winter2015/cmsc16200/home" rel="nofollow">Piazza (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Main/HomePage">Course WikiHome</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges">Recent Changes</a> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges?action=rss">(rss)</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Student">Student</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Problems">Problems</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Resources">Resources</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Questions">Questions</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">Profiles</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">My Profile</a>
+</li></ul><p class="vspace sidehead"> Instructor
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/StuartKurtz">Stuart Kurtz</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/ArielFeldman">Ariel Feldman</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Instructor/SampleProblem">Sample Problem</a>
+</li></ul><p class="vspace sidehead"> Lab
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/MarkStoehr">Mark Stoehr</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/Labs">Labs</a>
+</li><li><a class="urllink" href="http://people.cs.uchicago.edu/%7Estoehr/cs162" rel="nofollow">Labs Page (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/FAQ">FAQ</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/PmWiki">PmWiki</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/Cookbook/SourceBlock" rel="nofollow">SourceBlock (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/DocumentationIndex">Documentation Index</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/FAQ">PmWiki FAQ</a>
+</li></ul><p class="vspace" style="text-align: right;"> <span style="font-size:83%"><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/SideBar?action=edit">edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id="wikibody" valign="top">
+<!--PageActionFmt-->
+        <div id="wikicmds"><ul><li class="browse">      <a accesskey="" rel="nofollow" class="selflink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman">View</a>
+</li><li class="edit">      <a accesskey="e" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=edit">Edit</a>
+</li><li class="diff">   <a accesskey="h" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=diff">History</a>
+</li><li class="print">     <a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=print">Print</a>
+</li><li class="logout"><em>  <span style="font-size:83%"><a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=logout">Logout</a></span></em>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id="wikititle">
+          <div class="pagegroup"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms">Cms</a> /</div>
+          <h1 class="pagetitle">Hangman AI</h1></div>
+<!--PageText-->
+<div id="wikitext">
+<p>Proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/CodySilverman">Cody Silverman</a>.
+</p>
+<div class="vspace"></div><h2>Statement</h2>
+<p>Hangman is a pretty simple and classic game. If you don't know how to play it, you can read about it <a class="urllink" href="https://en.wikipedia.org/wiki/Hangman_%28game%29" rel="nofollow">here</a>.
+</p>
+<p class="vspace">I'm sure it's been done, but I'm a bit curious about 
+efficiency in some parts of the algorithm, plus it'd be fun to see in 
+various languages.
+</p>
+<p class="vspace">To keep it simple, the idea is to come up with an 
+optimal algorithm for letter guesses, that is, one that gets the largest
+ number of words with the smallest number of incorrect guesses. This may
+ either take into account a limited number of incorrect guesses 
+(probably specified by the user) and use probability in cases where no 
+truly optimal solution exists, or just attempt to come up with a general
+ algorithm that, given a dictionary, will solve its most challenging 
+game with the smallest amount of incorrect guesses.
+</p>
+<p class="vspace">Anyway, I don't know whether or not a complete search 
+could possibly be done quickly with a large dictionary, and if not, 
+whether to prefer guesses most likely to be correct or guesses whose 
+responses would split the possible words into as many distinct patterns 
+as possible.
+</p>
+<div class="vspace"></div><hr>
+<p>Solution proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/BowenWang">Bowen Wang</a>
+</p>
+<p class="vspace">The idea for the AI is simple: Since the length of the
+ word is known, we can first sieve the words that have the correct 
+length from the dictionary. Then we find the letter that appears most in
+ those word to make a guess. After we know part of the word, we can then
+ sieve further the dictionary by matching to the pattern that has been 
+guessed. For example, if we already have something like _ _a_ _ Then we 
+can sieve the words that have a as the third letter. (From the words 
+that have length 5).
+</p>
+<p class="vspace">Such simple algorithm works pretty well. At least I haven't find any cases where the AI fails.
+</p>
+<p class="vspace">Here is a haskell implementation of the game and the 
+AI. (The game is a simple version and I feel my implementation is very 
+verbose. Hopefully someone can improve it)
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock1">
+  <div class="sourceblocktext"><div class="haskell"><span class="kw1">import</span> Data<span class="sy0">.</span>List<br>
+<span class="kw1">import</span> System<span class="sy0">.</span><span class="kw4">IO</span><br>
+<span class="kw1">import</span> Control<span class="sy0">.</span><span class="kw4">Monad</span><br>
+<span class="kw1">import</span> System<span class="sy0">.</span>Random<br>
+<span class="kw1">import</span> Data<span class="sy0">.</span><span class="kw4">Char</span><br>
+<span class="kw1">import</span> Data<span class="sy0">.</span><span class="kw4">Maybe</span><br>
+<br>
+<span class="co1">--load in the dictionary</span><br>
+mainloop inh list <span class="sy0">=</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ineof <span class="sy0">&lt;-</span> hIsEOF inh<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> ineof<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">then</span> <span class="kw3">return</span> list<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">else</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;inpStr <span class="sy0">&lt;-</span>hGetLine inh<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">let</span> list1 <span class="sy0">=</span> &nbsp;inpStr : list<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mainloop inh list1<br>
+<br>
+<span class="co1">--a helper function that helps implement the correct guess.For example, "____" can be changed into "_a__"</span><br>
+changeIndex <span class="sy0">::</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="br0">[</span><span class="kw4">Int</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">String</span><br>
+changeIndex xs m <span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> xs<br>
+changeIndex xs m <span class="br0">(</span>n:ns<span class="br0">)</span> <span class="sy0">=</span> changeIndex ys m ns<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">where</span> ys <span class="sy0">=</span> <span class="br0">[</span>xs<span class="sy0">!!</span>i <span class="sy0">|</span> i<span class="sy0">&lt;-</span><span class="br0">[</span><span class="nu0">0</span><span class="sy0">..</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">]</span> <span class="sy0">++</span> m <span class="sy0">++</span> <span class="br0">[</span>xs<span class="sy0">!!</span>i <span class="sy0">|</span> i<span class="sy0">&lt;-</span><span class="br0">[</span>n<span class="sy0">+</span><span class="nu0">1</span><span class="sy0">..</span><span class="kw3">length</span> xs <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">]</span><span class="br0">]</span> &nbsp;<br>
+<br>
+<span class="co1">--a helper function that breaks a string into a list 
+of strings. For example, "start" would be breaked into 
+["s","t","a","r","t"]. It is helpful since the getLine function gets 
+string instead of char.</span><br>
+breakDown <span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+breakDown <span class="br0">(</span>x:xs<span class="br0">)</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">[</span>x<span class="br0">]</span><span class="br0">]</span> <span class="sy0">++</span> breakDown xs<br>
+<br>
+<span class="co1">--the game for human player</span><br>
+game <span class="sy0">::</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span> <span class="sy0">-&gt;</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="kw4">IO</span><span class="br0">(</span><span class="br0">)</span><br>
+game word n state letters<br>
+&nbsp; &nbsp;<span class="sy0">|</span> n <span class="sy0">&gt;</span> <span class="nu0">0</span> &nbsp;<span class="sy0">=</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; <span class="kw1">case</span> state <span class="sy0">==</span> word <span class="kw1">of</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; False <span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">" Valid choices are "</span> <span class="sy0">++</span> <span class="kw3">show</span> <span class="br0">(</span>breakDown letters<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="st0">" Please enter your guess: "</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; letter <span class="sy0">&lt;-</span> <span class="kw3">getLine</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> letter `<span class="kw3">elem</span>` breakDown letters <span class="kw1">of</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;True <span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> intersect letter word <span class="sy0">/=</span> <span class="br0">[</span><span class="br0">]</span> <span class="kw1">of</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; True <span class="sy0">-&gt;</span> <span class="kw1">do</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">let</span> newstate <span class="sy0">=</span> changeIndex state letter <span class="br0">(</span>elemIndices letter<span class="br0">(</span>breakDown word<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> newstate<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">"Correct guess. Attempts left "</span> <span class="sy0">++</span> <span class="kw3">show</span> n<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; game word n newstate <span class="br0">(</span>letters \\ letter<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">_</span> &nbsp; &nbsp;<span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> state<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">"Incorrect guess. Attempts left "</span> <span class="sy0">++</span> <span class="kw3">show</span> <span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; game word <span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span> state <span class="br0">(</span>letters \\ letter<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sy0">_</span> &nbsp;<span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> letter `<span class="kw3">elem</span>` breakDown <span class="br0">[</span><span class="st0">'a'</span><span class="sy0">..</span><span class="st0">'z'</span><span class="br0">]</span> <span class="kw1">of</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; True <span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="st0">"This letter has been guessed before. Please enter a new one."</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; game word n state letters <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">_</span> &nbsp; &nbsp;<span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="st0">"Invalid guess. Please enter a new one."</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; game word n state letters <br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">_</span> &nbsp;<span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="st0">"Congratulations. You win!"</span><br>
+&nbsp; &nbsp;<span class="sy0">|</span> <span class="kw3">otherwise</span> <span class="sy0">=</span> <span class="kw1">do</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">putStrLn</span> <span class="st0">"You Lose"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">"The correct word is "</span> <span class="sy0">++</span> <span class="kw3">show</span> word<br>
+<br>
+<span class="co1">-- a helper function that helps sieve the dictionary to get the most frequently appeared letter.</span><br>
+mostFrequent <span class="sy0">::</span> <span class="br0">[</span><span class="kw4">String</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="br0">[</span><span class="kw4">String</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">String</span><br>
+mostFrequent xs alphabet <span class="sy0">=</span> alphabet <span class="sy0">!!</span> fromJust <span class="br0">(</span>elemIndex <span class="br0">(</span><span class="kw3">maximum</span> <span class="sy0">$</span> <span class="kw3">map</span> number alphabet<span class="br0">)</span> <span class="br0">(</span><span class="kw3">map</span> number alphabet<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">where</span> number x <span class="sy0">=</span> <span class="kw3">length</span> <span class="sy0">$</span> findIndices <span class="br0">(</span><span class="sy0">==</span> x<span class="br0">)</span> <span class="br0">(</span>breakDown <span class="sy0">$</span> <span class="kw3">concat</span> xs<span class="br0">)</span> <br>
+<br>
+<span class="co1">--the AI</span><br>
+gameAI <span class="sy0">::</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="kw4">Int</span> <span class="sy0">-&gt;</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="br0">[</span><span class="kw4">String</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw4">IO</span><span class="br0">(</span><span class="br0">)</span><br>
+gameAI word n state letters dict<br>
+&nbsp; <span class="sy0">|</span> n <span class="sy0">&gt;</span> <span class="nu0">0</span> <span class="sy0">=</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> state <span class="sy0">==</span> word <span class="kw1">of</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;False <span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">" Valid choices are "</span> <span class="sy0">++</span> <span class="kw3">show</span> <span class="br0">(</span>breakDown letters<span class="br0">)</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="st0">" Please enter your guess: "</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> letter<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> intersect letter word <span class="kw1">of</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">[</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> state<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">"Incorrect guess. Attempts left "</span> <span class="sy0">++</span> <span class="kw3">show</span> <span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gameAI word <span class="br0">(</span>n<span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span> state <span class="br0">(</span>letters \\ letter<span class="br0">)</span> dict<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">_</span> &nbsp;<span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">let</span> newstate <span class="sy0">=</span> changeIndex state letter <span class="br0">(</span>elemIndices letter<span class="br0">(</span>breakDown word<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> newstate<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">"Correct guess. Attempts left "</span> <span class="sy0">++</span> <span class="kw3">show</span> n<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gameAI word n newstate <span class="br0">(</span>letters \\ letter<span class="br0">)</span> dict<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sy0">_</span> <span class="sy0">-&gt;</span> <span class="kw1">do</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="st0">"The AI wins."</span><br>
+&nbsp; &nbsp;<span class="sy0">|</span> <span class="kw3">otherwise</span> <span class="sy0">=</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">putStrLn</span> <span class="st0">"The AI Loses. Stupid AI"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="st0">"The correct word is "</span> <span class="sy0">++</span> <span class="kw3">show</span> word<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">where</span> &nbsp; &nbsp; range <span class="sy0">=</span> <span class="kw3">filter</span> match range1<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; range1 <span class="sy0">=</span> <span class="kw3">filter</span> <span class="br0">(</span>\x <span class="sy0">-&gt;</span> <span class="kw3">length</span> x <span class="sy0">==</span> <span class="kw3">length</span> word<span class="br0">)</span> <span class="br0">(</span><span class="kw3">map</span> <span class="br0">(</span><span class="kw3">map</span> toLower<span class="br0">)</span> dict<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; match x <span class="sy0">=</span> <span class="br0">[</span>x<span class="sy0">!!</span>i <span class="sy0">|</span> i <span class="sy0">&lt;-</span> <span class="br0">[</span><span class="nu0">0</span><span class="sy0">..</span><span class="kw3">length</span> x <span class="sy0">-</span><span class="nu0">1</span><span class="br0">]</span><span class="sy0">,</span> <span class="kw3">notElem</span> i list<span class="br0">]</span> <span class="sy0">==</span> <span class="br0">[</span>state<span class="sy0">!!</span>i <span class="sy0">|</span> i <span class="sy0">&lt;-</span> <span class="br0">[</span><span class="nu0">0</span><span class="sy0">..</span><span class="kw3">length</span> state <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">]</span><span class="sy0">,</span> <span class="kw3">notElem</span> i list<span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list <span class="sy0">=</span> findIndices <span class="br0">(</span><span class="sy0">==</span> <span class="st0">'_'</span><span class="br0">)</span> state<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; letter <span class="sy0">=</span> mostFrequent range <span class="br0">(</span>breakDown letters<span class="br0">)</span><br>
+<br>
+<br>
+main <span class="sy0">::</span> <span class="kw4">IO</span> <span class="br0">(</span><span class="br0">)</span><br>
+main <span class="sy0">=</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;inh <span class="sy0">&lt;-</span> openFile <span class="st0">"words.txt"</span> ReadWriteMode<br>
+&nbsp; &nbsp; &nbsp; &nbsp;wordDict <span class="sy0">&lt;-</span> mainloop inh <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;gen <span class="sy0">&lt;-</span> newStdGen<br>
+&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">let</span> x <span class="sy0">=</span> <span class="kw3">fst</span> <span class="sy0">$</span> randomR <span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span><span class="kw3">length</span> wordDict<span class="br0">)</span> gen<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;word <span class="sy0">=</span> <span class="kw3">map</span> <span class="br0">(</span><span class="kw3">map</span> toLower<span class="br0">)</span> wordDict <span class="sy0">!!</span> x<br>
+&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">putStrLn</span> <span class="st0">"Welcome to Hangman. You have two choices for this game: <span class="es0">\n</span> 0 play the game yourself. <span class="es0">\n</span> 1 watch the AI play. <span class="es0">\n</span> Press 0 to play the game and 1 to watch the AI play."</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;choice <span class="sy0">&lt;-</span> <span class="kw3">getLine</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> choice <span class="kw1">of</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="st0">"0"</span> <span class="sy0">-&gt;</span> <span class="kw1">do</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="st0">"Here is a word for you to guess. You have 10 attempts to guess the word."</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="kw3">take</span> <span class="br0">(</span><span class="kw3">length</span> word<span class="br0">)</span> <span class="br0">(</span><span class="kw3">repeat</span> <span class="st0">'_'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; game word <span class="nu0">10</span> <span class="br0">(</span><span class="kw3">take</span> <span class="br0">(</span><span class="kw3">length</span> word<span class="br0">)</span> <span class="br0">(</span><span class="kw3">repeat</span> <span class="st0">'_'</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">[</span><span class="st0">'a'</span><span class="sy0">..</span><span class="st0">'z'</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sy0">_</span> &nbsp;<span class="sy0">-&gt;</span> <span class="kw1">do</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">putStrLn</span> <span class="st0">"Watch the AI play"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw3">putStrLn</span> <span class="sy0">$</span> <span class="kw3">take</span> <span class="br0">(</span><span class="kw3">length</span> word<span class="br0">)</span> <span class="br0">(</span><span class="kw3">repeat</span> <span class="st0">'_'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gameAI word <span class="nu0">10</span> <span class="br0">(</span><span class="kw3">take</span> <span class="br0">(</span><span class="kw3">length</span> word<span class="br0">)</span> <span class="br0">(</span><span class="kw3">repeat</span> <span class="st0">'_'</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">[</span><span class="st0">'a'</span><span class="sy0">..</span><span class="st0">'z'</span><span class="br0">]</span> wordDict</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=sourceblock&amp;num=1" type="text/plain">[$[Get Code]]</a></div>
+</div>
+ 
+<p class="vspace">A sample run for the AI:
+</p>
+<div class="sourceblock " id="sourceblock2">
+  <div class="sourceblocktext"><div class="bash">Welcome to Hangman. You have two choices <span class="kw1">for</span> this game: <br>
+&nbsp;<span class="nu0">0</span> play the game yourself. <br>
+&nbsp;<span class="nu0">1</span> <span class="kw2">watch</span> the AI play. <br>
+&nbsp;Press <span class="nu0">0</span> to play the game and <span class="nu0">1</span> to <span class="kw2">watch</span> the AI play.<br>
+<span class="nu0">1</span><br>
+Watch the AI play<br>
+_______________<br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"a"</span>,<span class="st0">"b"</span>,<span class="st0">"c"</span>,<span class="st0">"d"</span>,<span class="st0">"e"</span>,<span class="st0">"f"</span>,<span class="st0">"g"</span>,<span class="st0">"h"</span>,<span class="st0">"i"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"n"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"u"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+i<br>
+_______________<br>
+Incorrect guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"a"</span>,<span class="st0">"b"</span>,<span class="st0">"c"</span>,<span class="st0">"d"</span>,<span class="st0">"e"</span>,<span class="st0">"f"</span>,<span class="st0">"g"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"n"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"u"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+e<br>
+______________e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"a"</span>,<span class="st0">"b"</span>,<span class="st0">"c"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"g"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"n"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"u"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+a<br>
+_a__a_________e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"c"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"g"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"n"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"u"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+n<br>
+_a__an___n____e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"c"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"g"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"u"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+u<br>
+_a__an__un__u_e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"c"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"g"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+c<br>
+_a__an__unc_u_e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"g"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+g<br>
+ga__an__unc_u_e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"l"</span>,<span class="st0">"m"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+l<br>
+gal_an__unc_u_e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"m"</span>,<span class="st0">"o"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+o<br>
+gal_ano_unc_u_e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"m"</span>,<span class="st0">"p"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+p<br>
+gal_anopunc_u_e<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"m"</span>,<span class="st0">"q"</span>,<span class="st0">"r"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+r<br>
+gal_anopunc_ure<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"m"</span>,<span class="st0">"q"</span>,<span class="st0">"s"</span>,<span class="st0">"t"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+t<br>
+gal_anopuncture<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+&nbsp;Valid choices are <span class="br0">[</span><span class="st0">"b"</span>,<span class="st0">"d"</span>,<span class="st0">"f"</span>,<span class="st0">"h"</span>,<span class="st0">"j"</span>,<span class="st0">"k"</span>,<span class="st0">"m"</span>,<span class="st0">"q"</span>,<span class="st0">"s"</span>,<span class="st0">"v"</span>,<span class="st0">"w"</span>,<span class="st0">"x"</span>,<span class="st0">"y"</span>,<span class="st0">"z"</span><span class="br0">]</span><br>
+&nbsp;Please enter your guess: <br>
+v<br>
+galvanopuncture<br>
+Correct guess. Attempts left <span class="nu0">9</span><br>
+The AI wins.</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=sourceblock&amp;num=2" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<hr>
+<p>Proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teo Collin</a>.
+</p>
+<p class="vspace">Written in Python 3.
+</p>
+<p class="vspace">This is my first attempt a hangman program Ai. It is 
+not as verbose or built for as many players as the version above, but it
+ is a successful AI and these features with ease later or by someone 
+else. I will focus on its ability to play the game and how it does this.
+</p>
+<p class="vspace">A game is generated using the hangman class, 
+specifying the word to be guessed and the number of guesses. For testing
+ purposes, I set the latter at 10. It also has an interface for 
+receiving guesses and returning information about them as well as keep 
+all the information the player knows about the word in a variable called
+ guess_state.
+</p>
+<p class="vspace">I have two functions that take a dictionary. One returns character frequencies, using the very useful <a class="urllink" href="https://docs.python.org/3/library/collections.html" rel="nofollow">Counter container</a> and the other returns a word list. There is also a function for checking if any characters from a list are in a word.
+</p>
+<p class="vspace">The AI is initialized with a game and dictionary. It’s
+ properties are all fairly obvious except for the diction one. This is 
+basically a set of all words in the dictionary that the guess could be 
+based on current information.  The game uses diction_update to update 
+this variable based on new information. It will take in account the 
+character we know are in, the positions of the characters in it, the 
+length of the word, and those we know are not in it. 
+</p>
+<p class="vspace">Using these function and guess function which updates information based on guesses, it plays the game by:
+</p><ul><li>Checking if there is only one word in the dictionary left, 
+if there is, try it. This is something of a problem as we are know 
+constrained by the dictionary if the hangman variant suggests that you 
+can only make one guess…
+</li><li>If there isn’t only one word left, check to see if the current 
+state has no missing characters and guess that. if it is right, it 
+returns True, if it is wrong, it returns False as I consider this a 
+failure of the program and may want to record it.
+</li><li>It then checks if we have run out of guesses, if we have return False.
+</li><li>Then, it updates the dictionary and queries the most frequent 
+character, which it labels as our guess. I decided not to prioritize 
+vowels because I wanted to suppose that we should test different 
+strategies. For example, if prioritizing vowels really does lead to 
+better results or maybe substituting in a different algorithm for 
+deciding what the guess is.
+</li><li>It it has run out of letters for some reason, it tells me that 
+it has failed. This is to protect against exception throwing in the case
+ of nonsensical input.
+</li><li>It guesses the character and then does it all again.
+</li></ul><p class="vspace">I created a play hangman function to have it
+ play the game for a particular word, turns, and dictionary and return 
+the result of the AI (Truth for success and False for failure).
+</p>
+<p class="vspace">I then created a mass test function, which runs the AI
+ through every word in the dictionary and reports the results. This can 
+take awhile, but it allows us an interesting way to see how effective 
+these AI's our. I would like to propose that others use my code and 
+modify the AI to see if it improves (I'm using a mac OSX 10.10 
+dictionary and I will happily provide the file). Or, if the AI is 
+written in another language, build in a similar test. We could also 
+gather other useful info with simple modifications e.g. average number 
+of guesses or commonalities between words it fails at. Naturally, we 
+could have some fun with R and <a class="urllink" href="http://ggplot2.org/" rel="nofollow">ggplot</a> to put together some graphics.
+</p>
+<p class="vspace">For reference, my AI succeeds around 89% of the time 
+and fails around 11%. Given that it has access to a dictionary, I think 
+this can probably be done better. 
+</p>
+<div class="vspace"></div><hr>
+<p>News: I modified the AI to guess vowels first until one is guessed 
+and then continue with the old algorithm. The results were exactly the 
+same.
+</p><hr>
+<p class="vspace">Here is the code:
+</p>
+<div class="sourceblock " id="sourceblock3">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">from</span> <span class="kw3">collections</span> <span class="kw1">import</span> Counter<br>
+<span class="kw1">import</span> <span class="kw3">re</span><br>
+<span class="kw1">import</span> <span class="kw3">sys</span><br>
+<br>
+<br>
+<span class="kw1">class</span> hangman<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> word<span class="sy0">,</span> guesses<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guesses</span> <span class="sy0">=</span> guesses<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">word</span> <span class="sy0">=</span> word<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">wordlen</span> <span class="sy0">=</span> <span class="kw2">len</span><span class="br0">(</span>word<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guess_state</span> <span class="sy0">=</span> <span class="br0">[</span><span class="st0">''</span> <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="kw2">len</span><span class="br0">(</span>word<span class="br0">)</span><span class="br0">)</span><span class="br0">]</span> <span class="co1"># initialzed the current information about known letters and their locations</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">def</span> guess_word<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> word<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> word <span class="sy0">==</span> <span class="kw2">self</span>.<span class="me1">word</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">def</span> guess_letters<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> letter<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guesses</span> -<span class="sy0">=</span> <span class="nu0">1</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> letter <span class="kw1">not</span> <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">word</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> i <span class="kw1">in</span> <span class="kw2">enumerate</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">word</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> letter <span class="kw1">is</span> i<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guess_state</span><span class="br0">[</span>i<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">]</span> <span class="sy0">=</span> letter<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">True</span><br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> dict_char_freq<span class="br0">(</span><span class="kw2">dict</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument dictionary name<br>
+&nbsp; &nbsp; :return list of character frequencies in des order<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">with</span> <span class="kw2">open</span><span class="br0">(</span><span class="kw2">dict</span><span class="sy0">,</span> <span class="st0">'r'</span><span class="br0">)</span> <span class="kw1">as</span> f:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; raw_data <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; new_data <span class="sy0">=</span> <span class="kw3">re</span>.<span class="me1">sub</span><span class="br0">(</span><span class="st0">'<span class="es0">\n</span>|-'</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> raw_data<span class="br0">)</span>.<span class="me1">lower</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">[</span>x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="kw1">for</span> x <span class="kw1">in</span> Counter<span class="br0">(</span>new_data<span class="br0">)</span>.<span class="me1">most_common</span><span class="br0">(</span><span class="br0">)</span><span class="br0">]</span><br>
+<br>
+<br>
+<span class="kw1">def</span> dict_words<span class="br0">(</span><span class="kw2">dict</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument dictionary name<br>
+&nbsp; &nbsp; :return list of words<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">with</span> <span class="kw2">open</span><span class="br0">(</span><span class="kw2">dict</span><span class="sy0">,</span> <span class="st0">'r'</span><span class="br0">)</span> <span class="kw1">as</span> f:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; raw_data <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; new_data <span class="sy0">=</span> <span class="br0">[</span>x.<span class="me1">strip</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">lower</span><span class="br0">(</span><span class="br0">)</span> <span class="kw1">for</span> x <span class="kw1">in</span> raw_data.<span class="me1">splitlines</span><span class="br0">(</span><span class="br0">)</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> new_data<br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> letter_check<span class="br0">(</span>w1<span class="sy0">,</span> w2<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; :argument w1 list of chars<br>
+&nbsp; &nbsp; :argument w2 is a word i.e a list of chars, but one we are checking against<br>
+&nbsp; &nbsp; :return bolean<br>
+&nbsp; &nbsp; Basically, checks if a word has any words in a list of words. This is useful for pairing down the dictionary<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> w2:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="kw1">in</span> w1:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">True</span><br>
+<br>
+<br>
+<span class="kw1">class</span> hangman_ai<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> game<span class="sy0">,</span> <span class="kw2">dict</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">game</span> <span class="sy0">=</span> game<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guessed</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guessed_wrong</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">diction</span> <span class="sy0">=</span> <span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> dict_words<span class="br0">(</span><span class="kw2">dict</span><span class="br0">)</span> <span class="kw1">if</span> <span class="kw2">len</span><span class="br0">(</span>x<span class="br0">)</span> <span class="kw1">is</span> <span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">wordlen</span><span class="br0">]</span> <span class="co1"># initalize the AI's diction based on word length</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">def</span> calc_word_freq<span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Calculates the character frequencies based 
+on the dictionary - the letters that have already been guessed<br>
+&nbsp; &nbsp; &nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">[</span>x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="kw1">for</span> x <span class="kw1">in</span> Counter<span class="br0">(</span><span class="br0">(</span><span class="br0">(</span><span class="st0">''</span>.<span class="me1">join</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">diction</span><span class="br0">)</span><span class="br0">)</span>.<span class="me1">lower</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>.<span class="me1">most_common</span><span class="br0">(</span><span class="br0">)</span> <span class="kw1">if</span> x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="kw1">not</span> <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">guessed</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">#self.vowel_word_freq = []</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">def</span> diction_update<span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""Updates the dictionary to reflect all info about a word, the chars in it and their positions"""</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; state <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guess_state</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; not_allowed <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">guessed_wrong</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; res <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> state:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="kw1">is</span> <span class="st0">''</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; res.<span class="me1">append</span><span class="br0">(</span><span class="st0">'.'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> x <span class="kw1">is</span> <span class="kw1">not</span> <span class="st0">''</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; res.<span class="me1">append</span><span class="br0">(</span>x<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; res1 <span class="sy0">=</span> <span class="st0">''</span>.<span class="me1">join</span><span class="br0">(</span>res<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">diction</span> <span class="sy0">=</span> <span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">diction</span> <span class="kw1">if</span> <span class="kw3">re</span>.<span class="me1">match</span><span class="br0">(</span>res1<span class="sy0">,</span> x<span class="br0">)</span> <span class="kw1">is</span> <span class="kw1">not</span> <span class="kw2">None</span> <span class="kw1">and</span> letter_check<span class="br0">(</span>x<span class="sy0">,</span> not_allowed<span class="br0">)</span> <span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> guess<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> c<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""Guesses a char and updates the relevant variables"""</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guessed</span>.<span class="me1">append</span><span class="br0">(</span>c<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; isin <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guess_letters</span><span class="br0">(</span>c<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw1">not</span> isin:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guessed_wrong</span>.<span class="me1">append</span><span class="br0">(</span>c<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> play<span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""Continues to guess char/update the diction based on these guesses until it runs out of turns or wins """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">len</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">diction</span><span class="br0">)</span> <span class="kw1">is</span> <span class="nu0">1</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Possible victory"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guess <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">diction</span><span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">test</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guess_word</span><span class="br0">(</span>guess<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw3">test</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"VICTORY!!"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">True</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Catastropic Failure 3"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Trying something new"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; state <span class="sy0">=</span> <span class="st0">''</span>.<span class="me1">join</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guess_state</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">len</span><span class="br0">(</span>state<span class="br0">)</span> <span class="kw1">is</span> <span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">wordlen</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Possible victory"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">test</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guess_word</span><span class="br0">(</span><span class="st0">''</span>.<span class="me1">join</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guess_state</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw3">test</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"VICTORY!"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">True</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Catastrophic Failure 1"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guesses</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">self</span>.<span class="me1">game</span>.<span class="me1">guesses</span> <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Catastrophic Failure 2"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">diction_update</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; guess <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">calc_word_freq</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c <span class="sy0">=</span> guess<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">except</span> <span class="kw2">IndexError</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">"Catastrophic Failure 3"</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span>c<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">guess</span><span class="br0">(</span>c<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">self</span>.<span class="me1">play</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<br>
+<br>
+<span class="kw1">def</span> play_hangman<span class="br0">(</span>word<span class="sy0">,</span> turns<span class="sy0">,</span> <span class="kw2">dict</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; game <span class="sy0">=</span> hangman<span class="br0">(</span>word<span class="sy0">,</span> turns<span class="br0">)</span><br>
+&nbsp; &nbsp; ai <span class="sy0">=</span> hangman_ai<span class="br0">(</span>game<span class="sy0">,</span> <span class="kw2">dict</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> ai.<span class="me1">play</span><span class="br0">(</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> mass_test<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""Runs the hangman game on everyword in the dictionary"""</span><br>
+&nbsp; &nbsp; all_words <span class="sy0">=</span> dict_words<span class="br0">(</span><span class="st0">'dict.txt'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; results <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">try</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> all_words:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">'Trying: '</span><span class="sy0">,</span> x<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; results.<span class="me1">append</span><span class="br0">(</span>play_hangman<span class="br0">(</span>x<span class="sy0">,</span> <span class="nu0">10</span><span class="sy0">,</span> <span class="st0">'dict.txt'</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">except</span> <span class="kw2">KeyboardInterrupt</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">'Interrupted, calculating results'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; success_percent <span class="sy0">=</span> <span class="nu0">100</span> * <span class="kw2">len</span><span class="br0">(</span><span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> results <span class="kw1">if</span> x <span class="kw1">is</span> <span class="kw2">True</span><span class="br0">]</span><span class="br0">)</span> / <span class="kw2">len</span><span class="br0">(</span>results<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; failure_percent <span class="sy0">=</span> <span class="nu0">100</span> * <span class="kw2">len</span><span class="br0">(</span><span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> results <span class="kw1">if</span> x <span class="kw1">is</span> <span class="kw2">False</span><span class="br0">]</span><span class="br0">)</span> / <span class="kw2">len</span><span class="br0">(</span>results<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">'The program succeeded {0}% of the time and failed {1}% of the time.'</span>.<span class="me1">format</span><span class="br0">(</span>success_percent<span class="sy0">,</span> failure_percent<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw3">sys</span>.<span class="me1">exit</span><span class="br0">(</span><span class="nu0">127</span><span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; success_percent <span class="sy0">=</span> <span class="nu0">100</span> * <span class="kw2">len</span><span class="br0">(</span><span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> results <span class="kw1">if</span> x <span class="kw1">is</span> <span class="kw2">True</span><span class="br0">]</span><span class="br0">)</span> / <span class="kw2">len</span><span class="br0">(</span>results<span class="br0">)</span><br>
+&nbsp; &nbsp; failure_percent <span class="sy0">=</span> <span class="nu0">100</span> * <span class="kw2">len</span><span class="br0">(</span><span class="br0">[</span>x <span class="kw1">for</span> x <span class="kw1">in</span> results <span class="kw1">if</span> x <span class="kw1">is</span> <span class="kw2">False</span><span class="br0">]</span><span class="br0">)</span> / <span class="kw2">len</span><span class="br0">(</span>results<span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">'The program succeeded {0}% of the time and failed {1}% of the time.'</span>.<span class="me1">format</span><span class="br0">(</span>success_percent<span class="sy0">,</span> failure_percent<span class="br0">)</span><span class="br0">)</span><br>
+<br>
+mass_test<span class="br0">(</span><span class="br0">)</span><br>
+<span class="co1">#play_hangman('global', 10, 'dict.txt')</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=sourceblock&amp;num=3" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+</div>
+
+      </td>
+    </tr></tbody></table>
+<!--PageFooterFmt-->
+  <div id="wikifoot">
+    <div class="footnav">
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=edit">Edit</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=diff">History</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/Hangman?action=print" target="_blank">Print</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Cms/RecentChanges">Recent Changes</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a></div>
+    <div class="lastmod">Page last modified on January 28, 2015, at 08:16 PM</div></div>
+<!--HTMLFooter-->
+
+
+</body></html>

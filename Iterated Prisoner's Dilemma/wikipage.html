@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>CMSC-16200 Winter 2015 | Teocollin / IteratedPrisonersdilemma </title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="wikipage_files/pmwiki.css" type="text/css">
+  <!--HTMLHeader--><style type="text/css"><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python .de1, .python .de2 {font-family: monospace; font-weight: normal;}
+.python  {font-family:monospace;}
+.python .imp {font-weight: bold; color: red;}
+.python li, .python .li1 {font-family: monospace; color: black; font-weight: normal;}
+.python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python .li2 {font-weight: bold;}
+.python .kw1 {color: #ff7700;font-weight:bold;}
+.python .kw2 {color: #008000;}
+.python .kw3 {color: #dc143c;}
+.python .kw4 {color: #0000cd;}
+.python .co1 {color: #808080; font-style: italic;}
+.python .coMULTI {color: #808080; font-style: italic;}
+.python .es0 {color: #000099; font-weight: bold;}
+.python .br0 {color: black;}
+.python .sy0 {color: #66cc66;}
+.python .st0 {color: #483d8b;}
+.python .nu0 {color: #ff4500;}
+.python .me1 {color: black;}
+.python .ln-xtra, .python li.ln-xtra, .python div.ln-xtra {background-color: #ffc;}
+.python span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  border: 1px solid #808080;
+  color: #000000;
+  background-color: #f1f0ed;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="robots" content="index,follow">
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id="wikilogo"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php"><img src="wikipage_files/uc-wordmark.png" alt="CMSC-16200 Winter 2015" border="0"></a></div>
+  <div id="wikihead">
+  <form action="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php">
+    <span class="headnav"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/RecentChanges" accesskey="c">Recent Changes</a> -</span>
+    <input name="n" value="Teocollin.IteratedPrisonersdilemma" type="hidden">
+    <input name="action" value="search" type="hidden">
+    <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a>:
+    <input name="q" class="inputbox searchbox" type="text">
+    <input class="inputbutton searchbutton" value="Go" type="submit"></form></div>
+<!--/PageHeaderFmt-->
+  <table id="wikimid" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<!--PageLeftFmt-->
+      <td id="wikileft" valign="top">
+        <p class="sidehead"> Main
+</p><ul><li><a class="urllink" href="http://cmsc-16200.cs.uchicago.edu/2015/" rel="nofollow">Course Home (exit)</a>
+</li><li><a class="urllink" href="https://piazza.com/uchicago/winter2015/cmsc16200/home" rel="nofollow">Piazza (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Main/HomePage">Course WikiHome</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges">Recent Changes</a> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges?action=rss">(rss)</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Student">Student</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Problems">Problems</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Resources">Resources</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Questions">Questions</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">Profiles</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">My Profile</a>
+</li></ul><p class="vspace sidehead"> Instructor
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/StuartKurtz">Stuart Kurtz</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/ArielFeldman">Ariel Feldman</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Instructor/SampleProblem">Sample Problem</a>
+</li></ul><p class="vspace sidehead"> Lab
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/MarkStoehr">Mark Stoehr</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/Labs">Labs</a>
+</li><li><a class="urllink" href="http://people.cs.uchicago.edu/%7Estoehr/cs162" rel="nofollow">Labs Page (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/FAQ">FAQ</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/PmWiki">PmWiki</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/Cookbook/SourceBlock" rel="nofollow">SourceBlock (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/DocumentationIndex">Documentation Index</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/FAQ">PmWiki FAQ</a>
+</li></ul><p class="vspace" style="text-align: right;"> <span style="font-size:83%"><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/SideBar?action=edit">edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id="wikibody" valign="top">
+<!--PageActionFmt-->
+        <div id="wikicmds"><ul><li class="browse">      <a accesskey="" rel="nofollow" class="selflink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma">View</a>
+</li><li class="edit">      <a accesskey="e" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=edit">Edit</a>
+</li><li class="diff">   <a accesskey="h" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=diff">History</a>
+</li><li class="print">     <a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=print">Print</a>
+</li><li class="logout"><em>  <span style="font-size:83%"><a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=logout">Logout</a></span></em>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id="wikititle">
+          <div class="pagegroup"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin">Teocollin</a> /</div>
+          <h1 class="pagetitle">IteratedPrisonersdilemma</h1></div>
+<!--PageText-->
+<div id="wikitext">
+<p>Proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teo collin</a>
+</p>
+<p class="vspace">The prisoner's dilemma is a scenario where two people 
+have been arrested and are separated for questioning. Separately and 
+simultaneously, they are asked to betray the other in exchange for a 
+better deal. They can choose to stay silent or talk. If they both stay 
+silent, they will both be convicted on some minor crime and serve for a 
+small amount of time. If either chooses to give up the other, the 
+betrayed is convicted and serves a considerably longer time while the 
+other goes free. If both choose to betray, to defect, then they both 
+serve the longer sentence.
+</p>
+<p class="vspace">The prisoner's dilemma is used in game theory/economics and evolutionary biology. You can read more about it <a class="urllink" href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma" rel="nofollow">here</a> 
+</p>
+<p class="vspace">Now, this game is really boring if you only play it 
+once. The game is considerably more interesting if you play it many 
+times against the same person. Experimenters have done this with real 
+people and when that became boring, people got the idea to design 
+algorithms to play against each other in what were called iterated 
+prisoner's dilemma competitions. People submitted their algorithms and 
+they played 1000 or so matches against every other algorithm. The prison
+ sentences above were translated into numerical scores and algorithms 
+were given a cummulative score for all the games they played against all
+ AI's. This is still going on in <a class="urllink" href="http://lesswrong.com/lw/l16/2014_iterated_prisoners_dilemma_tournament_results/" rel="nofollow">certain parts of the net</a>.
+</p>
+<p class="vspace">The goal of this problem is to create:
+</p><ul><li>First, a framework for having AI's compete against each 
+other and keep track of scores. Basically, a system for running the 
+competition 
+</li><li>Second, several default bots: Tit for tat, tat for tit, defect bot, and cooperate bot. 
+</li><li>Third, some of our own algorithms for playing the game. What they are allowed to do will be based off the framework.
+</li></ul><p class="vspace">The framework should come first so I will quickly layout the specifications:
+</p><ul><li>Keep track of which algorithms have played and their scores.
+ The numerical values for the 4 possible scenarios can be chosen at your
+ whim as long as they fulfill the requirements of the game.
+</li><li>Inform the algorithms of which algorithms they are competing against.
+</li><li>Figure out which AI wins.
+</li><li>Prove a transcript of every game played.  
+</li></ul><p class="vspace">After there is some framework, anyone can 
+submit an AI. It would be really quite nice if we were able to actually 
+have a competition.
+</p><hr> 
+<p>Framework proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teo Collin</a>
+</p>
+<p class="vspace">I have completed the framework for an IPDC. It is written in python 3 and so all the AIs should be written in python 3. 
+</p>
+<p class="vspace">The code makes heavy use of classes. There is a 
+history class. There is a player class. Every player class is created 
+with a function that determines the move for the player. You can see 
+several examples in the code. This function will be passed, the history 
+object for that function, the opponent, and the current round. The 
+history object for the function keeps historical information about the 
+AI in a format that I hope will be useful. 
+</p>
+<p class="vspace">A history class has a list of previous opponents and a
+ set of dictionaries. The dictionaries map names of opponents to some 
+sort of records about the game. Specifically, names of opponents, to 
+move made against them, moves made by them, points won or lost in rounds
+ with them. 
+</p>
+<p class="vspace">Mechanisms exist to update the history as the game progresses in the player, history, and game class.
+</p>
+<p class="vspace">The game class takes the payoffs for the game and 
+allows you to play a game between any two AIs. The class handles the 
+updating of the history objects in order to record the outcomes of the 
+game. 
+</p>
+<p class="vspace">Additionally, the player class has a function to 
+communicate with the game class by choices after its choice function is 
+called with the relevant arguments and receiving the results that allow 
+it to update the history function.
+</p>
+<p class="vspace">Lastly, the player class has a list of all players created.
+</p>
+<p class="vspace">All of this machinery comes together in the simulate 
+function to run all existing AIs in all possible combinations. It then 
+uses the history objects for each AI to retrieve information about the 
+net scores of all AIs across all games and the scores of individual one 
+on one competition. 
+</p>
+<p class="vspace">Now, that this is done, someone can write additional 
+AIs to compete, modify the starting framework in someway to: alter the 
+game conditions (e.g. payoffs) or gather additional information about 
+the results of the game.
+</p>
+<p class="vspace">If one wants to simply contribute some AIs, simply 
+define the function that would be passed to the player class and post 
+that along with results gathered by running the whole thing.
+</p>
+<p class="vspace">Here is the code:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock1">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">import</span> <span class="kw3">itertools</span><br>
+<span class="kw1">import</span> <span class="kw3">random</span><br>
+<br>
+<br>
+<span class="kw1">class</span> History<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; A class for keeping track of a AI's history. It has the name, the list of opponents, the total number of rounds<br>
+&nbsp; &nbsp; and a dictionary where opponents are keys, and either a 
+list of their moves, your moves, or the scores are the items<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> name<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">name</span> <span class="sy0">=</span> name<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">oppmoves</span> <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">mymoves</span> <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">scores</span> <span class="sy0">=</span> <span class="br0">{</span><span class="br0">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="kw2">round</span> <span class="sy0">=</span> <span class="nu0">0</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">listOfOpps</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">def</span> add_encounter<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> player<span class="sy0">,</span> myplay<span class="sy0">,</span> theirplay<span class="sy0">,</span> result<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Updates a dictionary after a move.<br>
+&nbsp; &nbsp; &nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> player <span class="kw1">not</span> <span class="kw1">in</span> <span class="kw2">self</span>.<span class="me1">listOfOpps</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">oppmoves</span><span class="br0">[</span>player<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">mymoves</span><span class="br0">[</span>player<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">scores</span><span class="br0">[</span>player<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">listOfOpps</span>.<span class="me1">append</span><span class="br0">(</span>player<span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">mymoves</span><span class="br0">[</span>player<span class="br0">]</span>.<span class="me1">append</span><span class="br0">(</span>myplay<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">oppmoves</span><span class="br0">[</span>player<span class="br0">]</span>.<span class="me1">append</span><span class="br0">(</span>theirplay<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">scores</span><span class="br0">[</span>player<span class="br0">]</span>.<span class="me1">append</span><span class="br0">(</span>result<span class="br0">)</span><br>
+<br>
+<span class="kw1">class</span> Player<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; list_of_players <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> movedet<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param movedet The function for making a 
+move. It should return True for cooperate and False for Defect<br>
+&nbsp; &nbsp; &nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">score</span> <span class="sy0">=</span> <span class="nu0">0</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">history</span> <span class="sy0">=</span> History<span class="br0">(</span><span class="kw3">repr</span><span class="br0">(</span>movedet.__name__<span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">move</span> <span class="sy0">=</span> movedet<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">name</span> <span class="sy0">=</span> <span class="kw3">repr</span><span class="br0">(</span>movedet.__name__<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Player.<span class="me1">list_of_players</span>.<span class="me1">append</span><span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">def</span> move<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> history<span class="sy0">,</span> opp<span class="sy0">,</span> <span class="kw2">round</span> <span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param history - the algorthim's history<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param The name of the opponent<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param the round number<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :return True for cooperate or False for defect<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Passes the necceary information to the movedet function, which returns the move<br>
+&nbsp; &nbsp; &nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; move <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">movedet</span><span class="br0">(</span>history<span class="sy0">,</span> opp<span class="sy0">,</span> <span class="kw2">round</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> move<br>
+&nbsp; &nbsp; <span class="kw1">def</span> update<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> opp<span class="sy0">,</span> mymove<span class="sy0">,</span> theirmove<span class="sy0">,</span> result<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">history</span>.<span class="me1">add_encounter</span><span class="br0">(</span>opp<span class="sy0">,</span> mymove<span class="sy0">,</span> theirmove<span class="sy0">,</span> result<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">score</span> +<span class="sy0">=</span> result<br>
+<br>
+<br>
+<span class="kw1">class</span> Game<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">def</span> <span class="kw4">__init__</span><span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> cop<span class="sy0">,</span> copd<span class="sy0">,</span> defc<span class="sy0">,</span> defect<span class="sy0">,</span> rounds<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param cop: The reward if both cooperate<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param copd: The reward for the player that copperates when the other defects<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param defc: The reward for the player that defects when the other cooperates<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param defect: The reward if they both defect<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param rounds: The number of rounds to be played<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :return:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">cop</span> <span class="sy0">=</span> cop<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">copd</span> <span class="sy0">=</span> copd<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">defc</span> <span class="sy0">=</span> defc<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">defect</span> <span class="sy0">=</span> defect<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">self</span>.<span class="me1">rounds</span> <span class="sy0">=</span> rounds<br>
+&nbsp; &nbsp; <span class="kw1">def</span> pay_off<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> moveA<span class="sy0">,</span> moveB<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param moveA Player A's move<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param moveB Player B's Move<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :return a tuple of (player A's reward, Player B's reward<br>
+&nbsp; &nbsp; &nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> moveA <span class="kw1">is</span> <span class="kw2">True</span> <span class="kw1">and</span> moveB <span class="kw1">is</span> <span class="kw2">True</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="kw2">self</span>.<span class="me1">cop</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">cop</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> moveA <span class="kw1">is</span> <span class="kw2">False</span> <span class="kw1">and</span> moveB <span class="kw1">is</span> <span class="kw2">False</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="kw2">self</span>.<span class="me1">defect</span><span class="sy0">,</span> <span class="kw2">self</span>.<span class="me1">defect</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> moveA <span class="kw1">is</span> <span class="kw2">True</span> <span class="kw1">and</span> moveB <span class="kw1">is</span> <span class="kw2">False</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="kw2">self</span>.<span class="me1">copd</span><span class="sy0">,</span><span class="kw2">self</span>.<span class="me1">defc</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> moveA <span class="kw1">is</span> <span class="kw2">False</span> <span class="kw1">and</span> moveB <span class="kw1">is</span> <span class="kw2">True</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="kw2">self</span>.<span class="me1">defc</span><span class="sy0">,</span><span class="kw2">self</span>.<span class="me1">copd</span><span class="br0">)</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">def</span> play<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> pa<span class="sy0">,</span> pb<span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param pa Player A<br>
+&nbsp; &nbsp; &nbsp; &nbsp; :param pb Player B<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Plays the game for the specified number of rounds and updates all relevant information<br>
+&nbsp; &nbsp; &nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; x <span class="sy0">=</span> <span class="nu0">0</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">while</span> x <span class="sy0">&lt;</span> <span class="kw2">self</span>.<span class="me1">rounds</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a <span class="sy0">=</span> pa.<span class="me1">move</span><span class="br0">(</span>pa.<span class="me1">history</span><span class="sy0">,</span> pb.<span class="me1">name</span><span class="sy0">,</span> x<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b <span class="sy0">=</span> pb.<span class="me1">move</span><span class="br0">(</span>pb.<span class="me1">history</span><span class="sy0">,</span> pa.<span class="me1">name</span><span class="sy0">,</span> x<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; results <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">pay_off</span><span class="br0">(</span>a<span class="sy0">,</span> b<span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pa.<span class="me1">update</span><span class="br0">(</span>pb.<span class="me1">name</span><span class="sy0">,</span> a<span class="sy0">,</span> b<span class="sy0">,</span> results<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pb.<span class="me1">update</span><span class="br0">(</span>pa.<span class="me1">name</span><span class="sy0">,</span> b<span class="sy0">,</span> a<span class="sy0">,</span> results<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x +<span class="sy0">=</span> <span class="nu0">1</span><br>
+<br>
+<span class="co1"># Example functions:</span><br>
+<span class="kw1">def</span> cooperate<span class="br0">(</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">True</span><br>
+<br>
+<span class="kw1">def</span> defect<span class="br0">(</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+<br>
+<span class="kw1">def</span> tit_for_tat<span class="br0">(</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">if</span> c <span class="kw1">is</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">True</span><br>
+&nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> a.<span class="me1">oppmoves</span><span class="br0">[</span>b<span class="br0">]</span><span class="br0">[</span>-<span class="nu0">1</span><span class="br0">]</span><br>
+<br>
+<span class="kw1">def</span> tat_for_tit<span class="br0">(</span>a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw1">if</span> c <span class="kw1">is</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+&nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> a.<span class="me1">oppmoves</span><span class="br0">[</span>b<span class="br0">]</span><span class="br0">[</span>-<span class="nu0">1</span><span class="br0">]</span><br>
+<br>
+<span class="kw1">def</span> ran_bot<span class="br0">(</span>a<span class="sy0">,</span>b<span class="sy0">,</span>c<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="kw3">test</span> <span class="sy0">=</span> <span class="kw3">random</span>.<span class="me1">randint</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span><span class="nu0">1</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="kw3">test</span> <span class="kw1">is</span> <span class="nu0">1</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">True</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="kw3">test</span> <span class="kw1">is</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">False</span><br>
+<br>
+<br>
+<span class="co1">#Example functions turned into bots:</span><br>
+Player<span class="br0">(</span>cooperate<span class="br0">)</span><br>
+Player<span class="br0">(</span>defect<span class="br0">)</span><br>
+Player<span class="br0">(</span>tit_for_tat<span class="br0">)</span><br>
+Player<span class="br0">(</span>tat_for_tit<span class="br0">)</span><br>
+<span class="co1">#Player(ran_bot)</span><br>
+<br>
+<span class="co1"># Plays the game with the defined pay offs and prints some information to demonstrate the history</span><br>
+<span class="kw1">def</span> simulate<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; game <span class="sy0">=</span> Game<span class="br0">(</span><span class="nu0">20</span><span class="sy0">,</span> -<span class="nu0">10</span><span class="sy0">,</span> <span class="nu0">10</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">10</span><span class="br0">)</span><br>
+&nbsp; &nbsp; combinations <span class="sy0">=</span> <span class="kw2">list</span><span class="br0">(</span><span class="kw3">itertools</span>.<span class="me1">combinations</span><span class="br0">(</span>Player.<span class="me1">list_of_players</span><span class="sy0">,</span>r<span class="sy0">=</span><span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> combinations:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; game.<span class="me1">play</span><span class="br0">(</span>x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">,</span> x<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> Player.<span class="me1">list_of_players</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">'Player: {0} Score: {1}'</span>.<span class="me1">format</span><span class="br0">(</span>x.<span class="me1">name</span><span class="sy0">,</span> x.<span class="me1">score</span><span class="br0">)</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> Player.<span class="me1">list_of_players</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> y <span class="kw1">in</span> Player.<span class="me1">list_of_players</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> y <span class="kw1">is</span> <span class="kw1">not</span> x:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; score <span class="sy0">=</span> <span class="kw2">sum</span><span class="br0">(</span>x.<span class="me1">history</span>.<span class="me1">scores</span><span class="br0">[</span>y.<span class="me1">name</span><span class="br0">]</span><span class="br0">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span><span class="br0">(</span><span class="st0">'{0} scored {1} with {2}'</span>.<span class="me1">format</span><span class="br0">(</span>x.<span class="me1">name</span><span class="sy0">,</span> score<span class="sy0">,</span> y.<span class="me1">name</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+simulate<span class="br0">(</span><span class="br0">)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=sourceblock&amp;num=1" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Also, here are the results of the current run:
+</p><ul><li>Player: 'cooperate' Score: 270
+</li><li>Player: 'defect' Score: 110
+</li><li>Player: 'tit_for_tat' Score: 190
+</li><li>Player: 'tat_for_tit' Score: 190
+</li><li>'cooperate' scored -100 with 'defect'
+</li><li>'cooperate' scored 200 with 'tit_for_tat'
+</li><li>'cooperate' scored 170 with 'tat_for_tit'
+</li><li>'defect' scored 100 with 'cooperate'
+</li><li>'defect' scored 10 with 'tit_for_tat'
+</li><li>'defect' scored 0 with 'tat_for_tit'
+</li><li>'tit_for_tat' scored 200 with 'cooperate'
+</li><li>'tit_for_tat' scored -10 with 'defect'
+</li><li>'tit_for_tat' scored 0 with 'tat_for_tit'
+</li><li>'tat_for_tit' scored 190 with 'cooperate'
+</li><li>'tat_for_tit' scored 0 with 'defect'
+</li><li>'tat_for_tit' scored 0 with 'tit_for_tat'
+</li></ul>
+</div>
+
+      </td>
+    </tr></tbody></table>
+<!--PageFooterFmt-->
+  <div id="wikifoot">
+    <div class="footnav">
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=edit">Edit</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=diff">History</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/IteratedPrisonersdilemma?action=print" target="_blank">Print</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Teocollin/RecentChanges">Recent Changes</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a></div>
+    <div class="lastmod">Page last modified on January 30, 2015, at 12:44 AM</div></div>
+<!--HTMLFooter-->
+
+
+</body></html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>CMSC-16200 Winter 2015 | SunWooPark / RandomConundrumSolutions </title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" href="wikipage_files/pmwiki.css" type="text/css">
+  <!--HTMLHeader--><style type="text/css"><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+  div.faqtoc div.faq * { display:none; }
+  div.faqtoc div.faq p.question 
+    { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
+  div.faqtoc div.faq p.question * { display:inline; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  border: 1px solid #808080;
+  color: #000000;
+  background-color: #f1f0ed;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python .de1, .python .de2 {font-family: monospace; font-weight: normal;}
+.python  {font-family:monospace;}
+.python .imp {font-weight: bold; color: red;}
+.python li, .python .li1 {font-family: monospace; color: black; font-weight: normal;}
+.python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python .li2 {font-weight: bold;}
+.python .kw1 {color: #ff7700;font-weight:bold;}
+.python .kw2 {color: #008000;}
+.python .kw3 {color: #dc143c;}
+.python .kw4 {color: #0000cd;}
+.python .co1 {color: #808080; font-style: italic;}
+.python .coMULTI {color: #808080; font-style: italic;}
+.python .es0 {color: #000099; font-weight: bold;}
+.python .br0 {color: black;}
+.python .sy0 {color: #66cc66;}
+.python .st0 {color: #483d8b;}
+.python .nu0 {color: #ff4500;}
+.python .me1 {color: black;}
+.python .ln-xtra, .python li.ln-xtra, .python div.ln-xtra {background-color: #ffc;}
+.python span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash .de1, .bash .de2 {font-family: monospace; font-weight: normal;}
+.bash  {font-family:monospace;}
+.bash .imp {font-weight: bold; color: red;}
+.bash li, .bash .li1 {font-family: monospace; color: black; font-weight: normal;}
+.bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash .li2 {font-weight: bold;}
+.bash .kw1 {color: #000000; font-weight: bold;}
+.bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash .co0 {color: #666666; font-style: italic;}
+.bash .co1 {color: #800000;}
+.bash .co2 {color: #cc0000; font-style: italic;}
+.bash .co3 {color: #000000; font-weight: bold;}
+.bash .co4 {color: #666666;}
+.bash .es1 {color: #000099; font-weight: bold;}
+.bash .es2 {color: #007800;}
+.bash .es3 {color: #007800;}
+.bash .es4 {color: #007800;}
+.bash .es5 {color: #780078;}
+.bash .es_h {color: #000099; font-weight: bold;}
+.bash .br0 {color: #7a0874; font-weight: bold;}
+.bash .sy0 {color: #000000; font-weight: bold;}
+.bash .st0 {color: #ff0000;}
+.bash .st_h {color: #ff0000;}
+.bash .nu0 {color: #000000;}
+.bash .re0 {color: #007800;}
+.bash .re1 {color: #007800;}
+.bash .re2 {color: #007800;}
+.bash .re4 {color: #007800;}
+.bash .re5 {color: #660033;}
+.bash .ln-xtra, .bash li.ln-xtra, .bash div.ln-xtra {background-color: #ffc;}
+.bash span.xtra { display:block; }
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for haskell
+ * CSS class: , CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.haskell .de1, .haskell .de2 {font-family: monospace; font-weight: normal;}
+.haskell  {font-family:monospace;}
+.haskell .imp {font-weight: bold; color: red;}
+.haskell li, .haskell .li1 {font-family: monospace; color: black; font-weight: normal;}
+.haskell .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.haskell .li2 {font-weight: bold;}
+.haskell .kw1 {color: #06c; font-weight: bold;}
+.haskell .kw2 {color: #06c; font-weight: bold;}
+.haskell .kw3 {font-weight: bold;}
+.haskell .kw4 {color: #cccc00; font-weight: bold;}
+.haskell .kw5 {color: maroon;}
+.haskell .co1 {color: #5d478b; font-style: italic;}
+.haskell .co2 {color: #339933; font-weight: bold;}
+.haskell .co3 {color: #5d478b; font-style: italic;}
+.haskell .coMULTI {color: #5d478b; font-style: italic;}
+.haskell .es0 {background-color: #3cb371; font-weight: bold;}
+.haskell .br0 {color: green;}
+.haskell .sy0 {color: #339933; font-weight: bold;}
+.haskell .st0 {background-color: #3cb371;}
+.haskell .nu0 {color: red;}
+.haskell .me1 {color: #060;}
+.haskell .ln-xtra, .haskell li.ln-xtra, .haskell div.ln-xtra {background-color: #ffc;}
+.haskell span.xtra { display:block; }
+
+--></style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="robots" content="index,follow">
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id="wikilogo"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php"><img src="wikipage_files/uc-wordmark.png" alt="CMSC-16200 Winter 2015" border="0"></a></div>
+  <div id="wikihead">
+  <form action="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php">
+    <span class="headnav"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RecentChanges" accesskey="c">Recent Changes</a> -</span>
+    <input name="n" value="SunWooPark.RandomConundrumSolutions" type="hidden">
+    <input name="action" value="search" type="hidden">
+    <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a>:
+    <input name="q" class="inputbox searchbox" type="text">
+    <input class="inputbutton searchbutton" value="Go" type="submit"></form></div>
+<!--/PageHeaderFmt-->
+  <table id="wikimid" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<!--PageLeftFmt-->
+      <td id="wikileft" valign="top">
+        <p class="sidehead"> Main
+</p><ul><li><a class="urllink" href="http://cmsc-16200.cs.uchicago.edu/2015/" rel="nofollow">Course Home (exit)</a>
+</li><li><a class="urllink" href="https://piazza.com/uchicago/winter2015/cmsc16200/home" rel="nofollow">Piazza (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Main/HomePage">Course WikiHome</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges">Recent Changes</a> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/AllRecentChanges?action=rss">(rss)</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Student">Student</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Problems">Problems</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Resources">Resources</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Student/Questions">Questions</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">Profiles</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Profiles">My Profile</a>
+</li></ul><p class="vspace sidehead"> Instructor
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/StuartKurtz">Stuart Kurtz</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/ArielFeldman">Ariel Feldman</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Instructor/SampleProblem">Sample Problem</a>
+</li></ul><p class="vspace sidehead"> Lab
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/MarkStoehr">Mark Stoehr</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/Labs">Labs</a>
+</li><li><a class="urllink" href="http://people.cs.uchicago.edu/%7Estoehr/cs162" rel="nofollow">Labs Page (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/LabTA/FAQ">FAQ</a>
+</li></ul><p class="vspace sidehead"> <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/PmWiki">PmWiki</a>
+</p><ul><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/Cookbook/SourceBlock" rel="nofollow">SourceBlock (exit)</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/DocumentationIndex">Documentation Index</a>
+</li><li><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/PmWiki/FAQ">PmWiki FAQ</a>
+</li></ul><p class="vspace" style="text-align: right;"> <span style="font-size:83%"><a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/SideBar?action=edit">edit SideBar</a></span>
+</p>
+</td>
+<!--/PageLeftFmt-->
+      <td id="wikibody" valign="top">
+<!--PageActionFmt-->
+        <div id="wikicmds"><ul><li class="browse">      <a accesskey="" rel="nofollow" class="selflink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions">View</a>
+</li><li class="edit">      <a accesskey="e" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=edit">Edit</a>
+</li><li class="diff">   <a accesskey="h" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=diff">History</a>
+</li><li class="print">     <a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=print">Print</a>
+</li><li class="logout"><em>  <span style="font-size:83%"><a accesskey="" rel="nofollow" class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=logout">Logout</a></span></em>
+</li></ul>
+</div>
+<!--PageTitleFmt-->
+        <div id="wikititle">
+          <div class="pagegroup"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark">SunWooPark</a> /</div>
+          <h1 class="pagetitle">RandomConundrumSolutions</h1></div>
+<!--PageText-->
+<div id="wikitext">
+<p>proposed by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/SunWooPark">Sun Woo Park</a>
+</p>
+<p class="vspace">In the quiz program "Countdown" on Channel 4, UK, the 
+contestants choose 9 random alphabets and create a word using the 
+letters. The specific rules are in this page: <a class="urllink" href="http://en.wikipedia.org/wiki/Countdown_%28game_show%29#Letters_round" rel="nofollow">http://en.wikipedia.org/wiki/Countdown_%28game_show%29#Letters_round</a>.
+ The lexicographers / celebrities in the "dictionary corner" determine 
+what are the possible solutions for the given random set of alphabets. 
+Instead of the lexicographers, let's have the computers do the job. Make
+ a program which gives all possible words (which is comprised of more 
+than 4 alphabets) generated from a set of chosen letters by the user. If
+ there aren't any possible words, the program may print out an error 
+message. 
+</p>
+<p class="vspace">A possible solution for 5 random alphabets may look like this:
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock1">
+  <div class="sourceblocktext"><div>$ conundrum axtes<br>taxes<br>east<br>seat<br>teas<br>eats<br>sate<br>saxe<br>sext<br>axes<br><br>$ conundrum xqvyl<br>No Solution<br></div></div>
+  <div class="sourceblocklink"></div>
+</div>
+
+<p class="vspace">The solutions may differ based on which dictionary you are using for the code.
+</p><hr>
+<p>Solution by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/Teocollin">Teodoro Fields Collin</a>:
+</p>
+<p class="vspace">First pass created using Python 2.7.4.
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock2">
+  <div class="sourceblocktext"><div class="python"><span class="kw1">import</span> <span class="kw3">itertools</span><br>
+<span class="kw1">from</span> <span class="kw3">sys</span> <span class="kw1">import</span> argv <br>
+<br>
+<br>
+<span class="kw1">def</span> cands<span class="br0">(</span>inputs<span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; Finds all permutations with more than 4 characters of a list of characters<br>
+&nbsp; &nbsp; :arg List of characters<br>
+&nbsp; &nbsp; :return list of strings<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="co1"># The below could probably be simplified a bit.... </span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">map</span><span class="br0">(</span><span class="st0">''</span>.<span class="me1">join</span><span class="sy0">,</span> <span class="kw2">list</span><span class="br0">(</span><span class="kw3">itertools</span>.<span class="me1">chain</span>.<span class="me1">from_iterable</span><span class="br0">(</span><span class="br0">[</span> <span class="kw2">map</span> <span class="br0">(</span><span class="kw2">list</span><span class="sy0">,</span> <span class="br0">(</span><span class="kw3">itertools</span>.<span class="me1">permutations</span><span class="br0">(</span>inputs<span class="sy0">,</span> x<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="nu0">4</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>inputs<span class="br0">)</span>+<span class="nu0">1</span><span class="br0">)</span><span class="br0">]</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> dict_make<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; Creates a dictionary of all words greater than length 4<br>
+&nbsp; &nbsp; :args None<br>
+&nbsp; &nbsp; :return A dictionary<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; f <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">(</span><span class="st0">'words.txt'</span><span class="sy0">,</span><span class="st0">'r'</span><span class="br0">)</span><br>
+&nbsp; &nbsp; dict1 <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">splitlines</span><span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="kw2">filter</span><span class="br0">(</span><span class="kw1">lambda</span> z:<span class="kw2">len</span><span class="br0">(</span>z<span class="br0">)</span> <span class="sy0">&gt;=</span> <span class="nu0">4</span><span class="sy0">,</span> dict1<span class="br0">)</span><br>
+<br>
+<span class="kw1">def</span> main<span class="br0">(</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; <span class="st0">"""<br>
+&nbsp; &nbsp; Solves a conundrum as specified here: 
+http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions<br>
+&nbsp; &nbsp; :arg None<br>
+&nbsp; &nbsp; :return None<br>
+&nbsp; &nbsp; """</span><br>
+&nbsp; &nbsp; <span class="kw3">string</span> <span class="sy0">=</span> argv<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> <span class="co1"># The 2nd command line argument.</span><br>
+&nbsp; &nbsp; possible <span class="sy0">=</span> cands<span class="br0">(</span><span class="kw3">string</span><span class="br0">)</span><br>
+&nbsp; &nbsp; dictionary <span class="sy0">=</span> dict_make<span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; results <span class="sy0">=</span> <span class="br0">[</span>possible<span class="br0">[</span>x<span class="br0">]</span> <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">xrange</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>possible<span class="br0">)</span><span class="br0">)</span> <span class="kw1">if</span> possible<span class="br0">[</span>x<span class="br0">]</span> <span class="kw1">in</span> dictionary<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="kw2">len</span><span class="br0">(</span>results<span class="br0">)</span> <span class="sy0">==</span> <span class="nu0">0</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> <span class="st0">"No Solution"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="kw1">else</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> x <span class="kw1">in</span> <span class="kw2">range</span><span class="br0">(</span><span class="nu0">0</span><span class="sy0">,</span> <span class="kw2">len</span><span class="br0">(</span>results<span class="br0">)</span><span class="br0">)</span>:<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">print</span> results<span class="br0">[</span>x<span class="br0">]</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> <span class="br0">(</span><span class="br0">)</span><br>
+<br>
+main<span class="br0">(</span><span class="br0">)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=sourceblock&amp;num=2" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace"><a class="urllink" href="https://docs.python.org/2/library/itertools.html#itertools.chain" rel="nofollow">Itertools</a>
+ is a very useful python library that has a permutations function and 
+other useful list operations. Using their permutations function, the 
+list function, and some other things, all permutations with length 4 or 
+greater are created. A dictionary is created by reading in my the 
+dictionary located in /usr/share/dict and splitting it by lines. Since 
+we only needs words of length 4 or greater, I filtered it by length. 
+Then, simply filter out all the strings that aren't in the dictionary, 
+and output them.
+</p>
+<p class="vspace">Sample output (Note: taxes isn't in my dictionary and a lot of other things are... I checked...):
+</p>
+<div class="sourceblock " id="sourceblock3">
+  <div class="sourceblocktext"><div class="bash">----:~----$ python main.pyc axtes<br>
+axes<br>
+ates<br>
+eats<br>
+east<br>
+sate<br>
+seax<br>
+seat<br>
+sext<br>
+seta <br>
+----:~----$ python main.pyc xqvyl<br>
+No Solution</div></div>
+  <div class="sourceblocklink"></div>
+</div>
+
+<hr>
+<p class="vspace">Solution by <a class="wikilink" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Profiles/BowenWang">Bowen Wang</a>
+</p>
+<p class="vspace">It's similar to the previous solution, but implemented
+ in haskell. There are some very useful functions for this problem in 
+Data.List.
+</p>
+<div class="vspace"></div>
+<div class="sourceblock " id="sourceblock4">
+  <div class="sourceblocktext"><div class="haskell"><span class="kw1">import</span> Data<span class="sy0">.</span>List<br>
+<span class="kw1">import</span> System<span class="sy0">.</span><span class="kw4">IO</span><br>
+<span class="kw1">import</span> Control<span class="sy0">.</span><span class="kw4">Monad</span><br>
+<br>
+generate <span class="sy0">::</span> <span class="kw4">String</span> <span class="sy0">-&gt;</span> <span class="br0">[</span><span class="kw4">String</span><span class="br0">]</span><br>
+generate xs <span class="sy0">=</span> <span class="kw3">filter</span> <span class="br0">(</span>\x <span class="sy0">-&gt;</span> <span class="kw3">length</span> x <span class="sy0">&gt;=</span> <span class="nu0">4</span><span class="br0">)</span> <span class="br0">(</span>nub <span class="sy0">$</span> <span class="kw3">concat</span> <span class="sy0">$</span> <span class="kw3">map</span> subsequences <span class="br0">(</span>permutations xs<span class="br0">)</span><span class="br0">)</span><br>
+<br>
+mainloop inh list <span class="sy0">=</span> <span class="kw1">do</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ineof <span class="sy0">&lt;-</span> hIsEOF inh<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> ineof<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">then</span> <span class="kw3">return</span> list<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">else</span> <span class="kw1">do</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;inpStr <span class="sy0">&lt;-</span>hGetLine inh<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">let</span> list1 <span class="sy0">=</span> &nbsp;inpStr : list<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mainloop inh list1<br>
+<br>
+main <span class="sy0">::</span> <span class="kw4">IO</span> <span class="br0">(</span><span class="br0">)</span><br>
+main <span class="sy0">=</span> <span class="kw1">do</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp;inh <span class="sy0">&lt;-</span> openFile <span class="st0">"words.txt"</span> ReadWriteMode<br>
+&nbsp; &nbsp; &nbsp; &nbsp;wordDict <span class="sy0">&lt;-</span> mainloop inh <span class="br0">[</span><span class="br0">]</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;letters <span class="sy0">&lt;-</span> <span class="kw3">getLine</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> intersect <span class="br0">(</span>generate letters<span class="br0">)</span> wordDict <span class="kw1">of</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">[</span><span class="br0">]</span> <span class="sy0">-&gt;</span> <span class="kw3">putStrLn</span> <span class="st0">"No Solution"</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="sy0">_</span> &nbsp;<span class="sy0">-&gt;</span> <span class="kw3">mapM_</span> <span class="kw3">putStrLn</span> <span class="br0">(</span>intersect <span class="br0">(</span>generate letters<span class="br0">)</span> wordDict<span class="br0">)</span><br>
+&nbsp;</div></div>
+  <div class="sourceblocklink"><a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=sourceblock&amp;num=4" type="text/plain">[$[Get Code]]</a></div>
+</div>
+
+<p class="vspace">Sample output:
+</p>
+<div class="sourceblock " id="sourceblock5">
+  <div class="sourceblocktext"><div class="bash"><span class="co4">bash-3.2$ </span>.<span class="sy0">/</span>conundrum<br>
+axtes<br>
+axes<br>
+ates<br>
+eats<br>
+seta<br>
+sext<br>
+sate<br>
+seat<br>
+seax<br>
+east<br>
+<br>
+<span class="co4">bash-3.2$ </span>.<span class="sy0">/</span>conundrum<br>
+xqvyl<br>
+No Solution</div></div>
+  <div class="sourceblocklink"></div>
+</div>
+
+</div>
+
+      </td>
+    </tr></tbody></table>
+<!--PageFooterFmt-->
+  <div id="wikifoot">
+    <div class="footnav">
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=edit">Edit</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=diff">History</a> -
+      <a rel="nofollow" href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RandomConundrumSolutions?action=print" target="_blank">Print</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/SunWooPark/RecentChanges">Recent Changes</a> -
+      <a href="http://brick.cs.uchicago.edu/Courses/CMSC-16200/2015/pmwiki/pmwiki.php/Site/Search">Search</a></div>
+    <div class="lastmod">Page last modified on January 06, 2015, at 09:58 PM</div></div>
+<!--HTMLFooter-->
+
+
+</body></html>
