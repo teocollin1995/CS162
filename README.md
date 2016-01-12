@@ -7,4 +7,4 @@ Also, I like to think of this as an archive of a small part of the wiki.
 
 List of projects with links to wiki pages
 --
-* [https://htmlpreview.github.io/?https://github.com/teocollin1995/CS162/blob/master/Adjaceny%20Matrix%20Checker/wikipage.html](Adjaceny Matrix Checker)
+* [Adjaceny Matrix Checker](https://rawgit.com/teocollin1995/CS162/master/Adjaceny%20Matrix%20Checker/wikipage.html)
