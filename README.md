@@ -11,7 +11,7 @@ List of projects with links to wiki pages
 * [Four is the Magic Number](https://rawgit.com/teocollin1995/CS162/master/Four%20is%20the%20Magic%20Number/wikipage.html)
 * [Hangman AI](https://github.com/teocollin1995/CS162/blob/master/Hangman%20AI/wikipage.html)
 * [Iterated Prisoner's Dilemma](https://github.com/teocollin1995/CS162/blob/master/Iterated%20Prisoner's%20Dilemma/wikipage.html)
-* [Network Map of Facebook Friends](https://github.com/teocollin1995/CS162/blob/master/Network%20Map%20of%20Facebook%20Friends/wikipage.html)
+* [Network Map of Facebook Friends](https://github.com/teocollin1995/CS162/blob/master/Network%20Map%20of%20Facebook%20Friends/wikipage.html) Note: this page is a revision posted to the 2016 year's wiki as a sample.
 * [NthPrime](https://github.com/teocollin1995/CS162/blob/master/NthPrime/wikipage.html)
 * [Random Conundrum Solution](https://github.com/teocollin1995/CS162/blob/master/Random%20Conundrum%20Solutions/wikipage.html)
 * [Six Degrees of Wikipedia](https://github.com/teocollin1995/CS162/blob/master/Six%20Degrees%20of%20Wikipedia/wikipage.html)
