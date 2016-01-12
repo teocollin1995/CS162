@@ -1,5 +1,0 @@
-strict digraph  {
-	graph [encoding=ascii,
-		file="try.dot"
-	];
-}
